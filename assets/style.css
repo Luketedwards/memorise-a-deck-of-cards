@@ -16,9 +16,62 @@ html, body{
     font-family: 'IBM Plex Serif', sans-serif;
     font-weight: 500;
     font-style: italic;
-    font-size: 40px;
-    margin-left: 40%;
+    font-size: 4em;
+    margin-left: 30%;
     color: #fafafa !important;
+}
+
+.list{
+    display: inline;
+    margin-left: 40%;
+    font-size: 1.5rem;
+    
+}
+
+.list a{
+    color: #fafafa !important;
+    text-decoration: none;
+    margin-left: 0%;
+    padding-right: 5%;   
+}
+
+.list a:hover{
+    color: black !important;
+}
+
+#game-link{
+
+
+}
+
+#memory-link{
+
+}
+
+#nav{
+    padding-bottom: 50px;
+}
+
+#button-div{
+    padding-top: 600px;
+    border: solid black 100px;
+    background-color: black;
+}
+
+#start-button{
+    position: absolute;
+    margin-top: 100px;
+    bottom: 50px;
+    left: 47%;;
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #fafafa;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 5%;
 }
 /* Card Images For Home Page */
 
@@ -26,10 +79,9 @@ html, body{
     width: 90vw;
     height: 90vh;
     margin-left: 5vw;
-    margin-bottom: 50px;
-    position: absolute;
-    
-    column-count: 13;
+    margin-bottom: 200px;
+    padding-bottom: 200px;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -40,6 +92,7 @@ html, body{
       ". . . . . . . . . . . . . "
       ". . . . . . . . . . . . . "
       ". . . . . . . . . . . . . ";
+      
 }
   
 #Card-AH{
