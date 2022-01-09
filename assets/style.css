@@ -1,0 +1,31 @@
+#tableContainer{
+    background-color: Green;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo{
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 40px;
+    margin-left: 40%;
+    color: #fafafa !important;
+}
+/* Card Images For Home Page */
+
+#cards-container{
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    margin-bottom: 200px;
+}
+
+#AH{
+    height: 120px;
+    width:100px;
+    background-image: url(/assets/images/AH.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
