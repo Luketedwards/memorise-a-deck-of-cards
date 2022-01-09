@@ -3,7 +3,7 @@ html, body{
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: scroll;
     box-sizing: border-box;
 }
 #tableContainer{
@@ -54,9 +54,9 @@ html, body{
 }
 
 #start-button{
-    position: fixed;
-    top: 4vw;
-    right: 4vw;
+    position: relative;
+    top: -4vw;
+    left: 80vw;
     z-index: 1000;
     
     font-family: 'IBM Plex Serif', sans-serif;
@@ -85,17 +85,51 @@ html, body{
     margin-bottom: 2vw;
     padding-bottom: 200px;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 2px 2px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      ". . . . . . . . . . . . . "
-      ". . . . . . . . . . . . . "
-      ". . . . . . . . . . . . . "
-      ". . . . . . . . . . . . . ";
-      
+   
+}
+
+#hearts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#hearts div{
+    width: 7.5vw;
+}
+
+#spades{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#spades div{
+    width: 7.5vw;
+}
+
+#diamonds{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#diamonds div{
+    width: 7.5vw;
+}
+
+#clubs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#clubs div{
+    width: 7.5vw;
 }
   
 #Card-AH{
@@ -514,37 +548,65 @@ html, body{
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 1200px){
-    #cards-container div{
-        height:20vh;
-        width: 7.5vw;
-    }
-}
-
-@media  screen and (max-width: 600px ) {
+@media screen and (max-width: 1000px){
     #cards-container{
-        width: 100vw;
-        height: 90vh;
-        margin-left: 5vw;
-        margin-bottom: 200px;
-        padding-bottom: 200px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        column-count: 4;
-        
-        
+        width: 110vw;
+        height: 1000px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+        ". . . ."; 
     }
-
     #cards-container div{
-        height:40%;
-        width:40%;
-        padding: 0;
+        height: 29vw;
+        width: 18vw;
         margin: 0;
     }
 
-    html{
-        overflow: scroll;
+    
+
+   
+
+    #hearts{
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        width: 10vw;
+    }
+    
+    #spades{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+    
+    #diamonds{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+    
+    #clubs{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
     }
 }
+
+
+
+/*display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+gap: 2px 2px;
+grid-auto-flow: row;
+grid-template-areas:
+  ". . . . . . . . . . . . . "
+  ". . . . . . . . . . . . . "
+  ". . . . . . . . . . . . . "
+  ". . . . . . . . . . . . . "; */
+  
