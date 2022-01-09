@@ -16,15 +16,16 @@ html, body{
     font-family: 'IBM Plex Serif', sans-serif;
     font-weight: 500;
     font-style: italic;
-    font-size: 4em;
-    margin-left: 30%;
+    font-size: 5vw;
+    margin-left: 20vw;
     color: #fafafa !important;
 }
 
 .list{
     display: inline;
-    margin-left: 40%;
-    font-size: 1.5rem;
+    margin-left: 30vw;
+    font-size: 2vw;
+    padding-right: 0.5vw;
     
 }
 
@@ -32,7 +33,7 @@ html, body{
     color: #fafafa !important;
     text-decoration: none;
     margin-left: 0%;
-    padding-right: 5%;   
+    padding-right: 10%;   
 }
 
 .list a:hover{
@@ -49,22 +50,17 @@ html, body{
 }
 
 #nav{
-    padding-bottom: 50px;
-}
-
-#button-div{
-    padding-top: 600px;
-    border: solid black 100px;
-    background-color: black;
+    padding-bottom: 20px;
 }
 
 #start-button{
-    position: absolute;
-    margin-top: 100px;
-    bottom: 50px;
-    left: 47%;;
+    position: fixed;
+    top: 4vw;
+    right: 4vw;
+    z-index: 1000;
+    
     font-family: 'IBM Plex Serif', sans-serif;
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: 700;
     background-color: #fafafa;
     color: black;
@@ -73,19 +69,26 @@ html, body{
     width: 10%;
     height: 5%;
 }
+
+#star-button:hover{
+    background-color: blanchedalmond;
+    color: black;
+}
 /* Card Images For Home Page */
 
 #cards-container{
-    width: 90vw;
+    width: 100vw;
     height: 90vh;
-    margin-left: 5vw;
-    margin-bottom: 200px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 1vw;;
+    margin-bottom: 2vw;
     padding-bottom: 200px;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 10px 9px;
+    gap: 2px 2px;
     grid-auto-flow: row;
     grid-template-areas:
       ". . . . . . . . . . . . . "
@@ -96,417 +99,452 @@ html, body{
 }
   
 #Card-AH{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/AH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-2H{
-    height: 10em;
-    width: 7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/2H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-3H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/3H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-4H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/4H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-5H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/5H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-6H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/6H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-7H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/7H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-8H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/8H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-9H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/9H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-10H{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/10H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-JH{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/JH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-QH{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/QH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-KH{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/KH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-AS{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/AS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-2S{
-    height: 10em;
-    width: 7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/2S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-3S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/3S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-4S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/4S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-5S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/5S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-6S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/6S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-7S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/7S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-8S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/8S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-9S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/9S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-10S{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/10S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-JS{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/JS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-QS{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/QS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-KS{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/KS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-AD{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/AD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-2D{
-    height: 10em;
-    width: 7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/2D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-3D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/3D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-4D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/4D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-5D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/5D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-6D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/6D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-7D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/7D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-8D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/8D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-9D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/9D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-10D{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/10D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-JD{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/JD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-QD{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/QD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-KD{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/KD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-AC{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/AC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-2C{
-    height: 10em;
-    width: 7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/2C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-3C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/3C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-4C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/4C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-5C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/5C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-6C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/6C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-7C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/7C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-8C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/8C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-9C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/9C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-10C{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/10C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-JC{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/JC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-QC{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/QC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #Card-KC{
-    height: 10em;
-    width:7em;
+    height: 16vh;
+    width:7vw;
     background-image: url(/assets/images/KC.png);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px){
+    #cards-container div{
+        height:20vh;
+        width: 7.5vw;
+    }
+}
+
+@media  screen and (max-width: 600px ) {
+    #cards-container{
+        width: 100vw;
+        height: 90vh;
+        margin-left: 5vw;
+        margin-bottom: 200px;
+        padding-bottom: 200px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        column-count: 4;
+        
+        
+    }
+
+    #cards-container div{
+        height:40%;
+        width:40%;
+        padding: 0;
+        margin: 0;
+    }
+
+    html{
+        overflow: scroll;
+    }
 }
