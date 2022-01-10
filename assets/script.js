@@ -40,25 +40,13 @@ for (let i = 0; i < suits.length; i++) {
     // display 5 results
     for (let i = 0; i < 52; i++) {
         shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
-    }    
-
-    function cycleDeck(shuffledDeck){
-        var i = 0;
-             if ($('#next').click == true){
-        $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`)};
-        i++;
-        console.log(i);
-
-    };
+    };    
 
     
-
-    var number = 0;
-    if ($('#next').click){
-    $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[number]}.png`);}
-    number++;
-
-console.log(shuffledDeck[1]);
-
-
+    
+      var number = 0; 
+     $("#next").click(function(){
+  $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[parseInt(number)]}.png`);;
+  number++;
+}); 
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
