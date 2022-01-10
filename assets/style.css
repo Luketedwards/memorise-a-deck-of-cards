@@ -636,6 +636,36 @@ transform: rotateY(-180deg) translateX(-100%);
 
 
 
+@media only screen and (min-width: 1300px){
+    .card-is-flipped {
+        transform: rotateY(-180deg) translateX(-110%);
+        
+        }
+        
+        .card-face--back{
+            transform: rotateY(-180deg) translateX(110%);
+            transition: transform 0.5s;
+            
+            background-image: url(/assets/images/playing-card-rear.png)  !important;
+        }
+}
+
+@media only screen and (max-width: 1200px){
+    .card-is-flipped {
+        transform: rotateY(-180deg) translateX(-105%);
+        
+        }
+        
+        .card-face--back{
+            transform: rotateY(-180deg) translateX(105%);
+            transition: transform 0.5s;
+            
+            background-image: url(/assets/images/playing-card-rear.png)  !important;
+        }
+}
+
+
+
 /*display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr;
