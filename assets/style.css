@@ -22,6 +22,17 @@ html, body{
     color: #fafafa !important;
 }
 
+#guess{
+    height: 32vh;
+    width: 14vw;
+    margin-left: 50%;
+    margin-bottom: 500px;
+    z-index: 1000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+
 .list{
     display: inline;
     margin-left: 30vw;

@@ -11,3 +11,54 @@ $('#cards-container div').click(function(){
     audioSuccess.play();}
     
 });
+
+const suits = ['H', 'S', 'D', 'C'];
+const value = ['A', '2', '3', '4', '5', '6','7', '8', '9', '10', 'J', 'Q', 'K'];
+
+let deck = [];
+let shuffledDeck = [];
+
+
+for (let i = 0; i < suits.length; i++) {
+    for (let x = 0; x < value.length; x++) {
+        let card = { Value: value[x], Suit: suits[i] };
+        deck.push(card).concat;
+    }
+}
+
+
+    for (let i = deck.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i);
+        let temp = deck[i];
+        deck[i] = deck[j];
+        deck[j] = temp;
+    }
+
+
+    console.log('The first five cards are:');
+ 
+    // display 5 results
+    for (let i = 0; i < 52; i++) {
+        shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
+    }    
+
+    function cycleDeck(shuffledDeck){
+        var i = 0;
+             if ($('#next').click == true){
+        $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`)};
+        i++;
+        console.log(i);
+
+    };
+
+    
+
+    var number = 0;
+    if ($('#next').click){
+    $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[number]}.png`);}
+    number++;
+
+console.log(shuffledDeck[1]);
+
+
+/*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
