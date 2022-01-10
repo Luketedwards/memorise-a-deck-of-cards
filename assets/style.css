@@ -42,15 +42,6 @@ html, body{
     color: black !important;
 }
 
-#game-link{
-
-
-}
-
-#memory-link{
-
-}
-
 #nav{
     padding-bottom: 20px;
 }
@@ -72,10 +63,38 @@ html, body{
     height: 5%;
 }
 
-#star-button:hover{
+#start-button:hover{
     background-color: blanchedalmond;
     color: black;
 }
+.cards{
+cursor: pointer;
+transform-style: preserve-3d;
+transform-origin: center right;
+transform-style: preserve-3d;
+transform-origin: center right;
+transition: transform 1s;
+
+
+
+
+}
+
+.card-is-flipped {
+transform: rotateY(-180deg) translateX(-100%);
+
+}
+
+.card-face--back{
+    transform: rotateY(-180deg) translateX(100%);
+    transition: transform 0.5s;
+    
+    background-image: url(/assets/images/playing-card-rear.png)  !important;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+  }
 /* Card Images For Home Page */
 
 #cards-container{
