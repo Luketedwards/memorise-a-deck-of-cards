@@ -43,15 +43,22 @@ for (let i = 0; i < suits.length; i++) {
     };    
 
     
-    
+
       var number = 0; 
      $("#next").click(function(){
-  $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[parseInt(number)]}.png`);;
-  number++;
-}); 
+        $('#guess').css('background-image', `url(/assets/images/${shuffledDeck[parseInt(number)]}.png`);;
+        number++;
+        }); 
+        
+$('#next').click(function(){
+    audioSuccess.play();
+});
+    
+     
+          
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
 
-let modalBtn = document.getElementById("modal-btn")
+let modalBtn = document.getElementById("start-button")
 let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
 modalBtn.onclick = function(){
