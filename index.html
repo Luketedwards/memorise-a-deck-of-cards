@@ -11,8 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>   
+    <button id="modal-btn"> click me, I make a modal</button>
+    <div class="modal">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          
+        </div>
+        <div class="modal-content">
+            <div class ="picture" id="guess"></div>
+            <button id="next">Next Card</button>
+        </div>
+        <div class="modal-footer">
+            
+        </div>
+      </div>
     <div id="tableContainer">
         <nav id="nav" class="navbar navbar-light">
         <div class="container-fluid"> 
@@ -26,7 +41,7 @@
             </div>
         </div>       
         </nav>     
-        <div id="button-div"><button id="start-button">Start Game!</button></div>
+        <div id="button-div"><button type="button" data-toggle="modal" data-target="#Modal" id="start-button">Start Game!</button></div>
     <div id="cards-container" class="container-fluid">
     <span id="cards-span"> 
     <span id="hearts">
@@ -99,7 +114,6 @@
     </div>
 
     </div>
-
     
     <div class ="picture" id="guess"></div>
     <button id="next">Next</button>
