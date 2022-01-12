@@ -46,25 +46,31 @@ $('#next').click(function(){
      
 var audioSuccess = new Audio('/assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('/assets/audio/denied.mp3');
-$('#cards-container div').click(function(){
+$('#cards-container div').click(function(correctCard){
     if(this.classList.contains("card-is-flipped")){
         audioFail.play()
         alert('Already flipped!');
         }else{
     const selectedCard = (this.id);
     console.log(selectedCard);
-    let i = 0;
-  while (i < 51){
+    $(this).addClass('card-is-flipped' + " " + 'card-face--back');
+    audioSuccess.play();
+  }
+    
+});       
+
+var clicks = $('#cards-container div').click(function());
+ 
+console.log(clicks.selectedCard);
+
+/*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
+function correctCard(selectedCard){
+  let i = 0;
       if (selectedCard === 'Card-' + shuffledDeck[i]){
         console.log('it worked!');
-        i++;
-    } 
-  
-    $(this).addClass('card-is-flipped' + " " + 'card-face--back');
-    audioSuccess.play();}}
-    
-});          
-/*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
+        i++;}
+  }; 
+
 
 let modalBtn = document.getElementById("start-button")
 let modal = document.querySelector(".modal")
@@ -81,14 +87,5 @@ window.onclick = function(e){
   }
 }
 
-let cardClick = document.getElementById('cards-container div').addEventListener('click', cardValue);
 
-function cardValue(cardClick){
-  $('#cards-container div').click(function(){
-    console.log(this.value);
-  });
-}
 
-function onClick(event){
-  alert(this.innerHTML)
-}
