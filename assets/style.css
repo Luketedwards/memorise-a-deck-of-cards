@@ -241,7 +241,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-AH{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/AH.png);
+    background-image: url(/assets/images/Card-AH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -249,7 +249,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-2H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/2H.png);
+    background-image: url(/assets/images/Card-2H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -257,7 +257,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-3H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/3H.png);
+    background-image: url(/assets/images/Card-3H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -265,7 +265,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-4H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/4H.png);
+    background-image: url(/assets/images/Card-4H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -273,7 +273,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-5H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/5H.png);
+    background-image: url(/assets/images/Card-5H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -281,7 +281,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-6H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/6H.png);
+    background-image: url(/assets/images/Card-6H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -289,7 +289,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-7H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/7H.png);
+    background-image: url(/assets/images/Card-7H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -297,7 +297,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-8H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/8H.png);
+    background-image: url(/assets/images/Card-8H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -305,7 +305,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-9H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/9H.png);
+    background-image: url(/assets/images/Card-9H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -313,7 +313,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-10H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/10H.png);
+    background-image: url(/assets/images/Card-10H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -321,7 +321,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-JH{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/JH.png);
+    background-image: url(/assets/images/Card-JH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -329,7 +329,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-QH{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/QH.png);
+    background-image: url(/assets/images/Card-QH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -337,7 +337,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-KH{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/KH.png);
+    background-image: url(/assets/images/Card-KH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -345,7 +345,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-AS{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/AS.png);
+    background-image: url(/assets/images/Card-AS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -353,7 +353,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-2S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/2S.png);
+    background-image: url(/assets/images/Card-2S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -361,7 +361,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-3S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/3S.png);
+    background-image: url(/assets/images/Card-3S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -369,7 +369,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-4S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/4S.png);
+    background-image: url(/assets/images/Card-4S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -377,7 +377,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-5S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/5S.png);
+    background-image: url(/assets/images/Card-5S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -385,7 +385,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-6S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/6S.png);
+    background-image: url(/assets/images/Card-6S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -393,7 +393,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-7S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/7S.png);
+    background-image: url(/assets/images/Card-7S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -401,7 +401,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-8S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/8S.png);
+    background-image: url(/assets/images/Card-8S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -409,7 +409,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-9S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/9S.png);
+    background-image: url(/assets/images/Card-9S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -417,7 +417,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-10S{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/10S.png);
+    background-image: url(/assets/images/Card-10S.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -425,7 +425,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-JS{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/JS.png);
+    background-image: url(/assets/images/Card-JS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -433,7 +433,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-QS{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/QS.png);
+    background-image: url(/assets/images/Card-QS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -441,7 +441,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-KS{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/KS.png);
+    background-image: url(/assets/images/Card-KS.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -449,7 +449,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-AD{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/AD.png);
+    background-image: url(/assets/images/Card-AD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -457,7 +457,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-2D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/2D.png);
+    background-image: url(/assets/images/Card-2D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -465,7 +465,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-3D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/3D.png);
+    background-image: url(/assets/images/Card-3D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -473,7 +473,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-4D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/4D.png);
+    background-image: url(/assets/images/Card-4D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -481,7 +481,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-5D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/5D.png);
+    background-image: url(/assets/images/Card-5D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -489,7 +489,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-6D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/6D.png);
+    background-image: url(/assets/images/Card-6D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -497,7 +497,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-7D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/7D.png);
+    background-image: url(/assets/images/Card-7D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -505,7 +505,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-8D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/8D.png);
+    background-image: url(/assets/images/Card-8D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -513,7 +513,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-9D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/9D.png);
+    background-image: url(/assets/images/Card-9D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -521,7 +521,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-10D{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/10D.png);
+    background-image: url(/assets/images/Card-10D.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -529,7 +529,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-JD{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/JD.png);
+    background-image: url(/assets/images/Card-JD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -537,7 +537,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-QD{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/QD.png);
+    background-image: url(/assets/images/Card-QD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -545,7 +545,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-KD{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/KD.png);
+    background-image: url(/assets/images/Card-KD.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -553,7 +553,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-AC{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/AC.png);
+    background-image: url(/assets/images/Card-AC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -561,7 +561,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-2C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/2C.png);
+    background-image: url(/assets/images/Card-2C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -569,7 +569,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-3C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/3C.png);
+    background-image: url(/assets/images/Card-3C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -577,7 +577,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-4C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/4C.png);
+    background-image: url(/assets/images/Card-4C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -585,7 +585,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-5C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/5C.png);
+    background-image: url(/assets/images/Card-5C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -593,7 +593,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-6C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/6C.png);
+    background-image: url(/assets/images/Card-6C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -601,7 +601,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-7C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/7C.png);
+    background-image: url(/assets/images/Card-7C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -609,7 +609,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-8C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/8C.png);
+    background-image: url(/assets/images/Card-8C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -617,7 +617,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-9C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/9C.png);
+    background-image: url(/assets/images/Card-9C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -625,7 +625,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-10C{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/10C.png);
+    background-image: url(/assets/images/Card-10C.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -633,7 +633,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-JC{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/JC.png);
+    background-image: url(/assets/images/Card-JC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -641,7 +641,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-QC{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/QC.png);
+    background-image: url(/assets/images/Card-QC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -649,7 +649,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-KC{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/KC.png);
+    background-image: url(/assets/images/Card-KC.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
