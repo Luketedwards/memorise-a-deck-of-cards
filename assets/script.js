@@ -46,7 +46,8 @@ $('#next').click(function(){
      
 var audioSuccess = new Audio('/assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('/assets/audio/denied.mp3');
-$('#cards-container div').click(function(correctCard){
+
+$('#cards-container div').click(function(){
     if(this.classList.contains("card-is-flipped")){
         audioFail.play()
         alert('Already flipped!');
@@ -57,18 +58,30 @@ $('#cards-container div').click(function(correctCard){
     audioSuccess.play();
   }
     
-});       
+});
 
-var clicks = $('#cards-container div').click(function());
- 
-console.log(clicks.selectedCard);
+let number2 = 0;
+
+var cardClicked = $('.cards').click(function(event){
+  var selectedCard = (this.id);
+  if (selectedCard === 'Card-' + shuffledDeck[number2]){
+    console.log("success!");
+    number2 ++;
+    return number2;
+  } else {
+    console.log('wrong card');
+  } 
+  })
+
+  
+  
 
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
 function correctCard(selectedCard){
-  let i = 0;
-      if (selectedCard === 'Card-' + shuffledDeck[i]){
+  let j = 0;
+      if (selectedCard === 'Card-' + shuffledDeck[j]){
         console.log('it worked!');
-        i++;}
+        j++;}
   }; 
 
 
