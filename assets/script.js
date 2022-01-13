@@ -30,8 +30,28 @@ for (let i = 0; i < suits.length; i++) {
     for (let i = 0; i < 52; i++) {
         shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
     };    
-
     
+    function interval(){
+      setInterval(incrementSeconds, 1000);}
+      let numberOfClicks = 0;
+      let cardProgress = 0;
+
+$('#next').click(function(){
+  numberOfClicks ++;
+  cardProgress ++;
+  if (numberOfClicks < 53){
+    cardsProgression();
+  }
+  console.log(numberOfClicks);
+  if (numberOfClicks == 1){
+      interval();
+    }
+});
+
+function cardsProgression(){
+  cardProgress = parseInt(cardProgress);
+  document.getElementById('card-progress').innerText = `${cardProgress}/52`;
+}
 
       var number = 0; 
      $("#next").click(function(){
@@ -40,7 +60,8 @@ for (let i = 0; i < suits.length; i++) {
         }); 
         
 $('#next').click(function(){
-    audioSuccess.play();
+  if (cardProgress < 53){
+    audioSuccess.play();}
 });
     
      

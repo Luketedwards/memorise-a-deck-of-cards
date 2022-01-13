@@ -16,21 +16,21 @@
 <body>     
     <script>
         var seconds = 0;
-        function timer(){
-            $('#time').innerHTML = seconds;
-            seconds ++;
-        }
-        setInterval(timer, 1000);
+
+        function incrementSeconds(interval) {
+        seconds += 1;
+        document.getElementById('time').innerText = seconds + "S";}
+
     </script>
     <div class="modal">
         <div class="modal-header">
           <span class="close-btn">&times;</span>
-          <h3 id="card-progress">Cards</h3>
-            <h3 id="time">time</h3>
+          <h3 id="card-progress">0/52</h3>
+            <h3 id="time">0S</h3>
         </div>
         <div class="modal-content">
             <div class ="picture" id="guess"></div>
-            <button onclick="timer()" id="next">Next Card</button>
+            <button id="next">Next Card</button>
         </div>
         <div class="modal-footer">
             
