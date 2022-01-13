@@ -13,7 +13,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
-<body>   
+<body>     
+    <script>
+        var seconds = 0;
+        function timer(){
+            $('#time').innerHTML = seconds;
+            seconds ++;
+        }
+        setInterval(timer, 1000);
+    </script>
     <div class="modal">
         <div class="modal-header">
           <span class="close-btn">&times;</span>
@@ -22,7 +30,7 @@
         </div>
         <div class="modal-content">
             <div class ="picture" id="guess"></div>
-            <button id="next">Next Card</button>
+            <button onclick="timer()" id="next">Next Card</button>
         </div>
         <div class="modal-footer">
             
@@ -41,17 +49,17 @@
             </div>
         </div>       
         </nav>     
-        <div id="button-div"><button type="button" data-toggle="modal" data-target="#Modal" id="start-button">Start Game!</button></div>
+        <div id="button-div"><button onclick="flipAllCards()" type="button" data-toggle="modal" data-target="#Modal" id="start-button">Start Game!</button></div>
     <div id="cards-container" class="container-fluid">
     <span id="cards-span"> 
     <span id="hearts">
-        <div class="cards" onClick= (cardClicked(this.id)) id="Card-AH" ></div>
-        <div class="cards" id="Card-2H"></div>
-        <div class="cards" id="Card-3H"></div>
-        <div class="cards" id="Card-4H"></div>
-        <div class="cards" id="Card-5H"></div>
-        <div class="cards" id="Card-6H"></div>
-        <div class="cards" id="Card-7H"></div>
+        <div class="cards card-face--back card-is-flipped" onClick= (cardClicked(this.id)) id="Card-AH" ></div>
+        <div class="cards card-face--back card-is-flipped" id="Card-2H"></div>
+        <div class="cards card-face--back card-is-flipped" id="Card-3H"></div>
+        <div class="cards card-face--back card-is-flipped" id="Card-4H"></div>
+        <div class="cards card-face--back card-is-flipped" id="Card-5H"></div>
+        <div class="cards card-face--back card-is-flipped" id="Card-6H"></div>
+        <div class="cards card-face--back card-is-flipped" id="Card-7H"></div>
         <div class="cards" id="Card-8H"></div>
         <div class="cards" id="Card-9H"></div>
         <div class="cards" id="Card-10H"></div>

@@ -74,8 +74,6 @@ var cardClicked = $('.cards').click(function(event){
   })
 
   
-  
-
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
 function correctCard(selectedCard){
   let j = 0;
