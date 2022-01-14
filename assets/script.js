@@ -24,35 +24,41 @@ for (let i = 0; i < suits.length; i++) {
     }
 
 
-    console.log('The first five cards are:');
- 
-    // display 5 results
+
     for (let i = 0; i < 52; i++) {
         shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
     };    
-    
-    function interval(){
-      setInterval(incrementSeconds, 1000);}
       let numberOfClicks = 0;
       let cardProgress = 0;
+      var myInterval; 
+      
+      function interval(){
+        myInterval = setInterval(incrementSeconds, 1000);}
 
-$('#next').click(function(){
-  numberOfClicks ++;
-  cardProgress ++;
-  if (numberOfClicks < 53){
-    cardsProgression();
-  }
-  console.log(numberOfClicks);
-  if (numberOfClicks == 1){
-      interval();
-    }
+        $('#next').click(function(){
+          numberOfClicks ++;
+          cardProgress ++;
+          if (numberOfClicks < 53){
+            cardsProgression();
+          }
+          console.log(numberOfClicks);
+          if (numberOfClicks == 1){
+              interval();
+            }
+          if (numberOfClicks == 53){
+              clearInterval(myInterval);
+          }  
+          
 });
+
+
+  
 
 function cardsProgression(){
   cardProgress = parseInt(cardProgress);
   document.getElementById('card-progress').innerText = `${cardProgress}/52`;
 }
-
+    
       var number = 0; 
      $("#next").click(function(){
         $('#guess').css('background-image', `url(/assets/images/Card-${shuffledDeck[parseInt(number)]}.png`);;
@@ -67,8 +73,10 @@ $('#next').click(function(){
      
 var audioSuccess = new Audio('/assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('/assets/audio/denied.mp3');
+var audioGameOver = new Audio('/assets/audio/game-over-sound.mp3');
 
 $('#cards-container div').click(function(){
+  if (cardProgress > 52){
     if(this.classList.contains("card-is-flipped")){
         audioFail.play()
         alert('Already flipped!');
@@ -78,21 +86,27 @@ $('#cards-container div').click(function(){
     $(this).addClass('card-is-flipped' + " " + 'card-face--back');
     audioSuccess.play();
   }
-    
+} else{audioFail.play();}
 });
 
 let number2 = 0;
 
 var cardClicked = $('.cards').click(function(event){
   var selectedCard = (this.id);
-  if (selectedCard === 'Card-' + shuffledDeck[number2]){
-    console.log("success!");
-    number2 ++;
-    return number2;
-  } else {
-    console.log('wrong card');
-  } 
-  })
+  if (cardProgress > 52){
+    if (selectedCard === 'Card-' + shuffledDeck[number2]){
+      console.log("success!");
+      number2 ++;
+      return number2;
+    } else {
+      console.log('wrong card');
+      audioGameOver.play();
+      alert('Sorry you lose. Try again!');
+    } 
+  }else{
+    alert('You must start the game and view all shuffled cards before playing!');
+  }
+})
 
   
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
