@@ -70,14 +70,14 @@ $('#next').click(function(){
     audioSuccess.play();}
 });
     
-     
+   
 var audioSuccess = new Audio('/assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('/assets/audio/denied.mp3');
 var audioGameOver = new Audio('/assets/audio/game-over-sound.mp3');
-var cardChoice = 'Card-' + shuffledDeck[number];
+
 
 $('#cards-container div').click(function(){
-  if (cardProgress > 52 && selectedCard === cardChoice){
+  if (cardProgress > 52 ){
     if(this.classList.contains("card-is-flipped")){
         audioFail.play()
         alert('Already flipped!');
@@ -90,13 +90,13 @@ $('#cards-container div').click(function(){
 } else{audioFail.play();}
 });
 
-let number2 = 0;
+var number2 = 0; 
 
 
 var cardClicked = $('.cards').click(function(event){
   var selectedCard = (this.id);
   if (cardProgress > 52){
-    if (selectedCard === cardChoice){
+    if (selectedCard === 'Card-' + shuffledDeck[number2]){
       console.log("success!");
       number2 ++;
       return number2;
@@ -109,6 +109,7 @@ var cardClicked = $('.cards').click(function(event){
     alert('You must start the game and view all shuffled cards before playing!');
   }
 })
+
 
   
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
