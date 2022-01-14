@@ -36,6 +36,21 @@ html, body{
     border-radius: 20px;
 }
 
+#end-of-guess{
+    margin-left: 7%;
+    font-size: 1.7em;
+    color: #fafafa !important;
+    margin-top: 26%;
+    background-color: cadetblue;
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    margin-right: 6%;
+    display: none;
+}
+
+
+
 .modal {
     display: none;
     position: fixed; 
@@ -158,9 +173,6 @@ transform-origin: center right;
 transform-style: preserve-3d;
 transform-origin: center right;
 transition: transform 1s;
-
-
-
 
 }
 

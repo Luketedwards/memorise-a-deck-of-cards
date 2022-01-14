@@ -50,8 +50,6 @@ for (let i = 0; i < suits.length; i++) {
           }  
           
 });
-
-
   
 
 function cardsProgression(){
@@ -68,13 +66,18 @@ function cardsProgression(){
 $('#next').click(function(){
   if (cardProgress < 53){
     audioSuccess.play();}
+    if(cardProgress == 53){
+      $("#end-of-guess").css({ display : "inline" });
+      audioCompletedMemorising.play();
+    }
 });
     
    
 var audioSuccess = new Audio('/assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('/assets/audio/denied.mp3');
 var audioGameOver = new Audio('/assets/audio/game-over-sound.mp3');
-
+var audioCompletedMemorising = new Audio('/assets/audio/completed-cards.mp3');
+var audioGameWon = new Audio('/assets/audio/game-win.mp3');
 
 $('#cards-container div').click(function(){
   if (cardProgress > 52 ){
@@ -91,7 +94,7 @@ $('#cards-container div').click(function(){
 });
 
 var number2 = 0; 
-
+var score = 0;
 
 var cardClicked = $('.cards').click(function(event){
   var selectedCard = (this.id);
@@ -99,6 +102,7 @@ var cardClicked = $('.cards').click(function(event){
     if (selectedCard === 'Card-' + shuffledDeck[number2]){
       console.log("success!");
       number2 ++;
+      score ++; 
       return number2;
     } else {
       console.log('wrong card');
