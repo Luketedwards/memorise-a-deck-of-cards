@@ -74,13 +74,14 @@ $('#next').click(function(){
 var audioSuccess = new Audio('/assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('/assets/audio/denied.mp3');
 var audioGameOver = new Audio('/assets/audio/game-over-sound.mp3');
+var cardChoice = 'Card-' + shuffledDeck[number];
 
 $('#cards-container div').click(function(){
-  if (cardProgress > 52){
+  if (cardProgress > 52 && selectedCard === cardChoice){
     if(this.classList.contains("card-is-flipped")){
         audioFail.play()
         alert('Already flipped!');
-        }else{
+        }else {
     const selectedCard = (this.id);
     console.log(selectedCard);
     $(this).addClass('card-is-flipped' + " " + 'card-face--back');
@@ -91,10 +92,11 @@ $('#cards-container div').click(function(){
 
 let number2 = 0;
 
+
 var cardClicked = $('.cards').click(function(event){
   var selectedCard = (this.id);
   if (cardProgress > 52){
-    if (selectedCard === 'Card-' + shuffledDeck[number2]){
+    if (selectedCard === cardChoice){
       console.log("success!");
       number2 ++;
       return number2;
