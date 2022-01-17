@@ -108,12 +108,22 @@ var cardClicked = $('.cards').click(function(event){
       console.log('wrong card');
       audioGameOver.play();
       alert('Sorry you lose. Try again!');
+      window.location.href = "gameLost.HTML";
     } 
   }else{
     alert('You must start the game and view all shuffled cards before playing!');
   }
 })
 
+if (cardProgress > 52){
+  const finalTime = $('#time').innerHTML;
+  console.log(finalTime);
+}
+
+function loserMessage(event, finalTime){
+  let playerMessage = document.getElementById('gameOverScore');
+      playerMessage.innerHTML = `Sorry that was the wrong card! Your score was ${score} and it took you ${finalTime} seconds to memorise the deck.`;
+}
 
   
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
