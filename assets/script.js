@@ -103,12 +103,19 @@ var cardClicked = $('.cards').click(function(event){
       console.log("success!");
       number2 ++;
       score ++; 
+      document.getElementById('score-count').innerText = `${score}/52`;
       return number2;
+      localStorage.setItem('finalScore', score);
     } else {
+      var finalTime = $('#time').innerText;
       console.log('wrong card');
       audioGameOver.play();
-      alert('Sorry you lose. Try again!');
-      window.location.href = "gameLost.HTML";
+      Swal.fire({
+        icon: 'error',
+        title: 'Game Over!',
+        text: `Sorry that was the wrong card! You got ${score} out of 52 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
+        footer: '<a href="index.html">Play Again?</a>'
+      })
     } 
   }else{
     alert('You must start the game and view all shuffled cards before playing!');
@@ -116,13 +123,8 @@ var cardClicked = $('.cards').click(function(event){
 })
 
 if (cardProgress > 52){
-  const finalTime = $('#time').innerHTML;
+  var finalTime = $('#time').innerText;
   console.log(finalTime);
-}
-
-function loserMessage(event, finalTime){
-  let playerMessage = document.getElementById('gameOverScore');
-      playerMessage.innerHTML = `Sorry that was the wrong card! Your score was ${score} and it took you ${finalTime} seconds to memorise the deck.`;
 }
 
   

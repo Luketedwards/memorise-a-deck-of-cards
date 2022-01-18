@@ -19,6 +19,23 @@ html, body{
     font-size: 2.5em;
 }
 
+#score-progress{
+    background-color: black;
+    border: 3px solid #fafafa;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 2%;
+    padding: 7px;
+    top: -46px;
+}
+
+#score-progress h3{
+    display: inline;
+    color: #fafafa !important;
+    padding-right: 1%;
+    font-size: 1.3em;
+    position: relative;
+}
 
 #time{
     display: inline;
