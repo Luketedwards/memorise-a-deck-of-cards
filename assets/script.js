@@ -95,39 +95,55 @@ $('#cards-container div').click(function(){
 
 var number2 = 0; 
 var score = 0;
+var cardsLeft = 52;
 
 var cardClicked = $('.cards').click(function(event){
   var selectedCard = (this.id);
-  if (cardProgress > 52){
-    if (selectedCard === 'Card-' + shuffledDeck[number2]){
-      console.log("success!");
-      number2 ++;
-      score ++; 
-      document.getElementById('score-count').innerText = `${score}/52`;
-      return number2;
-      localStorage.setItem('finalScore', score);
-    } else {
-      var finalTime = $('#time').innerText;
-      console.log('wrong card');
-      audioGameOver.play();
+  if (cardProgress > 52 && cardsLeft > 1){
+      if (selectedCard === 'Card-' + shuffledDeck[number2]){
+        console.log("success!");
+        number2 ++;
+        score ++; 
+        cardsLeft --;
+        document.getElementById('score-count').innerText = `${score}/52`;
+        return number2;
+          
+      } else {
+        console.log('wrong card');
+        audioGameOver.play();
+        let remainingCards = shuffledDeck.slice(score);
+        Swal.fire({
+          icon: 'error',
+          title: 'Game Over!',
+          text: `Sorry that was the wrong card! You got ${score} out of 52 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
+          showCancelButton: true,
+          cancelButtonText: `View Correct Order`,
+          footer: '<a href="index.html">Play Again?</a>'
+        }).then((result) => {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isDismissed) {
+            Swal.fire({
+              icon: 'success',            
+              text: `The remaining cards were: ${remainingCards}`,
+              footer: '<a href="index.html">Play Again?</a>'
+            })
+          }
+        })
+        score = 0;
+        seconds = 0; 
+        cardProgress = 0;
+      } 
+    }
+    if (cardsLeft == 1){
+      audioGameWon.play();
       Swal.fire({
-        icon: 'error',
-        title: 'Game Over!',
-        text: `Sorry that was the wrong card! You got ${score} out of 52 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
+        icon: 'success',
+        title: 'You Win!',
+        text: `Congratulations! You successfully memorised all 52 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
         footer: '<a href="index.html">Play Again?</a>'
-      })
-    } 
-  }else{
-    alert('You must start the game and view all shuffled cards before playing!');
-  }
-})
+      })}
+    })
 
-if (cardProgress > 52){
-  var finalTime = $('#time').innerText;
-  console.log(finalTime);
-}
-
-  
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
 function correctCard(selectedCard){
   let j = 0;
@@ -136,7 +152,7 @@ function correctCard(selectedCard){
         j++;}
   }; 
 
-
+  
 let modalBtn = document.getElementById("start-button")
 let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
