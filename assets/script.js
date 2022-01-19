@@ -157,9 +157,12 @@ function correctCard(selectedCard){
 let modalBtn = document.getElementById("start-button")
 let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
+let startClickCount = 0;
 modalBtn.onclick = function(){
   modal.style.display = "block"
-  audioCardShuffle.play();
+  startClickCount ++;
+  if(startClickCount == 1){
+  audioCardShuffle.play();}
 }
 closeBtn.onclick = function(){
   modal.style.display = "none"
