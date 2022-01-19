@@ -1,5 +1,5 @@
 function generatePDF(){
-    const element = document.getElementById('invoice');
+    const element = document.getElementById('PAOGenerator');
 
     var opt = {
         margin: 1,
