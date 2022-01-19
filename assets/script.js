@@ -78,6 +78,7 @@ var audioFail = new Audio('/assets/audio/denied.mp3');
 var audioGameOver = new Audio('/assets/audio/game-over-sound.mp3');
 var audioCompletedMemorising = new Audio('/assets/audio/completed-cards.mp3');
 var audioGameWon = new Audio('/assets/audio/game-win.mp3');
+var audioCardShuffle = new Audio('/assets/audio/shuffling-cards.mp3');
 
 $('#cards-container div').click(function(){
   if (cardProgress > 52 ){
@@ -158,6 +159,7 @@ let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
 modalBtn.onclick = function(){
   modal.style.display = "block"
+  audioCardShuffle.play();
 }
 closeBtn.onclick = function(){
   modal.style.display = "none"
