@@ -163,25 +163,41 @@ html, body{
 }
 
 #start-button{
-    position: relative;
-    top: -4vw;
-    left: 80vw;
-    z-index: 1000;
+      /* position: relative; */
+      top: 0vw;
+      /* left: 82vw; */
+      z-index: 1000;
+      font-family: 'IBM Plex Serif', sans-serif;
+      font-size: 1.5vw;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 7rem;
+      
     
-    font-family: 'IBM Plex Serif', sans-serif;
-    font-size: 1.5vw;
-    font-weight: 700;
-    background-color: #fafafa;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    width: 10%;
-    height: 5%;
 }
 
 #start-button:hover{
     background-color: blanchedalmond;
     color: black;
+}
+
+#button-text{
+    color: #fafafa;
+    left: 87.2vw;
+    position: absolute;
+    z-index: 1001;
+    top: 3.1vw;
+    font-weight: 700;
+    font-size: 0.99em;
+}
+
+#image-text-div{
+    position:absolute;
+}
+
+#button-div{
+    position: relative;
+    left: 82vw;
 }
 .cards{
 cursor: pointer;
@@ -777,7 +793,34 @@ transform: rotateY(-180deg) translateX(-100%);
         }
 }
 
+@media only screen and (max-width: 800px){
+    #start-button{
+        width: 6rem;
+    }
+}
 
+@media only screen and (max-width: 600px){
+    #start-button{
+        width: 5rem;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #start-button{
+        width: 5rem;
+    }
+
+    #button-div{
+        left:77vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #start-button{
+        width: 4.5rem;
+    }
+
+}
 
 /*display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
