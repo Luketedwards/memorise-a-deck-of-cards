@@ -12,5 +12,83 @@
 }
 
 nav{
-    background-color: cornflowerblue;
+    background-color: #89B5AF;
 }
+
+.container-fluid{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+h1, h2, h3{
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#section-1{
+    background-color: #DED9C4;
+    padding: 0;
+    margin: 0;
+}
+#section-1 p{
+ 
+}
+#section-2{
+    background-color: #96C7C1;
+    padding: 0;
+    margin: 0;
+}
+
+#PDFButton{
+    margin-left: 50%;
+    width: 7%;
+    font-size: 1.2rem;
+    font-family: 'Source Sans Pro';
+    border-radius: 10px;
+    border: none;
+    background-color: #89B5AF;
+}
+
+#section-3{
+    background-color: #DED9C4;
+    padding: 0;
+    margin: 0;
+}
+
+#section-3 p, ul{
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  footer{
+    background-color: #89B5AF;
+    height: 50px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    color: #fafafa;
+  }

@@ -10,3 +10,4 @@ function generatePDF(){
 
     html2pdf().set(opt).from(element).save();
 }
+

@@ -11,13 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/memoryTips.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='/assets/memoryTips.js'></script>
+    <script src="https://kit.fontawesome.com/15075673e9.js" crossorigin="anonymous"></script>
 </head>
 <body>     
+ 
     <nav id="nav" class="navbar navbar-light">
-        <div class="container-fluid"> 
+      <div id='text-container' class="container-fluid"> 
             <a class="container-fluid navbar-brand"id="logo" href="index.html">Memorise a Deck of Cards!</a>
             <br>
             <div class="container-fluid col-12">
@@ -28,12 +33,17 @@
             </div>
         </div>       
         </nav>  
+        <div class="container-fluid">
+        <div id="section-1">  
         <h1>Memory Tips To Beat The Game!</h1>
-        <p>If you've come here after attempting to memorise the deck you would be forgiven for thinking this an impossible task. Without the proper technique this game is virtually unwinnable. The odds of correctly guessing a single card is 1/52, or a little over a 2% chance. The odds of then guessing the second card correctly are 1/52 x 1/51. Play this through for the full 52 card deck and your odds of getting every card correct are 1 / 52! which is equal to 1 / 80658175170943878571660636856403766975289505440883277824000000000000... Just for reference thats a 68 digit number! Your odds of winning this game by chance are infinitesimal.
+        <p>If you've come here after attempting to memorise the deck you would be forgiven for thinking this an impossible task. Without the proper technique this game is virtually unwinnable. The odds of correctly guessing a single card is 1/52, or a little over a 2% chance. The odds of then guessing the second card correctly are 1/52 x 1/51. Play this through for the full 52 card deck and your odds of getting every card correct are 1 / 52! which is equal to <strong>1 / 80658175170943878571660636856403766975289505440883277824000000000000...</strong> Just for reference thats a 68 digit number! Your odds of winning this game by chance are infinitesimal.
             How then do you possibly stand a chance at winning this game? How is it that memory champions are able to commit entire decks of cards to memory in just 13.96 seconds, and remember the order for months? How is it possible that everyday people can learn the sequence of Pi to 67,890 digits, when most of us can't remember a phone number? For this we have the ancient Greeks to thank! </p>
-        <h2>The Method of Loci</h2>
+        </div>    
+      <div id="section-2">
+        <button class="collapsible"><h2>The Method of Loci <i class="fas fa-brain"></i></h2></button>
+      <div class="content">
         <p>Attributed to the Greek poet Simonedes of the 5th century, the method of Loci or the 'memory palace' has become popular in modern fiction through novels such as Hannibal, and T.V series like Sherlock Holmes. The method is unbelievably potent compared to traditional rote memorisation, and with a little work upfront will allow you to perform almost unimaginable feats of the mind.</p>
-        <h3>How Does It Work?</h3>
+        <h3>How Does It Work?<i class="fas fa-question"></i></h3>
         <p>The basic premise behind the method of Loci is that our short term memory is near useless, and is on average only able to hold 7 numbers for a short ammount of time. Where humans short term memory falters, our spatial memory more than makes up for!
         </p>
         <h3>Imagine an Item in Your House...</h3>
@@ -42,8 +52,13 @@
         <p>Simple. Take whatever it is that you want to remember, and in your mind physically walk around a space that you are familiar with. The order of the route needs to be obvious so I would recommend deciding on a system before you begin, such as walking clockwise around a room before moving on to the next one. Once you've decided on your route, pick 5-10 locations on the journey that stand out to you. It could be a table, or your T.V, just make sure it's an obvious location and not just a random spot in the room. </p>
         <h3>Place Your Items!</h3>
         <p>Now you have your route, imagine yourself walking on this journey. At each location on the way you see a diferent item that you would like to remember (lets say a shopping list). At the first location you imagine eggs have been smashed all over it, creating a huge mess! At the second location someone has spilled gallons of milk, it's leaking through the floorboards. You complete this process for the entirety of your list, and when you want to recall this information you just retrace your steps in your mind and you will remember your items.</p>
-        <h2>The PAO System</h2>
         <p>You might be wondering how to apply this to a deck of cards. This is where the PAO or Person, Action, Object system come into play.</p>
+      </div>
+      </div>
+      <div id="section-3">
+        <button class="collapsible"><h2>The PAO System</h2></button>
+      <div class="content">
+        
         <h3>What is a PAO System?</h3>
         <p>A PAO system is a method of grouping cards of numbers in easilly memorable chunks. Each card in the 52 card deck is attributed a person, action and object. For example, the Ace of Hearts might be Albert Einstein, scribbling, on a blackboard. This process is then repeated for all 52 cards, with no person, actions or objects repeated so that each card can then be identified by any of its unique attribtues. Once your PAO list is complete, you simply memorise it using the Loci method described above.</p>
         <h3>How to Implement the PAO System</h3>
@@ -54,6 +69,11 @@
             <li>Try to keep each suit of cards to its own room, or rooms. Don't combine them into the same location as it will be harder to recall them later.</li>
             <li>Try to pick a theme for each suit. Hearts could be your loved ones and family memembers, Clubs could be musicians as they often perform in clubs! Diamonds could be rich people, and Spades could be superheroes.</li>
         </ul>
+      </div>  
+    </div>
+      </div>
+      <button class="collapsible"><h2>Create Your PAO!</h2></button>
+      <div class="content">
         <div class="table-responsive" id="PAOGenerator">
         <table class="table">
             <thead>
@@ -432,9 +452,27 @@
               </tr>
             </tbody>
           </table>
-          
+          <button id="PDFButton" onclick="generatePDF()">save</button>
         </div>
-        <button onclick="generatePDF()">save</button>
+      </div>
+      <footer>Copyright @Luke Edwards 2022</footer>
+        
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } 
+        });
+      }
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="/assets/script.js"></script>    
 </body>
