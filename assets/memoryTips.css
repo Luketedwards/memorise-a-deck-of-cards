@@ -97,3 +97,19 @@ p{
     font-size: 1.2rem;
     color: #fafafa;
   }
+
+  #brain-image{
+      float: right;
+    width: 40%;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+  #first-para-div{
+    width: 63%;
+    padding-left: 11px;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 4px;
+  }
