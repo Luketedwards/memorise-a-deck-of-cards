@@ -81,22 +81,22 @@ html, body{
     background-color: rgba(0, 0, 0, 0.5);
   }
   .modal-content {
-    position: relative; 
+    position: relative;
     background-color: white;
     background-position-y: -4px;
-    background-position-x: 2px;
+    background-position-x: 1px;
     border-radius: 31px;
-    padding: 20px; 
-    margin: auto; 
-    height: 60vw;
-    width: 50vw;  
+    padding: 20px;
+    margin: auto;
+    height: 62vw;
+    width: 45vw;
     background-image: url(/assets/images/ornate-playing-card-crop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
   }
   .close-btn {
     float: right; 
