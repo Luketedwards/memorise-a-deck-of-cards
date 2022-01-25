@@ -1,10 +1,13 @@
 #PAOGenerator{
-    background-color: cadetblue;
+    background-color: #f1f1f1;
     overflow: scroll;
+    
 }
 
 #PAOGenerator th{
-    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 #PAOGenerator input{
@@ -20,23 +23,51 @@ nav{
     margin: 0 !important;
 }
 
-h1, h2{
+h1, h2, h3{
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 0;
     margin: 0;
-    color: white;
+    
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.2rem;
+}
+
+h3{
+    font-size: 1.9rem;
 }
 
 #section-1{
-    background-color: #DED9C4;
+    background-color: #f1f1f1;
     padding: 0;
     margin: 0;
 }
 p{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
  
 }
+
+li{
+    font-size: 1.22rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
 #section-2{
     background-color: #96C7C1;
     padding: 0;
@@ -107,9 +138,21 @@ p{
   }
 
   #first-para-div{
-    width: 63%;
-    padding-left: 11px;
     margin: 0;
     padding-top: 20px;
     padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  button{
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-top: 1 !important;
+      border-bottom: 1 !important;
+
+  }
+
+  #pao-content{
+      padding: 0 !important;
   }
