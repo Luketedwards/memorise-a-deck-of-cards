@@ -32,8 +32,9 @@ h1, h2, h3{
 }
 
 h1{
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #4d4d4d;
 }
 
 h2{
@@ -155,4 +156,8 @@ li{
 
   #pao-content{
       padding: 0 !important;
+  }
+
+  #fractions{
+      text-align: center;
   }
