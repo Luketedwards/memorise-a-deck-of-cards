@@ -76,12 +76,14 @@ li{
 }
 
 #PDFButton{
+    height: 3.5vw;
     margin-left: 50%;
     width: 7%;
-    font-size: 1.2rem;
+    font-size: 2.5vw;
     font-family: 'Source Sans Pro';
     border-radius: 10px;
     border: none;
+    padding-bottom: 4%;
     background-color: #89B5AF;
 }
 
@@ -151,6 +153,7 @@ li{
       border-right: 0 !important;
       border-top: 1 !important;
       border-bottom: 1 !important;
+      
 
   }
 
@@ -160,4 +163,11 @@ li{
 
   #fractions{
       text-align: center;
+  }
+
+  #button-div{
+    position: relative;
+    bottom: -3px;
+    margin-bottom: 20px;
+    left: -23px;
   }
