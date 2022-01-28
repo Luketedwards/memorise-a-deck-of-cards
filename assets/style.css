@@ -61,6 +61,10 @@ html, body{
     #guess{
         width:19vw !important;
     }
+
+    #end-of-guess{
+        font-size: 2.3vw !important;
+    }
 }
 
 #card-progress{
