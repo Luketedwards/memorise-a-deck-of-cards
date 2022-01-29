@@ -918,7 +918,71 @@ transform: rotateY(-180deg) translateX(-100%);
 
 }
 
+@media screen and (max-width: 700px){
+    #card-progress {
+        display: inline;
+        color: #fafafa;
+        padding-right: 1%;
+        padding-left: 1%;
+        font-size: 4.8vw;
+        background-color: black;
+        border: 3px solid #fafafa;
+        border-radius: 5px;
+        position: relative;
+        left: -3%;
+    }
 
+    #time {
+        display: inline;
+        color: #fafafa;
+        padding-right: 1%;
+        padding-left: 1%;
+        font-size: 4.7vw;
+        background-color: black;
+        border: 3px solid #fafafa;
+        border-radius: 5px;
+        position: relative;
+        margin-right: 23%;
+    }
+
+    #modal-content {
+        height: 74vw;
+        width: 54vw;
+    }
+
+    #guess {
+        height: 48vw;
+        width: 31vw;
+        margin-left: 27%;
+        margin-top: 20%;
+        z-index: 1000;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: -6%;
+        top: -1%;
+    }
+
+    #next {
+        width: 14vw;
+        height: 8vw;
+        background-color: darkslateblue;
+        color: #fafafa;
+        margin-left: 40%;
+        position: absolute;
+        border-radius: 10px;
+        top: 79%;
+        z-index: 1005;
+        left: -3%;
+        font-size: 2.1vw;
+    }
+
+    #end-of-guess{
+        font-size: 3.6vw;
+    }
+
+}
 
 /*display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
