@@ -64,6 +64,10 @@ function cardsProgression(){
         }); 
         
 $('#next').click(function(){
+  if(cardProgress == 1){
+    let btn = document.getElementById('next');
+    btn.innerHTML = 'Next Card';
+  }
   if(cardProgress == 52){
     let btn = document.getElementById('next');
     btn.innerHTML = 'Finish Memorising!';

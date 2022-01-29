@@ -227,8 +227,13 @@ footer{
     font-style: italic;
     font-size: 5vw;
     text-align: center;
-    
+    padding-right: 0;
+    padding-left: 0;
     color: #fafafa !important;
+}
+
+#logo {
+    color: black;
 }
 
 #guess{
@@ -258,7 +263,7 @@ footer{
     color: #fafafa !important;
     text-decoration: none;
     margin-left: 0%;
-    padding-right: 10%;   
+    margin-right: 10%;   
 }
 
 .list a:hover{
