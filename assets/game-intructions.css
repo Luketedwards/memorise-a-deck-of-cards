@@ -19,6 +19,10 @@ h1, h2, h3{
     
 }
 
+a{
+    text-decoration: wavy;
+}
+
 h1{
     font-size: 2.6rem;
     font-weight: 600;

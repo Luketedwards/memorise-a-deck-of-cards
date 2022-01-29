@@ -172,3 +172,18 @@ li{
     left: -23px;
   }
 
+#brain{
+    mix-blend-mode: multiply;
+    width: 38vw;
+    float: right;
+    position: relative;
+    left: 0vw;
+    bottom: 0vw;
+}
+
+
+@media screen and (max-width: 850px){
+    #brain{
+        display: none;
+    }
+}
