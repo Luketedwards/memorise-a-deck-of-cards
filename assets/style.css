@@ -46,7 +46,7 @@ html, body{
 
     #next {
         width: 9vw !important;
-        height: 4vw !important;
+        height: 5vw !important;
         background-color: darkslateblue;
         color: #fafafa;
         margin-left: 40% !important;
@@ -861,23 +861,23 @@ transform: rotateY(-180deg) translateX(-100%);
 
 
 
-@media only screen and (min-width: 1300px){
+@media screen and (min-width: 1500px){
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-110%);
         
         }
         
         .card-face--back{
-            transform: rotateY(-180deg) translateX(110%);
+            transform: rotateY(-180deg) translateX(113%);
             transition: transform 0.5s;
             
             background-image: url(/assets/images/playing-card-rear.png)  !important;
         }
 }
 
-@media only screen and (max-width: 1200px){
+@media screen and (max-width: 1400px){
     .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-105%);
+        transform: rotateY(-180deg) translateX(-100%);
         
         }
         
@@ -890,6 +890,8 @@ transform: rotateY(-180deg) translateX(-100%);
 }
 
 @media only screen and (max-width: 800px){
+
+
     #start-button{
         width: 6rem;
     }

@@ -64,12 +64,21 @@ function cardsProgression(){
         }); 
         
 $('#next').click(function(){
+  if(cardProgress == 52){
+    let btn = document.getElementById('next');
+    btn.innerHTML = 'Finish Memorising!';
+  }
   if (cardProgress < 53){
     audioSuccess.play();}
-    if(cardProgress == 53){
+  if(cardProgress == 53){
+    let btn = document.getElementById('next');
+      btn.innerHTML = 'Start Guessing!';
       $("#end-of-guess").css({ display : "inline" });
       audioCompletedMemorising.play();
-    }
+  }
+  if (cardProgress >= 54){
+    modal.style.display = "none";
+  }
 });
     
    
