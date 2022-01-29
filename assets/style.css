@@ -6,6 +6,17 @@ html, body{
     overflow: scroll;
     box-sizing: border-box;
 }
+
+footer{
+    background-color: #89B5AF;
+    height: 50px;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    color: #fafafa;
+    background-color: Green;
+  }
+
 #tableContainer{
     background-color: Green;
     width: 100%;
@@ -328,9 +339,10 @@ transform: rotateY(-180deg) translateX(-100%);
     margin-top: 0;
     margin-left: 0;
     margin-right: 1vw;;
-    margin-bottom: 2vw;
+    margin-bottom: 0;
     padding-bottom: 200px;
     position: relative;
+    padding-bottom: 10px;
    
 }
 
