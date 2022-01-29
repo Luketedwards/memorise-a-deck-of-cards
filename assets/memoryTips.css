@@ -1,3 +1,6 @@
+body{
+    background-color: #f7f7f8
+}
 #PAOGenerator{
     background-color: #f1f1f1;
     overflow: scroll;
@@ -93,16 +96,13 @@ li{
     margin: 0;
 }
 
-#section-3 p, ul{
-}
-
 .collapsible {
     background-color: #777;
     color: white;
     cursor: pointer;
     padding: 0;
     width: 100%;
-    border: solid;
+    border: solid #f7f7f8;
     text-align: left;
     outline: white;
     font-size: 15px;
@@ -118,7 +118,7 @@ li{
     padding-left: 3px;
     padding-right: 3px;
     max-height: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition: max-height 0.8s ease-out;
     background-color: #f1f1f1;
   }
@@ -171,3 +171,4 @@ li{
     margin-bottom: 20px;
     left: -23px;
   }
+

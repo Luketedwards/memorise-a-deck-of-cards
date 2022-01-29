@@ -876,7 +876,27 @@ transform: rotateY(-180deg) translateX(-100%);
     }
 }
 
+@media screen and (max-width: 800px){
+    #logo{
+        font-size: 7vw;
+    }
 
+    .list{
+        font-size: 3vw;
+        margin-left:25vw;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #logo{
+        font-size: 8vw;
+    }
+
+    .list{
+        font-size: 3.2vw;
+        margin-left:21vw;
+    }
+}
 
 @media screen and (min-width: 1500px){
     .card-is-flipped {
