@@ -172,7 +172,12 @@ var cardClicked = $('.cards').click(function(event){
       title: '<strong>Previous Scores</strong>',
       icon: 'info',
       html:
-        `Your previous score was ${highScore}/52 cards and your time was ${highTime}s.`, 
+        `Your previous scores were 
+        <ol> 
+        <li>${highScore[0]}/52 cards and your time was ${highTime[0]}s</li>
+        <li>${highScore[1]}/52 cards and your time was ${highTime[1]}s</li>
+        <li>${highScore[2]}/52 cards and your time was ${highTime[2]}s</li>
+        </ol>`,
       showCloseButton: true,
       showCancelButton: true,
       focusConfirm: false,
