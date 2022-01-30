@@ -143,8 +143,9 @@ var cardClicked = $('.cards').click(function(event){
             })
           }
         })
-        score = 0;
-        seconds = 0; 
+      commitScore(score, seconds);
+        score =0;
+        seconds = 0;
         cardProgress = 0;
       } 
     }
@@ -157,15 +158,21 @@ var cardClicked = $('.cards').click(function(event){
         footer: '<a href="index.html">Play Again?</a>'
       })}
     })
+  
+    function commitScore(score, time){
+      localStorage.setItem("previousScore", score);
+      localStorage.setItem("previousTime", parseInt(seconds));
+    }
+  var highScore = localStorage.getItem("previousScore");
+  var highTime = localStorage.getItem("previousTime");
 
-    function scoreList(event){
-    Swal.fire({
-      title: '<strong>HTML <u>example</u></strong>',
+  document.getElementById('score-button').addEventListener('click', scoreList);
+    function scoreList(){
+    Swal.fire ({
+      title: '<strong>Previous Scores</strong>',
       icon: 'info',
       html:
-        'You can use <b>bold text</b>, ' +
-        '<a href="//sweetalert2.github.io">links</a> ' +
-        'and other HTML tags',
+        `Your previous score was ${highScore}/52 cards and your time was ${highTime}s.`, 
       showCloseButton: true,
       showCancelButton: true,
       focusConfirm: false,
@@ -175,8 +182,26 @@ var cardClicked = $('.cards').click(function(event){
       cancelButtonText:
         '<i class="fa fa-thumbs-down"></i>',
       cancelButtonAriaLabel: 'Thumbs down'
-    })
-  }
+    })}
+    /* else {
+      Swal.fire({
+      title: '<strong>Previous Scores</strong>',
+      icon: 'info',
+      html:
+        `You have no previous scores. Play a game to log a score.`, 
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Great!',
+      confirmButtonAriaLabel: 'Thumbs up, great!',
+      cancelButtonText:
+        '<i class="fa fa-thumbs-down"></i>',
+      cancelButtonAriaLabel: 'Thumbs down'
+  }) */
+    
+
+
 /*$('#guess').css('background-image', `url(/assets/images/${shuffledDeck[i]}.png`);*/
 function correctCard(selectedCard){
   let j = 0;

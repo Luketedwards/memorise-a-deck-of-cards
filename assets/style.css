@@ -319,14 +319,9 @@ footer{
 
 #button-div{
     position: relative;
-    left: 82vw;
+    left: 66vw;
 }
 
-#button-div2{
-    position: relative;
-    left: 73vw;
-    top: -8.5vw;
-}
 .cards{
 cursor: pointer;
 transform-style: preserve-3d;
@@ -948,10 +943,16 @@ transform: rotateY(-180deg) translateX(-100%);
     #start-button{
         width: 6rem;
     }
+    #score-button{
+        width: 6rem;
+    }
 }
 
 @media only screen and (max-width: 600px){
     #start-button{
+        width: 5rem;
+    }
+    #score-button{
         width: 5rem;
     }
 }
@@ -962,7 +963,7 @@ transform: rotateY(-180deg) translateX(-100%);
     }
 
     #button-div{
-        left:77vw;
+        left:55vw;
     }
 }
 
@@ -970,6 +971,10 @@ transform: rotateY(-180deg) translateX(-100%);
     #start-button{
         width: 4.5rem;
     }
+    #score-button{
+        width: 4.5rem;
+    }
+
 
 }
 
