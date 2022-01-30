@@ -288,6 +288,16 @@ footer{
     
 }
 
+#score-button{
+    z-index: 1000;
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 7rem;
+    bottom: 6.4vw !important;
+}
+
 #start-button:hover{
     background-color: blanchedalmond;
     color: black;
@@ -310,6 +320,12 @@ footer{
 #button-div{
     position: relative;
     left: 82vw;
+}
+
+#button-div2{
+    position: relative;
+    left: 73vw;
+    top: -8.5vw;
 }
 .cards{
 cursor: pointer;
