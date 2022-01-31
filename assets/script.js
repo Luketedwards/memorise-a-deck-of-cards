@@ -147,9 +147,10 @@ var cardClicked = $('.cards').click(function(event){
         })
       gameScores.unshift(score);
       gameTimes.unshift(seconds);
-      localStorage.setItem("previousScores", JSON.stringify(gameScores));
-      localStorage.setItem("previousTime", JSON.stringify(gameTimes));
-      commitScore();
+      localStorage.setItem("previousScores", JSON.stringify(score));
+      localStorage.setItem("previousTime", JSON.stringify(seconds));
+      pushScores();
+      
         score =0;
         seconds = 0;
         cardProgress = 0;
@@ -167,27 +168,15 @@ var cardClicked = $('.cards').click(function(event){
   var accumulatedScores =  [];
    var accumulatedTimes = [];  
 
-      
-      var pushScore = JSON.parse(localStorage.getItem("previousScores"));
-      var pushTime = JSON.parse(localStorage.getItem("previousTimes"));
-      gameScores.concat(pushScore);
-      gameTimes.concat(pushTime);
-      localStorage.setItem('gameScores', JSON.stringify(gameScores));
-      localStorage.setItem('gameTimes', JSON.stringify(gameTimes));
-      
-      var gameScores2 = [];
-      var gameTimes2 = [];
-      let updateScore = JSON.parse(localStorage.getItem('gameScores'));
-      let updateTime = JSON.parse(localStorage.getItem('gameTimes'));
-      gameScores2.push(updateScore);
-      gameTimes2.push(updateTime);
-
-    function commitScore(gameScores, gameTimes){
-      
-    }
-   
+      function pushScores(){
+      localStorage.setItem('previousScores', localStorage.getItem('previousScores') + JSON.stringify(gameScores) );  
+      localStorage.setItem('previousTimes', localStorage.getItem('previousTimes') + JSON.stringify(gameTimes) );  
+      accumulatedScores.push(JSON.parse(localStorage.getItem('previousScores')));
+      accumulatedTimes.push(JSON.parse(localStorage.getItem('previousTime')));
+      }
 
   document.getElementById('score-button').addEventListener('click', scoreList);
+  
     function scoreList(){
       
     Swal.fire ({
@@ -196,9 +185,9 @@ var cardClicked = $('.cards').click(function(event){
       html:
         `Your previous scores were 
         <ol> 
-        <li>${gameScores2[0]}/52 cards and your time was ${gameTimes2[0]}s</li>
-        <li>${gameScores2[1]}/52 cards and your time was ${gameTimes2[1]}s</li>
-        <li>${gameScores2[2]}/52 cards and your time was ${gameTimes2[2]}s</li>
+        <li>${accumulatedScores[0]}/52 cards and your time was ${accumulatedTimes[0]}s</li>
+        <li>${accumulatedScores[1]}/52 cards and your time was ${accumulatedTimes[1]}s</li>
+        <li>${accumulatedScores[2]}/52 cards and your time was ${accumulatedTimes[2]}s</li>
         </ol>`,
       showCloseButton: true,
       showCancelButton: true,
