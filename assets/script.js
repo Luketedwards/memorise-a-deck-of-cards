@@ -2,6 +2,8 @@
 const suits = ['H', 'S', 'D', 'C'];
 const value = ['A', '2', '3', '4', '5', '6','7', '8', '9', '10', 'J', 'Q', 'K'];
 const Word = 'Card-';
+var gameScores = [];
+var gameTimes = [];
 
 let deck = [];
 let shuffledDeck = [];
@@ -143,7 +145,11 @@ var cardClicked = $('.cards').click(function(event){
             })
           }
         })
-      commitScore(score, seconds);
+      gameScores.unshift(score);
+      gameTimes.unshift(seconds);
+      localStorage.setItem("previousScores", JSON.stringify(gameScores));
+      localStorage.setItem("previousTime", JSON.stringify(gameTimes));
+      commitScore();
         score =0;
         seconds = 0;
         cardProgress = 0;
@@ -158,25 +164,41 @@ var cardClicked = $('.cards').click(function(event){
         footer: '<a href="index.html">Play Again?</a>'
       })}
     })
-  
-    function commitScore(score, time){
-      localStorage.setItem("previousScore", score);
-      localStorage.setItem("previousTime", parseInt(seconds));
+  var accumulatedScores =  [];
+   var accumulatedTimes = [];  
+
+      
+      var pushScore = JSON.parse(localStorage.getItem("previousScores"));
+      var pushTime = JSON.parse(localStorage.getItem("previousTimes"));
+      gameScores.concat(pushScore);
+      gameTimes.concat(pushTime);
+      localStorage.setItem('gameScores', JSON.stringify(gameScores));
+      localStorage.setItem('gameTimes', JSON.stringify(gameTimes));
+      
+      var gameScores2 = [];
+      var gameTimes2 = [];
+      let updateScore = JSON.parse(localStorage.getItem('gameScores'));
+      let updateTime = JSON.parse(localStorage.getItem('gameTimes'));
+      gameScores2.push(updateScore);
+      gameTimes2.push(updateTime);
+
+    function commitScore(gameScores, gameTimes){
+      
     }
-  var highScore = localStorage.getItem("previousScore");
-  var highTime = localStorage.getItem("previousTime");
+   
 
   document.getElementById('score-button').addEventListener('click', scoreList);
     function scoreList(){
+      
     Swal.fire ({
       title: '<strong>Previous Scores</strong>',
       icon: 'info',
       html:
         `Your previous scores were 
         <ol> 
-        <li>${highScore[0]}/52 cards and your time was ${highTime[0]}s</li>
-        <li>${highScore[1]}/52 cards and your time was ${highTime[1]}s</li>
-        <li>${highScore[2]}/52 cards and your time was ${highTime[2]}s</li>
+        <li>${gameScores2[0]}/52 cards and your time was ${gameTimes2[0]}s</li>
+        <li>${gameScores2[1]}/52 cards and your time was ${gameTimes2[1]}s</li>
+        <li>${gameScores2[2]}/52 cards and your time was ${gameTimes2[2]}s</li>
         </ol>`,
       showCloseButton: true,
       showCancelButton: true,
