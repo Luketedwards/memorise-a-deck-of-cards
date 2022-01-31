@@ -2,6 +2,31 @@
 const suits = ['H', 'S', 'D', 'C'];
 const value = ['A', '2', '3', '4', '5', '6','7', '8', '9', '10', 'J', 'Q', 'K'];
 const Word = 'Card-';
+const localStorageScores = localStorage.getItem('previousScores');
+const localStorageTimes = localStorage.getItem('previousTimes');
+function updateScores(){
+  let previousScores;
+  if(localStorageScores === null){
+    previousScores2 = [];
+  } else{
+    previousScores = JSON.parse(localStorageScores)
+  }
+  
+  previousScores.push(gameScores);
+
+  localStorage.setItem('previousScores', JSON.stringify(previousScores));}
+
+function updateTimes(){
+  let previousTimes;
+  if(localStorageTimes === null){
+    previousTimes2 = [];
+  } else{
+    previousTimes = JSON.parse(localStorageTimes)
+  }
+  
+  previousTimes.push(gameTimes);
+
+  localStorage.setItem('previousScores', JSON.stringify(previousScores));}
 var gameScores = [];
 var gameTimes = [];
 
@@ -147,8 +172,8 @@ var cardClicked = $('.cards').click(function(event){
         })
       gameScores.unshift(score);
       gameTimes.unshift(seconds);
-      localStorage.setItem("previousScores", JSON.stringify(score));
-      localStorage.setItem("previousTime", JSON.stringify(seconds));
+      updateScores();
+      updateTimes();
       pushScores();
       
         score =0;
@@ -165,29 +190,19 @@ var cardClicked = $('.cards').click(function(event){
         footer: '<a href="index.html">Play Again?</a>'
       })}
     })
-  var accumulatedScores =  [];
-   var accumulatedTimes = [];  
 
-      function pushScores(){
-      localStorage.setItem('previousScores', localStorage.getItem('previousScores') + JSON.stringify(gameScores) );  
-      localStorage.setItem('previousTimes', localStorage.getItem('previousTimes') + JSON.stringify(gameTimes) );  
-      accumulatedScores.push(JSON.parse(localStorage.getItem('previousScores')));
-      accumulatedTimes.push(JSON.parse(localStorage.getItem('previousTime')));
-      }
+document.getElementById('score-button').addEventListener('click', scoreList);
 
-  document.getElementById('score-button').addEventListener('click', scoreList);
-  
-    function scoreList(){
-      
+    function scoreList(previousScores2, previousTimes2){ 
     Swal.fire ({
       title: '<strong>Previous Scores</strong>',
       icon: 'info',
       html:
         `Your previous scores were 
         <ol> 
-        <li>${accumulatedScores[0]}/52 cards and your time was ${accumulatedTimes[0]}s</li>
-        <li>${accumulatedScores[1]}/52 cards and your time was ${accumulatedTimes[1]}s</li>
-        <li>${accumulatedScores[2]}/52 cards and your time was ${accumulatedTimes[2]}s</li>
+        <li>${previousScores2}/52 cards and your time was ${previousTimes2}s</li>
+        <li>${previousScores2}/52 cards and your time was ${previousTimes2}s</li>
+        <li>${previousScores2}/52 cards and your time was ${previousTimes2}s</li>
         </ol>`,
       showCloseButton: true,
       showCancelButton: true,
