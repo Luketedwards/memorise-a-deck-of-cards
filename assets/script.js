@@ -2,31 +2,8 @@
 const suits = ['H', 'S', 'D', 'C'];
 const value = ['A', '2', '3', '4', '5', '6','7', '8', '9', '10', 'J', 'Q', 'K'];
 const Word = 'Card-';
-const localStorageScores = localStorage.getItem('previousScores');
-const localStorageTimes = localStorage.getItem('previousTimes');
-function updateScores(){
-  let previousScores;
-  if(localStorageScores === null){
-    previousScores2 = [];
-  } else{
-    previousScores = JSON.parse(localStorageScores)
-  }
-  
-  previousScores.push(gameScores);
 
-  localStorage.setItem('previousScores', JSON.stringify(previousScores));}
 
-function updateTimes(){
-  let previousTimes;
-  if(localStorageTimes === null){
-    previousTimes2 = [];
-  } else{
-    previousTimes = JSON.parse(localStorageTimes)
-  }
-  
-  previousTimes.push(gameTimes);
-
-  localStorage.setItem('previousScores', JSON.stringify(previousScores));}
 var gameScores = [];
 var gameTimes = [];
 
@@ -169,13 +146,12 @@ var cardClicked = $('.cards').click(function(event){
               footer: '<a href="index.html">Play Again?</a>'
             })
           }
-        })
-      gameScores.unshift(score);
-      gameTimes.unshift(seconds);
-      updateScores();
-      updateTimes();
-      pushScores();
       
+        })
+      gameScores.push(score);
+      gameTimes.push(seconds);
+      localStorage.setItem('previousScore3', JSON.stringify(gameScores));
+      localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
         score =0;
         seconds = 0;
         cardProgress = 0;
@@ -193,26 +169,26 @@ var cardClicked = $('.cards').click(function(event){
 
 document.getElementById('score-button').addEventListener('click', scoreList);
 
-    function scoreList(previousScores2, previousTimes2){ 
+var previousScore3 = JSON.parse(localStorage.getItem('previousScore3'));
+var previousTime3 = JSON.parse(localStorage.getItem('previousTime3'));
+
+    function scoreList(){ 
+
     Swal.fire ({
-      title: '<strong>Previous Scores</strong>',
+      title: '<strong>Previous Score</strong>',
       icon: 'info',
       html:
-        `Your previous scores were 
+        `Your previous score last round was 
         <ol> 
-        <li>${previousScores2}/52 cards and your time was ${previousTimes2}s</li>
-        <li>${previousScores2}/52 cards and your time was ${previousTimes2}s</li>
-        <li>${previousScores2}/52 cards and your time was ${previousTimes2}s</li>
+        <li>${previousScore3}/52 cards and your time was ${previousTime3}s</li>
         </ol>`,
       showCloseButton: true,
-      showCancelButton: true,
+      showCancelButton: false,
       focusConfirm: false,
       confirmButtonText:
         '<i class="fa fa-thumbs-up"></i> Great!',
       confirmButtonAriaLabel: 'Thumbs up, great!',
-      cancelButtonText:
-        '<i class="fa fa-thumbs-down"></i>',
-      cancelButtonAriaLabel: 'Thumbs down'
+      
     })}
     /* else {
       Swal.fire({
