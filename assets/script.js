@@ -83,9 +83,13 @@ $('#next').click(function(){
       btn.innerHTML = 'Start Guessing!';
       $("#end-of-guess").css({ display : "inline" });
       audioCompletedMemorising.play();
+      
   }
-  if (cardProgress >= 54){
+  if (cardProgress == 54){
     modal.style.display = "none";
+    audioSuccess.play();
+    $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
+    $('#score-progress').removeClass('hidden');
   }
 });
     
@@ -98,7 +102,7 @@ var audioGameWon = new Audio('/assets/audio/game-win.mp3');
 var audioCardShuffle = new Audio('/assets/audio/shuffling-cards.mp3');
 
 $('#cards-container div').click(function(){
-  if (cardProgress > 52 ){
+  if (cardProgress >= 54 ){
     if(this.classList.contains("card-is-flipped")){
         audioFail.play()
         alert('Already flipped!');
@@ -117,7 +121,7 @@ var cardsLeft = 52;
 
 var cardClicked = $('.cards').click(function(event){
   var selectedCard = (this.id);
-  if (cardProgress > 52 && cardsLeft > 1){
+  if (cardProgress >= 54 && cardsLeft > 1){
       if (selectedCard === 'Card-' + shuffledDeck[number2]){
         console.log("success!");
         number2 ++;
@@ -135,15 +139,15 @@ var cardClicked = $('.cards').click(function(event){
           title: 'Game Over!',
           text: `Sorry that was the wrong card! You got ${score} out of 52 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
           showCancelButton: true,
-          cancelButtonText: `View Correct Order`,
-          footer: '<a href="index.html">Play Again?</a>'
+          cancelButtonText: `View Correct Order`
+          
         }).then((result) => {
           /* Read more about isConfirmed, isDenied below */
           if (result.isDismissed) {
             Swal.fire({
               icon: 'success',            
-              text: `The remaining cards were: ${remainingCards}`,
-              footer: '<a href="index.html">Play Again?</a>'
+              text: `The remaining cards were: ${remainingCards}`
+              
             })
             .then(() => {
             window.location.href = 'index.html';
@@ -247,6 +251,7 @@ modalBtn.onclick = function(){
   startClickCount ++;
   if(startClickCount == 1){
   audioCardShuffle.play();}
+  $('#cards-container').addClass('green');
 }
 closeBtn.onclick = function(){
   modal.style.display = "none"

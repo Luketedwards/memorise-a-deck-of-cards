@@ -6,6 +6,9 @@ html, body{
     overflow: scroll;
     box-sizing: border-box;
 }
+nav{
+    background-color: #89B5AF;
+}
 
 footer{
     background-color: #89B5AF;
@@ -14,11 +17,10 @@ footer{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
-    background-color: Green;
   }
 
 #tableContainer{
-    background-color: Green;
+    background-color: #89a5b5;
     width: 100%;
     height: fit-content;
 }
@@ -99,6 +101,14 @@ footer{
     margin-left: 2%;
     padding: 7px;
     top: -46px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.green{
+    background-image; url('assets/images/poker-table-fabric-min') !important;
 }
 
 #score-progress h3{
@@ -321,6 +331,7 @@ footer{
 #button-div{
     position: relative;
     left: 66vw;
+    margin-top: 15px;
 }
 
 .cards{
@@ -338,12 +349,23 @@ transform: rotateY(-180deg) translateX(-100%);
 
 }
 
+.card-is-flipped-start {
+    transform: rotateY(-180deg) translateX(100%);
+    
+    }
 .card-face--back{
     transform: rotateY(-180deg) translateX(100%);
     transition: transform 0.5s;
     
     background-image: url(/assets/images/playing-card-rear.png)  !important;
 }
+.card-face--back-start{
+    transform: rotateY(180deg) translateX(100%);
+    transition: transform 0.5s;
+    
+    background-image: url(/assets/images/playing-card-rear.png)  !important;
+}
+
 
 .card.visible .card-back {
     transform: rotateY(-180deg);
