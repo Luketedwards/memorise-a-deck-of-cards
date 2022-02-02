@@ -249,14 +249,13 @@ let startClickCount = 0;
 modalBtn.onclick = function(){
     modal.style.display = "block"
     startClickCount ++;
-  if(startClickCount == 1){setTimeout(function(){
-  $('#tableContainer').css('background-color', '#89b5af');
-  $('#game-area').addClass('game-area');
-  $('#button-div').css('padding-top', '10px');  
-  $('nav, #tableContainer, footer').addClass('wood');
-  
+  if(startClickCount == 1){
     audioCardShuffle.play();
- }, 750);}
+  setTimeout(function(){  
+  $('#tableContainer').css('background-color', '#89b5af');
+  $('#game-area').addClass('game-area'); 
+  $('nav, #tableContainer, footer').addClass('wood');
+ },700 );}
  
 }
 closeBtn.onclick = function(){

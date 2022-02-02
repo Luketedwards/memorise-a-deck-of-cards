@@ -183,7 +183,7 @@ footer{
     height: 100%; 
     z-index: 1000;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.95);
   }
 
   #modal-content{
@@ -330,6 +330,7 @@ footer{
     position: relative;
     left: 66vw;
     margin-top: 15px;
+    padding-top: 10px;
 }
 
 .cards{
@@ -954,7 +955,7 @@ transform: rotateY(-180deg) translateX(-100%);
         }
         
         .card-face--back{
-            transform: rotateY(-180deg) translateX(113%);
+            transform: rotateY(-180deg) translateX(110%);
             transition: transform 0.5s;
             
             background-image: url(/assets/images/playing-card-rear.png)  !important;
