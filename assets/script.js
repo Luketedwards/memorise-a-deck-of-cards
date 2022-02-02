@@ -247,13 +247,14 @@ let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
 let startClickCount = 0;
 modalBtn.onclick = function(){
-  modal.style.display = "block"
-  startClickCount ++;
-  if(startClickCount == 1){
+    modal.style.display = "block"
+    startClickCount ++;
+  if(startClickCount == 1){setTimeout(function(){
   $('#tableContainer').css('background-color', '#89b5af');
-  $('.game-area').css('background', '');
+  $('#game-area').addClass('game-area');
   $('#button-div').css('padding-top', '10px');  
-  setTimeout(function(){
+  $('nav, #tableContainer, footer').addClass('wood');
+  
     audioCardShuffle.play();
  }, 750);}
  
