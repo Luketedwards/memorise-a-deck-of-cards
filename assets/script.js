@@ -145,6 +145,11 @@ var cardClicked = $('.cards').click(function(event){
               text: `The remaining cards were: ${remainingCards}`,
               footer: '<a href="index.html">Play Again?</a>'
             })
+            .then(() => {
+            window.location.href = 'index.html';
+          });
+          } else{
+            window.location.href = 'index.html';
           }
       
         })
@@ -173,6 +178,21 @@ var previousScore3 = JSON.parse(localStorage.getItem('previousScore3'));
 var previousTime3 = JSON.parse(localStorage.getItem('previousTime3'));
 
     function scoreList(){ 
+    if(previousScore3 == null){
+      Swal.fire ({
+      title: '<strong>Previous Score</strong>',
+      icon: 'info',
+      html:
+        "You have no previous score! Play a game to record a previous score and time.",
+      showCloseButton: true,
+      showCancelButton: false,
+      focusConfirm: false,
+      confirmButtonText:
+        '<i class="fa fa-thumbs-up"></i> Great!',
+      confirmButtonAriaLabel: 'Thumbs up, great!',
+      
+    })
+    }  else{
 
     Swal.fire ({
       title: '<strong>Previous Score</strong>',
@@ -189,7 +209,7 @@ var previousTime3 = JSON.parse(localStorage.getItem('previousTime3'));
         '<i class="fa fa-thumbs-up"></i> Great!',
       confirmButtonAriaLabel: 'Thumbs up, great!',
       
-    })}
+    })}}
     /* else {
       Swal.fire({
       title: '<strong>Previous Scores</strong>',

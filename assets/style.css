@@ -296,6 +296,7 @@ footer{
     border-radius: 50%;
     width: 7rem;
     bottom: 6.4vw !important;
+    margin-right: 1vw;
 }
 
 #start-button:hover{
@@ -823,6 +824,12 @@ transform: rotateY(-180deg) translateX(-100%);
     background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 1000px){
+    #button-div{
+        left: 45vw;
+     }
+}
+
 @media screen and (max-width: 1000px){
     html, body{
         width: 100%;
@@ -856,7 +863,7 @@ transform: rotateY(-180deg) translateX(-100%);
         color: #fafafa !important;
     }
 
-   
+    
 
     #hearts{
         display: flex;
