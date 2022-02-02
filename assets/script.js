@@ -250,8 +250,13 @@ modalBtn.onclick = function(){
   modal.style.display = "block"
   startClickCount ++;
   if(startClickCount == 1){
-  audioCardShuffle.play();}
-  $('#cards-container').addClass('green');
+  $('#tableContainer').css('background-color', '#89b5af');
+  $('.game-area').css('background', '');
+  $('#button-div').css('padding-top', '10px');  
+  setTimeout(function(){
+    audioCardShuffle.play();
+ }, 750);}
+ 
 }
 closeBtn.onclick = function(){
   modal.style.display = "none"

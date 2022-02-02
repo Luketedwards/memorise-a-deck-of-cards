@@ -17,6 +17,7 @@ footer{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
+    padding-top: 10px;
   }
 
 #tableContainer{
@@ -105,10 +106,6 @@ footer{
 
 .hidden{
     visibility: hidden;
-}
-
-.green{
-    background-image; url('assets/images/poker-table-fabric-min') !important;
 }
 
 #score-progress h3{
@@ -371,6 +368,14 @@ transform: rotateY(-180deg) translateX(-100%);
     transform: rotateY(-180deg);
   }
 /* Card Images For Home Page */
+
+.game-area{
+    
+    background-image: url('/assets/images/poker-table-fabric-min-min.jpeg');
+    background-size: contain;
+    background: transparent;
+    
+}
 
 #cards-container{
     width: 100vw;
