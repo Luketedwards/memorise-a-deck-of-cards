@@ -283,7 +283,8 @@ footer{
     color: #fafafa !important;
     text-decoration: none;
     margin-left: 0%;
-    margin-right: 10%;   
+    margin-right: 10%;  
+    font-family: 'Alegreya', serif;
 }
 
 .list a:hover{
