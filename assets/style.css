@@ -11,6 +11,18 @@ nav{
     background-color: #89B5AF;
 }
 
+#suits-images-1{
+    width: 11vw;
+    position: absolute;
+    left: 4vw;
+}
+
+#suits-images-2{
+    width: 10vw;
+    position: absolute;
+    left: 87vw;
+}
+
 footer{
     background-color: #89B5AF;
     height: 50px;
@@ -372,7 +384,7 @@ transform: rotateY(-180deg) translateX(-100%);
 /* Card Images For Home Page */
 
 .game-area{
-    background-image: url('/assets/images/poker-table-fabric-min-min.jpeg');
+    background-image: url('/assets/images/poker-table-fabric-min-min-compressed.jpg');
     background-size: contain;
 }
 

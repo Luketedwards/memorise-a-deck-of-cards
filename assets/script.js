@@ -255,6 +255,7 @@ modalBtn.onclick = function(){
   $('#tableContainer').css('background-color', '#89b5af');
   $('#game-area').addClass('game-area'); 
   $('nav, #tableContainer, footer').addClass('wood');
+  $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
  },700 );}
  
 }
