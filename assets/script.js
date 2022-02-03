@@ -130,7 +130,7 @@ var cardClicked = $('.cards').click(function(event){
         document.getElementById('score-count').innerText = `${score}/52`;
         return number2;
           
-      } else {
+      } if(selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
         console.log('wrong card');
         audioGameOver.play();
         let remainingCards = shuffledDeck.slice(score);
@@ -142,7 +142,7 @@ var cardClicked = $('.cards').click(function(event){
           cancelButtonText: `View Correct Order`
           
         }).then((result) => {
-          /* Read more about isConfirmed, isDenied below */
+         
           if (result.isDismissed) {
             Swal.fire({
               icon: 'success',            
@@ -165,15 +165,30 @@ var cardClicked = $('.cards').click(function(event){
         seconds = 0;
         cardProgress = 0;
       } 
+      if($(selectedCard).hasClass('card-is-flipped')){
+        audioFail.play()
+        alert('Already flipped!');
+      }
     }
     if (cardsLeft == 1){
+      score = 52;
+      gameScores.push(score);
+      gameTimes.push(seconds);
+      localStorage.setItem('previousScore3', JSON.stringify(gameScores));
+      localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
+      document.getElementById('score-count').innerText = `52/52`;
       audioGameWon.play();
       Swal.fire({
         icon: 'success',
         title: 'You Win!',
         text: `Congratulations! You successfully memorised all 52 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
         footer: '<a href="index.html">Play Again?</a>'
-      })}
+
+      })
+      .then(() => {
+        window.location.href = 'index.html';
+      });
+      } 
     })
 
 document.getElementById('score-button').addEventListener('click', scoreList);

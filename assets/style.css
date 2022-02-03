@@ -388,6 +388,10 @@ transform: rotateY(-180deg) translateX(-100%);
     background-size: contain;
 }
 
+#game-area{
+    padding-bottom: 30px;
+}
+
 .wood{
     background-image: url('/assets/images/dark-wood-min.jpg')!important;
     background-size: contain;
