@@ -8,7 +8,7 @@ body{
 }
 
 #PAOGenerator th{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Alegreya', serif;
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -28,24 +28,28 @@ nav{
 
 h1, h2, h3{
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Alegreya', serif;
     padding: 0;
     margin: 0;
     
 }
 
 h1{
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     font-weight: 600;
     color: #4d4d4d;
+    padding-top: 15px;
 }
 
 h2{
-    font-size: 2.2rem;
+    font-size: 3rem;
 }
 
 h3{
-    font-size: 1.9rem;
+    font-size: 2.8rem;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #4d4d4d;
 }
 
 #section-1{
@@ -54,21 +58,27 @@ h3{
     margin: 0;
 }
 p{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Alegreya', serif;
     font-weight: 300;
  
 }
 
+#number-stat{
+    font-weight: 600;
+    font-size: 1.6rem;
+    overflow-wrap: break-word;
+}
+
 li{
-    font-size: 1.22rem;
+    font-size: 1.6rem;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Alegreya', serif;
     font-weight: 400;
 }
 
