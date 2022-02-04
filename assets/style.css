@@ -369,13 +369,13 @@ transform: rotateY(-180deg) translateX(-100%);
     transform: rotateY(-180deg) translateX(100%);
     transition: transform 0.5s;
     
-    background-image: url(/assets/images/playing-card-rear.png)  !important;
+    background-image: url(/images/playing-card-rear.png)  !important;
 }
 .card-face--back-start{
     transform: rotateY(180deg) translateX(100%);
     transition: transform 0.5s;
     
-    background-image: url(/assets/images/playing-card-rear.png)  !important;
+    background-image: url(/images/playing-card-rear.png)  !important;
 }
 
 
@@ -460,7 +460,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-AH{
     height: 16vh;
     width:7vw;
-    background-image: url(images/Card-AH.png);
+    background-image: url(/images/Card-AH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -476,7 +476,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-3H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/Card-3H.png);
+    background-image: url(/images/Card-3H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
