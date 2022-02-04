@@ -96,11 +96,11 @@ $('#next').click(function(){
     
    
 var audioSuccess = new Audio('audio/Card-flip-sound-effect.mp3');
-var audioFail = new Audio('../audio/denied.mp3');
+var audioFail = new Audio('./audio/denied.mp3');
 var audioGameOver = new Audio('audio/You-lose-game-over.mp3');
 var audioCompletedMemorising = new Audio('audio/completed-cards.mp3');
 var audioGameWon = new Audio('audio/Finale-sound-effect.mp3');
-var audioCardShuffle = new Audio('/audio/shuffling-cards.mp3');
+var audioCardShuffle = new Audio('./audio/shuffling-cards.mp3');
 var audioTryAgain = new Audio('audio/try-again-new.mp3');
 var audioCorrectCards = new Audio('audio/Success-sound-effect.mp3')
 
