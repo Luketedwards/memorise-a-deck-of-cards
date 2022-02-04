@@ -460,7 +460,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-AH{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/Card-AH.png);
+    background-image: url(images/Card-AH.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -468,7 +468,7 @@ transform: rotateY(-180deg) translateX(-100%);
 #Card-2H{
     height: 16vh;
     width:7vw;
-    background-image: url(/assets/images/Card-2H.png);
+    background-image: url(/images/Card-2H.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
