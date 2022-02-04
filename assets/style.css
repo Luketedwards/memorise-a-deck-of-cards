@@ -156,6 +156,11 @@ footer{
     font-size: 2vw;
 }
 
+#next:hover{
+    color:darkslateblue;
+    background-color: #fafafa;
+}
+
 #end-of-guess{
     margin-left: 6%;
     font-size: 2.8vw;
