@@ -287,8 +287,8 @@ footer{
 .list a{
     color: #fafafa !important;
     text-decoration: none;
-    margin-left: 0%;
-    margin-right: 10%;  
+    margin-left: -1%;
+    margin-right: 8%;  
     font-family: 'Alegreya', serif;
 }
 
@@ -875,7 +875,7 @@ transform: rotateY(-180deg) translateX(-100%);
 
 @media screen and (min-width: 1000px){
     #button-div{
-        left: 45vw;
+        left: 42vw;
      }
 }
 
