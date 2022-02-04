@@ -95,14 +95,14 @@ $('#next').click(function(){
 });
     
    
-var audioSuccess = new Audio('../audio/Card-flip-sound-effect.mp3');
+var audioSuccess = new Audio('assets/audio/Card-flip-sound-effect.mp3');
 var audioFail = new Audio('assets/audio/denied.mp3');
-var audioGameOver = new Audio('audio/You-lose-game-over.mp3');
-var audioCompletedMemorising = new Audio('audio/completed-cards.mp3');
-var audioGameWon = new Audio('audio/Finale-sound-effect.mp3');
-var audioCardShuffle = new Audio('/assets/audio/shuffling-cards.mp3');
-var audioTryAgain = new Audio('audio/try-again-new.mp3');
-var audioCorrectCards = new Audio('audio/Success-sound-effect.mp3')
+var audioGameOver = new Audio('assets/audio/You-lose-game-over.mp3');
+var audioCompletedMemorising = new Audio('assets/audio/completed-cards.mp3');
+var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
+var audioCardShuffle = new Audio('assets/audio/shuffling-cards.mp3');
+var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
+var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3')
 
 $('#cards-container div').click(function(){
   if (cardProgress >= 54 ){
