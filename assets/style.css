@@ -41,8 +41,8 @@ footer{
 
 @media screen and (min-width: 1100px){
     #modal-content{
-        height: 45vw !important;
-        width: 33vw !important;
+        height: 44vw !important;
+        width: 32vw !important;
     }
 
     #card-progress {
@@ -55,7 +55,7 @@ footer{
         border: 3px solid #fafafa;
         border-radius: 5px;
         position: relative;
-        left: 9%!important;
+        left: 12%!important;
     }
 
     #time {
@@ -68,7 +68,7 @@ footer{
         border: 3px solid #fafafa;
         border-radius: 5px;
         position: relative;
-        margin-right: 34% !important;
+        margin-right: 35% !important;
     }
 
     #next {
@@ -86,7 +86,7 @@ footer{
     }
 
     #guess{
-        width:19vw !important;
+        width:18vw !important;
     }
 
     #end-of-guess{
