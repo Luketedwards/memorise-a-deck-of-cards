@@ -103,6 +103,7 @@ var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
 var audioCardShuffle = new Audio('assets/audio/shuffling-cards.mp3');
 var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
 var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3')
+var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3')
 
 $('#cards-container div').click(function(){
   if (cardProgress >= 54 ){
@@ -208,6 +209,7 @@ var previousScore3 = JSON.parse(localStorage.getItem('previousScore3'));
 var previousTime3 = JSON.parse(localStorage.getItem('previousTime3'));
 
     function scoreList(){ 
+    audioPreviousScore.play();  
     if(previousScore3 == null){
       Swal.fire ({
       title: '<strong>Previous Score</strong>',
