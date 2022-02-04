@@ -14,7 +14,7 @@ nav{
 #suits-images-1{
     width: 11vw;
     position: absolute;
-    left: 4vw;
+    left: 2.2vw;
 }
 
 #suits-images-2{
@@ -944,6 +944,45 @@ transform: rotateY(-180deg) translateX(-100%);
     .list{
         font-size: 3vw;
         margin-left:25vw;
+    }
+
+    #suits-images-1{
+        visibility:hidden;
+    }
+    #suits-images-2{
+        visibility:hidden;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #end-of-guess{
+        font-size: 5vw;
+    }
+
+    #time{
+        font-size: 6vw;
+        margin-right: 12%;
+    }
+
+    #card-progress{
+        font-size: 6vw;
+        left: -15%;
+    }
+
+    #modal-content{
+        height: 105vw;
+        width: 76vw;
+    }
+
+    #guess{
+        height: 64vw;
+        width: 51vw;
+    }
+
+    #next{
+        width: 21vw;
+        height: 12vw;
+        font-size: 3.2vw;
     }
 }
 
