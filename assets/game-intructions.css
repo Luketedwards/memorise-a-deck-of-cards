@@ -1,9 +1,9 @@
 body{
-    background-color: #f7f7f8;
+    background-color: #EDF5E1 !important;
 }
 
 nav{
-    background-color: #89B5AF;
+    background-color: #379683;
 }
 
 .container-fluid{
@@ -16,6 +16,7 @@ h1, h2, h3{
     font-family: 'Source Sans Pro', sans-serif;
     padding: 0;
     margin: 0;
+    color: #000 !important;
     
 }
 
@@ -48,6 +49,7 @@ p{
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
+    color: #000;
  
 }
 
@@ -61,7 +63,7 @@ li{
 }
 
   footer{
-    background-color: #89B5AF;
+    background-color: #379683;
     height: 50px;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;

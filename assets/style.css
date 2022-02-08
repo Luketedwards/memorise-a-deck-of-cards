@@ -8,7 +8,7 @@ html, body{
     box-sizing: border-box;
 }
 nav{
-    background-color: #89B5AF;
+    background-color: #379683;
 }
 
 #suits-images-1{
@@ -24,7 +24,7 @@ nav{
 }
 
 footer{
-    background-color: #89B5AF;
+    background-color: #379683;
     height: 50px;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
