@@ -62,7 +62,7 @@ p{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    font-family: 'Alegreya', serif;
+    font-family: 'Source Serif 4', sans-serif;
     font-weight: 300;
     color: #000;
  
@@ -79,7 +79,7 @@ li{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    font-family: 'Alegreya', serif;
+    font-family: 'Source Serif 4', sans-serif;
     font-weight: 400;
 }
 
@@ -131,7 +131,7 @@ li{
     max-height: 0;
     overflow: scroll;
     transition: max-height 0.8s ease-out;
-    background-color: #85dcb;
+    
   }
 
   footer{

@@ -24,6 +24,10 @@ a{
     text-decoration: wavy;
 }
 
+h1,h2,h3{
+    font-family: 'Alegreya', serif;
+}
+
 h1{
     font-size: 2.6rem;
     font-weight: 600;
@@ -47,7 +51,8 @@ p{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 5px;
+    font-family: 'Source Serif 4', sans-serif;
     font-weight: 300;
     color: #000;
  
@@ -58,7 +63,7 @@ li{
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Serif 4', sans-serif;
     font-weight: 400;
 }
 
@@ -66,7 +71,7 @@ li{
     background-color: #379683;
     height: 50px;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Serif 4', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
   }

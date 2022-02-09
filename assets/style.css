@@ -27,7 +27,7 @@ footer{
     background-color: #379683;
     height: 50px;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Serif 4', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
     padding-top: 10px;
@@ -278,7 +278,7 @@ footer{
 .list{
     display: inline;
     margin-left: 30vw;
-    font-size: 2vw;
+    font-size: 2.4vw;
     padding-right: 0.5vw;
     text-align: center;
     
@@ -287,7 +287,7 @@ footer{
 .list a{
     color: #fafafa !important;
     text-decoration: none;
-    margin-left: -1%;
+    margin-left: 2%;
     margin-right: 8%;  
     font-family: 'Alegreya', serif;
 }
@@ -310,7 +310,7 @@ footer{
       font-weight: 700;
       width: 7rem;
       border-radius: 50%;
-      
+      height: 7rem;
     
 }
 
@@ -320,6 +320,7 @@ footer{
     font-size: 1.5vw;
     font-weight: 700;
     width: 7rem;
+    height: 7rem;
     bottom: 6.4vw !important;
     margin-right: 1vw;
     border-radius: 50%;
@@ -1076,24 +1077,29 @@ transform: rotateY(-180deg) translateX(-100%);
 
     #start-button{
         width: 6rem;
+        height: 6rem;
     }
     #score-button{
         width: 6rem;
+        height: 6rem;
     }
 }
 
 @media only screen and (max-width: 600px){
     #start-button{
         width: 5rem;
+        height: 5rem;
     }
     #score-button{
         width: 5rem;
+        height: 5rem;
     }
 }
 
 @media only screen and (max-width: 500px){
     #start-button{
         width: 5rem;
+        height: 5rem;
     }
 
     #button-div{
@@ -1104,9 +1110,11 @@ transform: rotateY(-180deg) translateX(-100%);
 @media only screen and (max-width: 400px){
     #start-button{
         width: 4.5rem;
+        height: 4.5rem;
     }
     #score-button{
         width: 4.5rem;
+        height: 4.5rem;
     }
 
 
