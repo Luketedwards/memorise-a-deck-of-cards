@@ -1,493 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Tips</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display&family=Satisfy&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/memoryTips.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src='assets/memoryTips.js'></script>
-    <script src="https://kit.fontawesome.com/15075673e9.js" crossorigin="anonymous"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Tips</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display&family=Satisfy&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/memoryTips.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src='assets/memoryTips.js'></script>
+  <script src="https://kit.fontawesome.com/15075673e9.js" crossorigin="anonymous"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
-<body>     
- 
-    <nav id="nav" class="navbar navbar-light">
-      <div id='text-container' class="container-fluid"> 
-            <a class="container-fluid navbar-brand"id="logo" href="index.html">Memorise a Deck of Cards!</a>
-            <br>
-            <div class="container-fluid col-12">
-            <span class="navbar-nav list">
-                <a class="nav-item" id="game-link" href="game-instructions.html">How To Play</a>
-                <a class="nav-item" id="memory-link" href="memory-tips.html">Memory Tips</a>
-            </span>
-            </div>
-        </div>       
-        </nav>  
-        <div class="container-fluid">
-        <div id="section-1">  
-        <h1>Memory Tips To Beat The Game!</h1>
-        <div>
-          <img id="brain" src="assets/images/brain-image.jpeg" alt="image of a brain">
-          <div id="first-para-div">
-        <p>If you've come here after attempting to memorise the deck you would be forgiven for thinking this an impossible task. Without the proper technique this game is virtually unwinnable. <br> The odds of correctly guessing a single card is 1/52, or a little over a 2% chance. The odds of then guessing the second card correctly are 1/52 x 1/51. Play this through for the full 52 card deck and your odds of getting every card correct are 1/52! which is equal to<br> <p id="number-stat"> One in 80658175170943878571660636856403766975289505440883277824000000000000</p> <p>Just for reference thats a 68 digit number! Your odds of winning this game by chance are infinitesimal.
-            How then do you possibly stand a chance at winning this game? How is it that memory champions are able to commit entire decks of cards to memory in just 13.96 seconds, and remember the order for months? How is it possible that everyday people can learn the sequence of Pi to 67,890 digits, when most of us can't remember a phone number? For this we have the ancient Greeks to thank! </p>
-          </div>
+
+<body>
+
+  <nav id="nav" class="navbar navbar-light">
+    <div id='text-container' class="container-fluid">
+      <a class="container-fluid navbar-brand" id="logo" href="index.html">Memorise a Deck of Cards!</a>
+      <br>
+      <div class="container-fluid col-12">
+        <span class="navbar-nav list">
+          <a class="nav-item" id="game-link" href="game-instructions.html">How To Play</a>
+          <a class="nav-item" id="memory-link" href="memory-tips.html">Memory Tips</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div id="section-1">
+      <h1>Memory Tips To Beat The Game!</h1>
+      <div>
+        <img id="brain" src="assets/images/brain-image.jpeg" alt="image of a brain">
+        <div id="first-para-div">
+          <p>If you've come here after attempting to memorise the deck you would be forgiven for thinking this an
+            impossible task. Without the proper technique this game is virtually unwinnable. <br> The odds of correctly
+            guessing a single card is 1/52, or a little over a 2% chance. The odds of then guessing the second card
+            correctly are 1/52 x 1/51. Play this through for the full 52 card deck and your odds of getting every card
+            correct are 1/52! which is equal to<br>
+            <p id="number-stat"> One in 80658175170943878571660636856403766975289505440883277824000000000000</p>
+            <p>Just for reference thats a 68 digit number! Your odds of winning this game by chance are infinitesimal.
+              How then do you possibly stand a chance at winning this game? How is it that memory champions are able to
+              commit entire decks of cards to memory in just 13.96 seconds, and remember the order for months? How is it
+              possible that everyday people can learn the sequence of Pi to 67,890 digits, when most of us can't
+              remember a phone number? For this we have the ancient Greeks to thank! </p>
         </div>
-        </div>    
-      <div id="section-2">
-        <button class="collapsible"><h2>The Method of Loci <i class="fas fa-brain"></i></h2></button>
+      </div>
+    </div>
+    <div id="section-2">
+      <button class="collapsible">
+        <h2>The Method of Loci <i class="fas fa-brain"></i></h2>
+      </button>
       <div class="content">
-        <p>Attributed to the Greek poet Simonedes of the 5th century, the method of Loci or the 'memory palace' has become popular in modern fiction through novels such as Hannibal, and T.V series like Sherlock Holmes. The method is unbelievably potent compared to traditional rote memorisation, and with a little work upfront will allow you to perform almost unimaginable feats of the mind.</p>
+        <p>Attributed to the Greek poet Simonedes of the 5th century, the method of Loci or the 'memory palace' has
+          become popular in modern fiction through novels such as Hannibal, and T.V series like Sherlock Holmes. The
+          method is unbelievably potent compared to traditional rote memorisation, and with a little work upfront will
+          allow you to perform almost unimaginable feats of the mind.</p>
         <h3>How Does It Work?</h3>
-        <p>The basic premise behind the method of Loci is that our short term memory is near useless, and is on average only able to hold 7 numbers for a short ammount of time. Where humans short term memory falters, our spatial memory more than makes up for!
+        <p>The basic premise behind the method of Loci is that our short term memory is near useless, and is on average
+          only able to hold 7 numbers for a short ammount of time. Where humans short term memory falters, our spatial
+          memory more than makes up for!
         </p>
         <h3>Imagine an Item in Your House...</h3>
-        <p>It can be anything. A wallet, your favourite pen, a DVD of a movie you love. Whatever it is, I bet that you have a pretty good idea of where to find it. This is because the area of our brain that deals with spatial memory is far more capable than our short term memory.</p>
+        <p>It can be anything. A wallet, your favourite pen, a DVD of a movie you love. Whatever it is, I bet that you
+          have a pretty good idea of where to find it. This is because the area of our brain that deals with spatial
+          memory is far more capable than our short term memory.</p>
         <h3>How Can I Use This?</h3>
-        <p>Simple. Take whatever it is that you want to remember, and in your mind physically walk around a space that you are familiar with. The order of the route needs to be obvious so I would recommend deciding on a system before you begin, such as walking clockwise around a room before moving on to the next one. Once you've decided on your route, pick 5-10 locations on the journey that stand out to you. It could be a table, or your T.V, just make sure it's an obvious location and not just a random spot in the room. </p>
+        <p>Simple. Take whatever it is that you want to remember, and in your mind physically walk around a space that
+          you are familiar with. The order of the route needs to be obvious so I would recommend deciding on a system
+          before you begin, such as walking clockwise around a room before moving on to the next one. Once you've
+          decided on your route, pick 5-10 locations on the journey that stand out to you. It could be a table, or your
+          T.V, just make sure it's an obvious location and not just a random spot in the room. </p>
         <h3>Place Your Items!</h3>
-        <p>Now you have your route, imagine yourself walking on this journey. At each location on the way you see a diferent item that you would like to remember (lets say a shopping list). At the first location you imagine eggs have been smashed all over it, creating a huge mess! At the second location someone has spilled gallons of milk, it's leaking through the floorboards. You complete this process for the entirety of your list, and when you want to recall this information you just retrace your steps in your mind and you will remember your items.</p>
-        <p>You might be wondering how to apply this to a deck of cards. This is where the PAO or Person, Action, Object system come into play.</p>
+        <p>Now you have your route, imagine yourself walking on this journey. At each location on the way you see a
+          diferent item that you would like to remember (lets say a shopping list). At the first location you imagine
+          eggs have been smashed all over it, creating a huge mess! At the second location someone has spilled gallons
+          of milk, it's leaking through the floorboards. You complete this process for the entirety of your list, and
+          when you want to recall this information you just retrace your steps in your mind and you will remember your
+          items.</p>
+        <p>You might be wondering how to apply this to a deck of cards. This is where the PAO or Person, Action, Object
+          system come into play.</p>
       </div>
-      </div>
-      <div id="section-3">
-        <button class="collapsible"><h2>The PAO System <i class="fas fa-lightbulb"></i></h2></button>
-      <div class="content">
-        
-        <h3>What is a PAO System?</h3>
-        <p>A PAO system is a method of grouping cards of numbers in easilly memorable chunks. Each card in the 52 card deck is attributed a person, action and object. For example, the Ace of Hearts might be Albert Einstein, scribbling, on a blackboard. This process is then repeated for all 52 cards, with no person, actions or objects repeated so that each card can then be identified by any of its unique attribtues. Once your PAO list is complete, you simply memorise it using the Loci method described above.</p>
-        <h3>How to Implement the PAO System</h3>
-        <p>Once you have your PAO system memorised you can use it to memorise the order of playing cards. The cards will be grouped into sets of three, with the first of that set atrributed the person of the first card, the second the object of the second card, and the third the action of the third card. Combining these three parameters should create a totally unique image, such as 'Einstein dancing on a tank'. This likely eccentric image can then be stored in a new Loci journey, where each image when deciphered will recall three playing cards. Repeat this process 16 more times and you will have rememebered the entire deck in just 17 crazy images! </p>
-        <h3>Tips for creating a good PAO system</h3>
-        <P>Here are a few key tips to creating a successful PAO system. Once you're ready you can input your ideas into the table below and click the button to save it as a PDF. It will take some time to create the system but you only have to do it once, and it will then serve you a lifeime.</P>
-        <ul>
-            <li>Try to keep each suit of cards to its own room, or rooms. Don't combine them into the same location as it will be harder to recall them later.</li>
-            <li>Try to pick a theme for each suit. Hearts could be your loved ones and family members, Clubs could be musicians as they often perform in clubs! Diamonds could be rich people, and Spades could be superheroes.</li>
-            <li>The more vivid and viceral your images are the easier they will be to remember. Try to incorporate shocking images, engaging your other senses like sound and smell, and generally make them as surprising and unique as possible.</li>
-            <li>When placing your PAO's on your memory journey, try to make them interact with the environment and eachother as much as possible. Don't just place Mike Tyson in the doorway, have him smashing it to pieces!</li>
-        </ul>
-      </div>  
     </div>
+    <div id="section-3">
+      <button class="collapsible">
+        <h2>The PAO System <i class="fas fa-lightbulb"></i></h2>
+      </button>
+      <div class="content">
+
+        <h3>What is a PAO System?</h3>
+        <p>A PAO system is a method of grouping cards of numbers in easilly memorable chunks. Each card in the 52 card
+          deck is attributed a person, action and object. For example, the Ace of Hearts might be Albert Einstein,
+          scribbling, on a blackboard. This process is then repeated for all 52 cards, with no person, actions or
+          objects repeated so that each card can then be identified by any of its unique attribtues. Once your PAO list
+          is complete, you simply memorise it using the Loci method described above.</p>
+        <h3>How to Implement the PAO System</h3>
+        <p>Once you have your PAO system memorised you can use it to memorise the order of playing cards. The cards will
+          be grouped into sets of three, with the first of that set atrributed the person of the first card, the second
+          the object of the second card, and the third the action of the third card. Combining these three parameters
+          should create a totally unique image, such as 'Einstein dancing on a tank'. This likely eccentric image can
+          then be stored in a new Loci journey, where each image when deciphered will recall three playing cards. Repeat
+          this process 16 more times and you will have rememebered the entire deck in just 17 crazy images! </p>
+        <h3>Tips for creating a good PAO system</h3>
+        <P>Here are a few key tips to creating a successful PAO system. Once you're ready you can input your ideas into
+          the table below and click the button to save it as a PDF. It will take some time to create the system but you
+          only have to do it once, and it will then serve you a lifeime.</P>
+        <ul>
+          <li>Try to keep each suit of cards to its own room, or rooms. Don't combine them into the same location as it
+            will be harder to recall them later.</li>
+          <li>Try to pick a theme for each suit. Hearts could be your loved ones and family members, Clubs could be
+            musicians as they often perform in clubs! Diamonds could be rich people, and Spades could be superheroes.
+          </li>
+          <li>The more vivid and viceral your images are the easier they will be to remember. Try to incorporate
+            shocking images, engaging your other senses like sound and smell, and generally make them as surprising and
+            unique as possible.</li>
+          <li>When placing your PAO's on your memory journey, try to make them interact with the environment and
+            eachother as much as possible. Don't just place Mike Tyson in the doorway, have him smashing it to pieces!
+          </li>
+        </ul>
       </div>
-      <button class="collapsible"><h2>Create Your PAO <i class="fas fa-exclamation"></i></h2></button>
-      <div class="content" id="pao-content">
-        <div class="table-responsive" id="PAOGenerator">
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Card</th>
-                <th scope="col">Person</th>
-                <th scope="col">Action</th>
-                <th scope="col">Object</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">AH</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">2H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">3H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">4H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">5H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">6H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">7H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">8H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">9H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">10H</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">JH</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">QH</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">KH</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">AC</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">2C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">3C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">4C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">5C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">6C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">7C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">8C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">9C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">10C</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">JC</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">QC</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">KC</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">AD</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">2D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">3D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">4D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">5D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">6D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">7D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">8D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">9D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">10D</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">JD</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">QD</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">KD</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">AS</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">2S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">3S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">4S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">5S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">6S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">7S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">8S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">9S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">10S</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">JS</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">QS</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <th scope="row">KS</th>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-              </tr>
-            </tbody>
-          </table>
-          
-        </div>
-        <div id="button-div"><button id="PDFButton" onclick="generatePDF()">save</button></div>
-      </div>
-      <footer>© Luke Edwards 2022</footer>
-        
-        <script>
-          var coll = document.getElementsByClassName("collapsible");
-      var i;
-      
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight){
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-          } 
-        });
-      }
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="/assets/script.js"></script>    
+    </div>
+  </div>
+  <button class="collapsible">
+    <h2>Create Your PAO <i class="fas fa-exclamation"></i></h2>
+  </button>
+  <div class="content" id="pao-content">
+    <div class="table-responsive" id="PAOGenerator">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Card</th>
+            <th scope="col">Person</th>
+            <th scope="col">Action</th>
+            <th scope="col">Object</th>
+            <th scope="col">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">AH</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">2H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">3H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">4H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">5H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">6H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">7H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">8H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">9H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">10H</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">JH</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">QH</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">KH</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">AC</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">2C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">3C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">4C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">5C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">6C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">7C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">8C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">9C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">10C</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">JC</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">QC</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">KC</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">AD</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">2D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">3D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">4D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">5D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">6D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">7D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">8D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">9D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">10D</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">JD</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">QD</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">KD</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">AS</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">2S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">3S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">4S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">5S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">6S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">7S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">8S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">9S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">10S</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">JS</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">QS</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <th scope="row">KS</th>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div id="button-div"><button id="PDFButton" onclick="generatePDF()">save</button></div>
+  </div>
+  <footer>© Luke Edwards 2022</footer>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="/assets/script.js"></script>
 </body>
+
 </html>

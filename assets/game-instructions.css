@@ -1,52 +1,57 @@
-body{
+/*General*/
+body {
     background-color: #EDF5E1 !important;
 }
 
-nav{
+nav {
     background-color: #379683;
 }
 
-.container-fluid{
+.container-fluid {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     padding: 0;
     margin: 0;
     color: #000 !important;
-    
+
 }
 
-a{
+a {
     text-decoration: wavy;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     font-family: 'Alegreya', serif;
 }
 
-h1{
+h1 {
     font-size: 2.6rem;
     font-weight: 600;
     color: #4d4d4d;
     margin-top: 15px;
 }
 
-h2{
+h2 {
     font-size: 2.3rem;
     margin-top: 15px;
     text-align: center !important;
     margin-top: 27px;
 }
 
-h3{
+h3 {
     font-size: 1.9rem;
 }
 
-p{
+p {
     font-size: 1.5rem;
     padding-left: 10px;
     padding-right: 10px;
@@ -55,10 +60,10 @@ p{
     font-family: 'Source Serif 4', sans-serif;
     font-weight: 300;
     color: #000;
- 
+
 }
 
-li{
+li {
     font-size: 1.32rem;
     padding-left: 10px;
     padding-right: 10px;
@@ -67,20 +72,20 @@ li{
     font-weight: 400;
 }
 
-  footer{
+footer {
     background-color: #379683;
     height: 50px;
     text-align: center;
     font-family: 'Source Serif 4', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
-  }
+}
 
-  p{
-      text-align: center;
-  }
+p {
+    text-align: center;
+}
 
-  #aces{
+#aces {
     vertical-align: middle;
     float: right;
     width: 26vw;
@@ -89,10 +94,11 @@ li{
     bottom: 4vw;
     mix-blend-mode: multiply;
     margin-bottom: -1900px;
-  }
+}
 
-  @media screen and (max-width: 1262px){
-      #aces{
-          display: none;
-      }
-  }
+/*Media Queries*/
+@media screen and (max-width: 1400px) {
+    #aces {
+        display: none;
+    }
+}

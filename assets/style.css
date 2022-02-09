@@ -1,4 +1,6 @@
-html, body{
+/* General */
+html,
+body {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -7,23 +9,8 @@ html, body{
     overflow: scroll;
     box-sizing: border-box;
 }
-nav{
-    background-color: #379683;
-}
 
-#suits-images-1{
-    width: 11vw;
-    position: absolute;
-    left: 2.2vw;
-}
-
-#suits-images-2{
-    width: 10vw;
-    position: absolute;
-    left: 87vw;
-}
-
-footer{
+footer {
     background-color: #379683;
     height: 50px;
     text-align: center;
@@ -31,70 +18,650 @@ footer{
     font-size: 1.2rem;
     color: #fafafa;
     padding-top: 10px;
-  }
+}
 
-#tableContainer{
+#tableContainer {
     background-color: #89a5b5;
     width: 100%;
     height: fit-content;
 }
 
-@media screen and (min-width: 1100px){
-    #modal-content{
-        height: 44vw !important;
-        width: 32vw !important;
-    }
-
-    #card-progress {
-        display: inline;
-        color: #fafafa;
-        padding-right: 1%;
-        padding-left: 1%;
-        font-size: 3.5vw !important;
-        background-color: black;
-        border: 3px solid #fafafa;
-        border-radius: 5px;
-        position: relative;
-        left: 12%!important;
-    }
-
-    #time {
-        display: inline;
-        color: #fafafa;
-        padding-right: 1% !important;
-        padding-left: 1% !important;
-        font-size: 3.5vw !important;
-        background-color: black;
-        border: 3px solid #fafafa;
-        border-radius: 5px;
-        position: relative;
-        margin-right: 35% !important;
-    }
-
-    #next {
-        width: 9vw !important;
-        height: 5vw !important;
-        background-color: darkslateblue;
-        color: #fafafa;
-        margin-left: 40% !important;
-        position: absolute;
-        border-radius: 10px;
-        top: 79% !important;
-        z-index: 1005;
-        left: -4% !important;
-        font-size: 1.5vw !important;
-    }
-
-    #guess{
-        width:18vw !important;
-    }
-
-    #end-of-guess{
-        font-size: 2.3vw !important;
-    }
+#suits-images-1 {
+    width: 11vw;
+    position: absolute;
+    left: 2.2vw;
 }
 
-#card-progress{
+#suits-images-2 {
+    width: 10vw;
+    position: absolute;
+    left: 87vw;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#start-button {
+    top: 0vw;
+    z-index: 1000;
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 700;
+    width: 7rem;
+    border-radius: 50%;
+    height: 7rem;
+
+}
+
+#score-button {
+    z-index: 1000;
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 700;
+    width: 7rem;
+    height: 7rem;
+    bottom: 6.4vw !important;
+    margin-right: 1vw;
+    border-radius: 50%;
+}
+
+#button-text {
+    color: #fafafa;
+    left: 87.2vw;
+    position: absolute;
+    z-index: 1001;
+    top: 3.1vw;
+    font-weight: 700;
+    font-size: 0.99em;
+}
+
+#image-text-div {
+    position: absolute;
+}
+
+#button-div {
+    position: relative;
+    left: 66vw;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.game-area {
+    background-image: url('images/poker-table-fabric-min-min-compressed.jpg');
+    background-size: contain;
+}
+
+#game-area {
+    padding-bottom: 30px;
+}
+
+.wood {
+    background-image: url('images/dark-wood-min.jpg') !important;
+    background-size: contain;
+    rotate: 90deg !important;
+}
+
+#cards-container {
+    width: 100vw;
+    height: fit-content;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 1vw;
+    ;
+    margin-bottom: 0;
+    padding-bottom: 200px;
+    position: relative;
+    padding-bottom: 10px;
+
+}
+
+/* Nav */
+nav {
+    background-color: #379683;
+}
+
+#logo {
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 5vw;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    color: #fafafa !important;
+}
+
+.list {
+    display: inline;
+    margin-left: 30vw;
+    font-size: 2.4vw;
+    padding-right: 0.5vw;
+    text-align: center;
+
+}
+
+.list a {
+    color: #fafafa !important;
+    text-decoration: none;
+    margin-left: 2%;
+    margin-right: 8%;
+    font-family: 'Alegreya', serif;
+}
+
+.list a:hover {
+    color: black !important;
+}
+
+#nav {
+    padding-bottom: 20px;
+}
+
+/*Playing Card Divs */
+
+.cards {
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+
+}
+
+.card-is-flipped {
+    transform: rotateY(-180deg) translateX(-100%);
+
+}
+
+.card-is-flipped-start {
+    transform: rotateY(-180deg) translateX(100%);
+
+}
+
+.card-face--back {
+    transform: rotateY(-180deg) translateX(100%);
+    transition: transform 0.5s;
+
+    background-image: url(images/playing-card-rear.png) !important;
+}
+
+.card-face--back-start {
+    transform: rotateY(180deg) translateX(100%);
+    transition: transform 0.5s;
+
+    background-image: url(images/playing-card-rear.png) !important;
+}
+
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+#hearts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+#hearts div {
+    width: 7.5vw;
+}
+
+#spades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+#spades div {
+    width: 7.5vw;
+}
+
+#diamonds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+#diamonds div {
+    width: 7.5vw;
+}
+
+#clubs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+#clubs div {
+    width: 7.5vw;
+}
+
+#Card-AH {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-AH.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-2H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-2H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-3H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-3H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-4H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-4H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-5H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-5H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-6H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-6H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-7H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-7H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-8H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-8H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-9H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-9H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-10H {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-10H.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-JH {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-JH.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-QH {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-QH.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-KH {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-KH.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-AS {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-AS.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-2S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-2S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-3S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-3S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-4S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-4S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-5S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-5S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-6S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-6S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-7S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-7S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-8S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-8S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-9S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-9S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-10S {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-10S.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-JS {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-JS.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-QS {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-QS.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-KS {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-KS.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-AD {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-AD.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-2D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-2D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-3D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-3D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-4D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-4D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-5D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-5D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-6D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-6D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-7D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-7D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-8D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-8D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-9D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-9D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-10D {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-10D.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-JD {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-JD.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-QD {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-QD.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-KD {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-KD.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-AC {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-AC.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-2C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-2C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-3C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-3C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-4C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-4C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-5C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-5C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-6C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-6C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-7C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-7C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-8C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-8C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-9C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-9C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-10C {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-10C.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-JC {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-JC.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-QC {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-QC.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#Card-KC {
+    height: 16vh;
+    width: 7vw;
+    background-image: url(images/Card-KC.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Modals*/
+
+#card-progress {
     display: inline;
     color: #fafafa;
     padding-right: 1%;
@@ -107,7 +674,7 @@ footer{
     left: 2%;
 }
 
-#score-progress{
+#score-progress {
     background-color: black;
     border: 3px solid #fafafa;
     border-radius: 5px;
@@ -117,11 +684,7 @@ footer{
     top: -46px;
 }
 
-.hidden{
-    visibility: hidden;
-}
-
-#score-progress h3{
+#score-progress h3 {
     display: inline;
     color: #fafafa !important;
     padding-right: 1%;
@@ -129,7 +692,7 @@ footer{
     position: relative;
 }
 
-#time{
+#time {
     display: inline;
     color: #fafafa;
     padding-right: 1%;
@@ -142,7 +705,7 @@ footer{
     margin-right: 28%;
 }
 
-#next{
+#next {
     width: 12vw;
     height: 7vw;
     background-color: darkslateblue;
@@ -156,12 +719,12 @@ footer{
     font-size: 2vw;
 }
 
-#next:hover{
-    color:darkslateblue;
+#next:hover {
+    color: darkslateblue;
     background-color: #fafafa;
 }
 
-#end-of-guess{
+#end-of-guess {
     margin-left: 6%;
     font-size: 2.8vw;
     color: #fafafa !important;
@@ -174,7 +737,7 @@ footer{
     display: none;
 }
 
-.modal-header{
+.modal-header {
     display: flex;
     flex-shrink: 0;
     padding-bottom: 0 !important;
@@ -186,28 +749,29 @@ footer{
     background-color: rgba(0, 0, 0, );
 }
 
-.modal-footer{
+.modal-footer {
     border: none !important;
 }
 
 .modal {
     display: none;
-    position: fixed; 
+    position: fixed;
     padding-top: 50px;
-    left: 0; 
+    left: 0;
     top: 0;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     z-index: 1000;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.95);
-  }
+}
 
-  #modal-content{
-      height:62vw;
-      width:45vw;
-  }
-  .modal-content {
+#modal-content {
+    height: 62vw;
+    width: 45vw;
+}
+
+.modal-content {
     position: relative;
     background-color: white;
     background-position-y: -4px;
@@ -224,44 +788,45 @@ footer{
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
-  }
+}
 
-  
-  .close-btn {
-    float: right; 
-    color: lightgray; 
-    font-size: 24px;  
+
+.close-btn {
+    float: right;
+    color: lightgray;
+    font-size: 24px;
     font-weight: bold;
-  }
-  .close-btn:hover {
+}
+
+.close-btn:hover {
     color: darkgray;
-  }
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-
-
-#logo{
-    font-family: 'IBM Plex Serif', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 5vw;
-    text-align: center;
-    padding-right: 0;
-    padding-left: 0;
-    color: #fafafa !important;
 }
 
-#logo {
-    color: black;
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
-#guess{
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+#guess {
     height: 48vw;
     width: 26vw;
     margin-left: 27%;
@@ -275,618 +840,24 @@ footer{
     top: -1%;
 }
 
-.list{
-    display: inline;
-    margin-left: 30vw;
-    font-size: 2.4vw;
-    padding-right: 0.5vw;
-    text-align: center;
-    
-}
+/*Media Queries */
 
-.list a{
-    color: #fafafa !important;
-    text-decoration: none;
-    margin-left: 2%;
-    margin-right: 8%;  
-    font-family: 'Alegreya', serif;
-}
-
-.list a:hover{
-    color: black !important;
-}
-
-#nav{
-    padding-bottom: 20px;
-}
-
-#start-button{
-      /* position: relative; */
-      top: 0vw;
-      /* left: 82vw; */
-      z-index: 1000;
-      font-family: 'IBM Plex Serif', sans-serif;
-      font-size: 1.5vw;
-      font-weight: 700;
-      width: 7rem;
-      border-radius: 50%;
-      height: 7rem;
-    
-}
-
-#score-button{
-    z-index: 1000;
-    font-family: 'IBM Plex Serif', sans-serif;
-    font-size: 1.5vw;
-    font-weight: 700;
-    width: 7rem;
-    height: 7rem;
-    bottom: 6.4vw !important;
-    margin-right: 1vw;
-    border-radius: 50%;
-}
-
-#button-text{
-    color: #fafafa;
-    left: 87.2vw;
-    position: absolute;
-    z-index: 1001;
-    top: 3.1vw;
-    font-weight: 700;
-    font-size: 0.99em;
-}
-
-#image-text-div{
-    position:absolute;
-}
-
-#button-div{
-    position: relative;
-    left: 66vw;
-    margin-top: 15px;
-    padding-top: 10px;
-}
-
-.cards{
-cursor: pointer;
-transform-style: preserve-3d;
-transform-origin: center right;
-transform-style: preserve-3d;
-transform-origin: center right;
-transition: transform 1s;
-
-}
-
-.card-is-flipped {
-transform: rotateY(-180deg) translateX(-100%);
-
-}
-
-.card-is-flipped-start {
-    transform: rotateY(-180deg) translateX(100%);
-    
-    }
-.card-face--back{
-    transform: rotateY(-180deg) translateX(100%);
-    transition: transform 0.5s;
-    
-    background-image: url(images/playing-card-rear.png)  !important;
-}
-.card-face--back-start{
-    transform: rotateY(180deg) translateX(100%);
-    transition: transform 0.5s;
-    
-    background-image: url(images/playing-card-rear.png)  !important;
-}
-
-
-.card.visible .card-back {
-    transform: rotateY(-180deg);
-  }
-/* Card Images For Home Page */
-
-.game-area{
-    background-image: url('images/poker-table-fabric-min-min-compressed.jpg');
-    background-size: contain;
-}
-
-#game-area{
-    padding-bottom: 30px;
-}
-
-.wood{
-    background-image: url('images/dark-wood-min.jpg')!important;
-    background-size: contain;
-    rotate: 90deg !important;
-}
-
-#cards-container{
-    width: 100vw;
-    height: fit-content;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 1vw;;
-    margin-bottom: 0;
-    padding-bottom: 200px;
-    position: relative;
-    padding-bottom: 10px;
-   
-}
-
-#hearts{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    padding-bottom: 5px;
-}
-
-#hearts div{
-    width: 7.5vw;
-}
-
-#spades{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-}
-
-#spades div{
-    width: 7.5vw;
-}
-
-#diamonds{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-}
-
-#diamonds div{
-    width: 7.5vw;
-}
-
-#clubs{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-}
-
-#clubs div{
-    width: 7.5vw;
-}
-  
-#Card-AH{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-AH.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-2H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-2H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-3H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-3H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-4H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-4H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-5H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-5H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-6H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-6H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-7H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-7H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-8H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-8H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-9H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-9H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-10H{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-10H.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-JH{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-JH.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-QH{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-QH.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-KH{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-KH.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-AS{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-AS.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-2S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-2S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-3S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-3S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-4S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-4S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-5S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-5S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-6S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-6S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-7S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-7S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-8S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-8S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-9S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-9S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-10S{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-10S.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-JS{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-JS.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-QS{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-QS.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-KS{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-KS.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-AD{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-AD.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-2D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-2D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-3D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-3D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-4D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-4D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-5D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-5D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-6D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-6D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-7D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-7D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-8D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-8D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-9D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-9D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-10D{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-10D.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-JD{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-JD.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-QD{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-QD.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-KD{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-KD.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-AC{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-AC.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-2C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-2C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-3C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-3C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-4C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-4C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-5C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-5C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-6C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-6C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-7C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-7C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-8C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-8C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-9C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-9C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-10C{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-10C.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-JC{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-JC.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-QC{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-QC.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#Card-KC{
-    height: 16vh;
-    width:7vw;
-    background-image: url(images/Card-KC.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 1000px){
-    #button-div{
+@media screen and (min-width: 1000px) {
+    #button-div {
         left: 42vw;
-     }
+    }
 }
 
-@media screen and (max-width: 1000px){
-    html, body{
+@media screen and (max-width: 1000px) {
+
+    html,
+    body {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
     }
-    #cards-container{
+
+    #cards-container {
         width: 110vw;
         height: 1000px;
         padding-right: 25px;
@@ -895,224 +866,229 @@ transform: rotateY(-180deg) translateX(-100%);
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-auto-flow: row;
         grid-template-areas:
-        ". . . ."; 
+            ". . . .";
     }
-    #cards-container div{
+
+    #cards-container div {
         height: 29vw;
         width: 18vw;
         margin: 0;
     }
 
-    #logo{
+    #logo {
         font-family: 'IBM Plex Serif', sans-serif;
         font-weight: 500;
         font-style: italic;
         font-size: 6vw;
         text-align: center;
-        
+
         color: #fafafa !important;
     }
 
-    
 
-    #hearts{
+
+    #hearts {
         display: flex;
         flex-direction: column;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         width: 10vw;
     }
-    
-    #spades{
+
+    #spades {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        
+
     }
-    
-    #diamonds{
+
+    #diamonds {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        
+
     }
-    
-    #clubs{
+
+    #clubs {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        
+
     }
 }
 
-@media screen and (max-width: 800px){
-    #logo{
+@media screen and (max-width: 800px) {
+    #logo {
         font-size: 7vw;
     }
 
-    .list{
+    .list {
         font-size: 3vw;
-        margin-left:25vw;
+        margin-left: 25vw;
     }
 
-    #suits-images-1{
-        visibility:hidden;
+    #suits-images-1 {
+        visibility: hidden;
     }
-    #suits-images-2{
-        visibility:hidden;
+
+    #suits-images-2 {
+        visibility: hidden;
     }
 }
 
-@media screen and (max-width: 550px){
-    #logo{
+@media screen and (max-width: 550px) {
+    #logo {
         font-size: 8vw;
     }
 
-    .list{
+    .list {
         font-size: 3.2vw;
-        margin-left:21vw;
+        margin-left: 21vw;
     }
 }
 
-@media screen and (min-width: 1500px){
+@media screen and (min-width: 1500px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-110%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(121%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(121%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
-@media screen and (max-width: 1450px){
+@media screen and (max-width: 1450px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-110%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(119%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(119%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1440px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-110%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(115%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(115%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
 
-@media screen and (max-width: 1420px){
+@media screen and (max-width: 1420px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-100%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(104%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(104%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1400px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-100%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(102%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(102%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
-@media screen and (max-width: 1380px){
+@media screen and (max-width: 1380px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-100%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(100%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(100%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1360px) {
     .card-is-flipped {
         transform: rotateY(-180deg) translateX(-100%);
-        
-        }
-        
-        .card-face--back{
-            transform: rotateY(-180deg) translateX(100%);
-            transition: transform 0.5s;
-            
-            background-image: url(images/playing-card-rear.png)  !important;
-        }
+
+    }
+
+    .card-face--back {
+        transform: rotateY(-180deg) translateX(100%);
+        transition: transform 0.5s;
+
+        background-image: url(images/playing-card-rear.png) !important;
+    }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
 
 
-    #start-button{
+    #start-button {
         width: 6rem;
         height: 6rem;
     }
-    #score-button{
+
+    #score-button {
         width: 6rem;
         height: 6rem;
     }
 }
 
-@media only screen and (max-width: 600px){
-    #start-button{
+@media only screen and (max-width: 600px) {
+    #start-button {
         width: 5rem;
         height: 5rem;
     }
-    #score-button{
+
+    #score-button {
         width: 5rem;
         height: 5rem;
     }
 }
 
-@media only screen and (max-width: 500px){
-    #start-button{
+@media only screen and (max-width: 500px) {
+    #start-button {
         width: 5rem;
         height: 5rem;
     }
 
-    #button-div{
-        left:55vw;
+    #button-div {
+        left: 55vw;
     }
 }
 
-@media only screen and (max-width: 400px){
-    #start-button{
+@media only screen and (max-width: 400px) {
+    #start-button {
         width: 4.5rem;
         height: 4.5rem;
     }
-    #score-button{
+
+    #score-button {
         width: 4.5rem;
         height: 4.5rem;
     }
@@ -1120,7 +1096,7 @@ transform: rotateY(-180deg) translateX(-100%);
 
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
     #card-progress {
         display: inline;
         color: #fafafa;
@@ -1180,52 +1156,95 @@ transform: rotateY(-180deg) translateX(-100%);
         font-size: 2.1vw;
     }
 
-    #end-of-guess{
+    #end-of-guess {
         font-size: 3.6vw;
     }
 
 }
 
-@media screen and (max-width: 500px){
-    #end-of-guess{
+@media screen and (max-width: 500px) {
+    #end-of-guess {
         font-size: 5vw;
     }
 
-    #time{
+    #time {
         font-size: 6vw;
         margin-right: 12%;
     }
 
-    #card-progress{
+    #card-progress {
         font-size: 6vw;
         left: -15%;
     }
 
-    #modal-content{
+    #modal-content {
         height: 105vw;
         width: 76vw;
     }
 
-    #guess{
+    #guess {
         height: 64vw;
         width: 51vw;
     }
 
-    #next{
+    #next {
         width: 21vw;
         height: 12vw;
         font-size: 3.2vw;
     }
 }
 
-/*display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr;
-gap: 2px 2px;
-grid-auto-flow: row;
-grid-template-areas:
-  ". . . . . . . . . . . . . "
-  ". . . . . . . . . . . . . "
-  ". . . . . . . . . . . . . "
-  ". . . . . . . . . . . . . "; */
-  
+@media screen and (min-width: 1100px) {
+    #modal-content {
+        height: 44vw !important;
+        width: 32vw !important;
+    }
+
+    #card-progress {
+        display: inline;
+        color: #fafafa;
+        padding-right: 1%;
+        padding-left: 1%;
+        font-size: 3.5vw !important;
+        background-color: black;
+        border: 3px solid #fafafa;
+        border-radius: 5px;
+        position: relative;
+        left: 12% !important;
+    }
+
+    #time {
+        display: inline;
+        color: #fafafa;
+        padding-right: 1% !important;
+        padding-left: 1% !important;
+        font-size: 3.5vw !important;
+        background-color: black;
+        border: 3px solid #fafafa;
+        border-radius: 5px;
+        position: relative;
+        margin-right: 35% !important;
+    }
+
+    #next {
+        width: 9vw !important;
+        height: 5vw !important;
+        background-color: darkslateblue;
+        color: #fafafa;
+        margin-left: 40% !important;
+        position: absolute;
+        border-radius: 10px;
+        top: 79% !important;
+        z-index: 1005;
+        left: -4% !important;
+        font-size: 1.5vw !important;
+    }
+
+    #guess {
+        width: 18vw !important;
+    }
+
+    #end-of-guess {
+        font-size: 2.3vw !important;
+    }
+}

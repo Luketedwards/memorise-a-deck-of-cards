@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to play!</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display&family=Satisfy&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display&family=Satisfy&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/game-instructions.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='assets/memoryTips.js'></script>
     <script src="https://kit.fontawesome.com/15075673e9.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -25,43 +33,54 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
-<body>     
- 
+
+<body>
+
     <nav id="nav" class="navbar navbar-light">
-      <div id='text-container' class="container-fluid"> 
-            <a class="container-fluid navbar-brand"id="logo" href="index.html">Memorise a Deck of Cards!</a>
+        <div id='text-container' class="container-fluid">
+            <a class="container-fluid navbar-brand" id="logo" href="index.html">Memorise a Deck of Cards!</a>
             <br>
             <div class="container-fluid col-12">
-            <span class="navbar-nav list">
-                <a class="nav-item" id="game-link" href="game-instructions.html">How To Play</a>
-                <a class="nav-item" id="memory-link" href="memory-tips.html">Memory Tips</a>
-            </span>
+                <span class="navbar-nav list">
+                    <a class="nav-item" id="game-link" href="game-instructions.html">How To Play</a>
+                    <a class="nav-item" id="memory-link" href="memory-tips.html">Memory Tips</a>
+                </span>
             </div>
-        </div>       
-        </nav>  
-        <div class="container-fluid">
-       <h1>What is <em>Memorise a Deck of Cards</em>?</h1>
-       <p><em>Memorise a Deck of Cards</em> is a challenging memory training game that tasks you to first memorise a randomly ordered deck of playing cards, before requiring you to correctly recall the sequence. Your performance is assessed through two criteria; your time to memorise the deck, and your number of correctly recalled cards.</p>
-       <h2>How to play!</h2>
-       <img id="aces" src="assets/images/playing-cards-pic.jpeg" alt="four aces playing cards.">
-       <ol>
-           <li>Click the <strong>Start Game</strong> chip to shuffle the cards and open the memorisation window.</li>
-           <li>Click the <strong>Start Timer</strong> button to begin the clock and present the first card.</li>
-           <li>Once you have memorised the first card simply click the <strong>Next Card</strong> button to present a new card.</li>
-           <li>After all 52 cards have been presented to you click the <strong>Finish Memorising!</strong> button to stop the timer.</li>
-           <li>The game will now allow you to input your card choices. Close the window by clicking the <strong>Start Guessing!</strong> button.</li>
-           <li>To input your choices just click the cards in the correct order.</li>
-       </ol>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1>What is <em>Memorise a Deck of Cards</em>?</h1>
+        <p><em>Memorise a Deck of Cards</em> is a challenging memory training game that tasks you to first memorise a
+            randomly ordered deck of playing cards, before requiring you to correctly recall the sequence. Your
+            performance is assessed through two criteria; your time to memorise the deck, and your number of correctly
+            recalled cards.</p>
+        <h2>How to play!</h2>
+        <img id="aces" src="assets/images/playing-cards-pic.jpeg" alt="four aces playing cards.">
+        <ol>
+            <li>Click the <strong>Start Game</strong> chip to shuffle the cards and open the memorisation window.</li>
+            <li>Click the <strong>Start Timer</strong> button to begin the clock and present the first card.</li>
+            <li>Once you have memorised the first card simply click the <strong>Next Card</strong> button to present a
+                new card.</li>
+            <li>After all 52 cards have been presented to you click the <strong>Finish Memorising!</strong> button to
+                stop the timer.</li>
+            <li>The game will now allow you to input your card choices. Close the window by clicking the <strong>Start
+                    Guessing!</strong> button.</li>
+            <li>To input your choices just click the cards in the correct order.</li>
+        </ol>
 
-       <h2>Need Help?</h2>
+        <h2>Need Help?</h2>
 
-       <p>If you're finding the game too dificult, or would just like to improve your score or time, visit the <a href="memory-tips.html">memory tips</a> page for some powerful tips and tools to beat the game!</p>
+        <p>If you're finding the game too dificult, or would just like to improve your score or time, visit the <a
+                href="memory-tips.html">memory tips</a> page for some powerful tips and tools to beat the game!</p>
 
-       <h2>Ready to Play?</h2>
-       <p>If you think you're ready to give it a go, click <a href="index.html">here</a> to take you to the game!</p>
-      </div>
-      <footer>© Luke Edwards 2022</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="/assets/script.js"></script>    
+        <h2>Ready to Play?</h2>
+        <p>If you think you're ready to give it a go, click <a href="index.html">here</a> to take you to the game!</p>
+    </div>
+    <footer>© Luke Edwards 2022</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="/assets/script.js"></script>
 </body>
+
 </html>

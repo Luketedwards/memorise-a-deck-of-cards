@@ -1,63 +1,42 @@
-body{
+/* General */
+body {
     background-color: #f7f7f8
 }
-#PAOGenerator{
-    background-color: #f1f1f1;
-    overflow: scroll;
-    
-}
 
-#PAOGenerator th{
-    font-family: 'Alegreya', serif;
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-#PAOGenerator input{
-    border-radius: 5px;
-}
-
-nav{
-    background-color: #379683;
-}
-
-.container-fluid{
+.container-fluid {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     text-align: center;
     font-family: 'Alegreya', serif;
     padding: 0;
     margin: 0;
-    
+
 }
 
-h1{
+h1 {
     font-size: 3.2rem;
     font-weight: 600;
     color: #000;
     padding-top: 15px;
 }
 
-h2{
+h2 {
     font-size: 3rem;
 }
 
-h3{
+h3 {
     font-size: 2.8rem;
     padding-top: 10px;
     padding-bottom: 5px;
     color: #000;
 }
 
-#section-1{
-    background-color: #EDF5E1 !important;
-    padding: 0;
-    margin: 0;
-}
-p{
+p {
     font-size: 1.6rem;
     padding-left: 10px;
     padding-right: 10px;
@@ -65,16 +44,16 @@ p{
     font-family: 'Source Serif 4', sans-serif;
     font-weight: 300;
     color: #000;
- 
+
 }
 
-#number-stat{
+#number-stat {
     font-weight: 600;
     font-size: 1.6rem;
     overflow-wrap: break-word;
 }
 
-li{
+li {
     font-size: 1.6rem;
     padding-left: 10px;
     padding-right: 10px;
@@ -83,25 +62,19 @@ li{
     font-weight: 400;
 }
 
-#section-2{
+#section-1 {
     background-color: #EDF5E1 !important;
     padding: 0;
     margin: 0;
 }
 
-#PDFButton{
-    height: 3.5vw;
-    margin-left: 50%;
-    width: 7%;
-    font-size: 2.5vw;
-    font-family: 'Source Sans Pro';
-    border-radius: 10px;
-    border: none;
-    padding-bottom: 4%;
-    background-color: #89B5AF;
+#section-2 {
+    background-color: #EDF5E1 !important;
+    padding: 0;
+    margin: 0;
 }
 
-#section-3{
+#section-3 {
     background-color: #EDF5E1 !important;
     padding: 0;
     margin: 0;
@@ -119,72 +92,53 @@ li{
     font-size: 15px;
     height: 150px;
     margin: 0;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #5CDB95!important;
-  }
-  
-  .content {
+}
+
+.active,
+.collapsible:hover {
+    background-color: #5CDB95 !important;
+}
+
+.content {
     padding-left: 3px;
     padding-right: 3px;
     max-height: 0;
     overflow: scroll;
     transition: max-height 0.8s ease-out;
-    
-  }
 
-  footer{
+}
+
+footer {
     background-color: #379683;
     height: 50px;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
-  }
+}
 
-  #brain-image{
-      float: right;
+#brain-image {
+    float: right;
     width: 40%;
     height: 100%;
     margin-right: 20px;
     border-radius: 50%;
-  }
+}
 
-  #first-para-div{
+#first-para-div {
     margin: 0;
     padding-top: 20px;
     padding-bottom: 4px;
     padding-left: 10px;
     padding-right: 10px;
-    
-  }
 
-  button{
-      border-left: 0 !important;
-      border-right: 0 !important;
-      border-top: 1 !important;
-      border-bottom: 1 !important;
-      
+}
 
-  }
+#fractions {
+    text-align: center;
+}
 
-  #pao-content{
-      padding: 0 !important;
-  }
-
-  #fractions{
-      text-align: center;
-  }
-
-  #button-div{
-    position: relative;
-    bottom: -3px;
-    margin-bottom: 20px;
-    left: -23px;
-  }
-
-#brain{
+#brain {
     mix-blend-mode: multiply;
     width: 38vw;
     float: right;
@@ -193,9 +147,65 @@ li{
     bottom: 0vw;
 }
 
+/* Nav */
+nav {
+    background-color: #379683;
+}
 
-@media screen and (max-width: 850px){
-    #brain{
+
+/* PAO Generator */
+#PAOGenerator {
+    background-color: #f1f1f1;
+    overflow: scroll;
+
+}
+
+#PAOGenerator th {
+    font-family: 'Alegreya', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#PAOGenerator input {
+    border-radius: 5px;
+}
+
+#PDFButton {
+    height: 3.5vw;
+    margin-left: 50%;
+    width: 7%;
+    font-size: 2.5vw;
+    font-family: 'Source Sans Pro';
+    border-radius: 10px;
+    border: none;
+    padding-bottom: 4%;
+    background-color: #89B5AF;
+}
+
+button {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 1 !important;
+    border-bottom: 1 !important;
+
+
+}
+
+#pao-content {
+    padding: 0 !important;
+}
+
+#button-div {
+    position: relative;
+    bottom: -3px;
+    margin-bottom: 20px;
+    left: -23px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 850px) {
+    #brain {
         display: none;
     }
 }
