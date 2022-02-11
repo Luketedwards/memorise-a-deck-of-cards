@@ -78,6 +78,10 @@ $('#mute-button').click(function(){
   })
 
 window.onload = function(){
+  let startBtn = document.getElementById('start-button');
+  startBtn.src = "assets/images/poker-chip-start-game.png";
+  let previousScoreBtn = document.getElementById('score-button');
+  previousScoreBtn.src = "assets/images/previous-score-chip.png";
   if (muteDecision == null){
     let muteBtnImage = document.getElementById('mute-button');
     muted = false;
