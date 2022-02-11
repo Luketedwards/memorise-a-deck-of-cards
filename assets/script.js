@@ -49,24 +49,54 @@ for (let i = 0; i < 52; i++) {
   shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
 };
 
-var muted = false;
+var muted ;
+var muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
 
 $('#mute-button').click(function(){
   let muteBtn = document.getElementById('mute-button');
   if (muted == false){
     muted = true;
     muteBtn.innerHTML = 'Un-mute Audio'
-    return muted
+    localStorage.setItem('muteDecision', JSON.stringify(muted));
+    muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
+  console.log(muteDecision);
+    return {muted, muteDecision}
     
   }
   if (muted == true){
     muted = false;
     muteBtn.innerHTML = 'Mute Audio'
-    return muted
+    localStorage.setItem('muteDecision', JSON.stringify(muted));
+    muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
+  console.log(muteDecision);
+    return {muted, muteDecision}
   }
   
   })
+
+window.onload = function(){
+  if (muteDecision == null){
+    let muteBtn = document.getElementById('mute-button');
+    muted = false;
+    muteBtn.innerHTML = 'Mute Audio'
+    return muted
+  } 
   
+  if (muteDecision == false){
+    let muteBtn = document.getElementById('mute-button');
+    muted = false;
+    muteBtn.innerHTML = 'Mute Audio'
+    return muted
+  } 
+  
+  if (muteDecision == true){
+    let muteBtn = document.getElementById('mute-button');
+    muted = true;
+    muteBtn.innerHTML = 'Un-mute Audio'
+    return muted
+  } 
+  }
+
 
 /*Initial decleration of a few important parameters. 
 numberOfClicks is used to ensure the game doesn't start until all the shuffled cards have been presented to the player.
