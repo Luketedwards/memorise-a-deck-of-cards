@@ -56,9 +56,10 @@ var muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
 
 $('#mute-button').click(function(){
   let muteBtn = document.getElementById('mute-button');
+  let muteBtnImage = document.getElementById('mute-button');
   if (muted == false){
     muted = true;
-    muteBtn.innerHTML = 'Un-mute Audio'
+    muteBtnImage.src = "assets/images/un-mute-audio.png"
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
@@ -67,7 +68,7 @@ $('#mute-button').click(function(){
   }
   if (muted == true){
     muted = false;
-    muteBtn.innerHTML = 'Mute Audio'
+    muteBtnImage.src = "assets/images/mute-audio.png"
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
@@ -78,23 +79,23 @@ $('#mute-button').click(function(){
 
 window.onload = function(){
   if (muteDecision == null){
-    let muteBtn = document.getElementById('mute-button');
+    let muteBtnImage = document.getElementById('mute-button');
     muted = false;
-    muteBtn.innerHTML = 'Mute Audio'
+    muteBtnImage.src = "assets/images/mute-audio.png"
     return muted
   } 
   
   if (muteDecision == false){
-    let muteBtn = document.getElementById('mute-button');
+    let muteBtnImage = document.getElementById('mute-button');
     muted = false;
-    muteBtn.innerHTML = 'Mute Audio'
+    muteBtnImage.src = "assets/images/mute-audio.png"
     return muted
   } 
   
   if (muteDecision == true){
-    let muteBtn = document.getElementById('mute-button');
+    let muteBtnImage = document.getElementById('mute-button');
     muted = true;
-    muteBtn.innerHTML = 'Un-mute Audio'
+    muteBtnImage.src = "assets/images/un-mute-audio.png"
     return muted
   } 
   }
