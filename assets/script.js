@@ -1,3 +1,14 @@
+/*All audio files being initially defined */
+var audioSuccess = new Audio('assets/audio/Card-flip-sound-effect.mp3');
+var audioFail = new Audio('assets/audio/denied.mp3');
+var audioGameOver = new Audio('assets/audio/You-lose-game-over.mp3');
+var audioCompletedMemorising = new Audio('assets/audio/completed-cards.mp3');
+var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
+var audioCardShuffle = new Audio('assets/audio/shuffling-cards.mp3');
+var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
+var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3')
+var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3')
+
 /* Array storing suits and values of cards to be assembled below upon page load.
 "Word" is used to insert shuffled deck images when presenting the order to the player. E.G. First card is "AC" in the shuffled deck, and the corresponding image for this card is name assets/images/Card-AC.
 "gamescores" and "gametimes" are used to store results of the game before passing them to local storage*/
@@ -37,6 +48,25 @@ for (let i = deck.length - 1; i > 0; i--) {
 for (let i = 0; i < 52; i++) {
   shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
 };
+
+var muted = false;
+
+$('#mute-button').click(function(){
+  let muteBtn = document.getElementById('mute-button');
+  if (muted == false){
+    muted = true;
+    muteBtn.innerHTML = 'Un-mute Audio'
+    return muted
+    
+  }
+  if (muted == true){
+    muted = false;
+    muteBtn.innerHTML = 'Mute Audio'
+    return muted
+  }
+  
+  })
+  
 
 /*Initial decleration of a few important parameters. 
 numberOfClicks is used to ensure the game doesn't start until all the shuffled cards have been presented to the player.
@@ -95,8 +125,8 @@ $('#next').click(function () {
     btn.innerHTML = 'Finish Memorising!';
   }
   if (cardProgress < 53) {
-
-    audioSuccess.play();
+    if(muted == false){
+    audioSuccess.play();}
   }
   if (cardProgress == 53) {
     let btn = document.getElementById('next');
@@ -104,43 +134,37 @@ $('#next').click(function () {
     $("#end-of-guess").css({
       display: "inline"
     });
-    audioCompletedMemorising.play();
+    if (muted == false){
+    audioCompletedMemorising.play();}
 
   }
   if (cardProgress == 54) {
     modal.style.display = "none";
-    audioSuccess.play();
+    if (muted == false){
+    audioSuccess.play();}
     $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
     $('#score-progress').removeClass('hidden');
   }
 });
-
-/*All audio files being initially defined */
-var audioSuccess = new Audio('assets/audio/Card-flip-sound-effect.mp3');
-var audioFail = new Audio('assets/audio/denied.mp3');
-var audioGameOver = new Audio('assets/audio/You-lose-game-over.mp3');
-var audioCompletedMemorising = new Audio('assets/audio/completed-cards.mp3');
-var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
-var audioCardShuffle = new Audio('assets/audio/shuffling-cards.mp3');
-var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
-var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3')
-var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3')
 
 /*Code that determines whether a card is to be flipped or not. If the card is currently unflipped it will flip, if it is already flipped
 it will play an error sound and display a message */
 $('#cards-container div').click(function () {
   if (cardProgress >= 54) {
     if (this.classList.contains("card-is-flipped")) {
-      audioFail.play()
+      if (muted == false){
+      audioFail.play()}
       alert('Already flipped!');
     } else {
       const selectedCard = (this.id);
       console.log(selectedCard);
       $(this).addClass('card-is-flipped' + " " + 'card-face--back');
-      audioSuccess.play();
+      if (muted == false){
+      audioSuccess.play();}
     }
   } else {
-    audioFail.play();
+    if (muted == false){
+    audioFail.play();}
   }
 });
 
@@ -169,7 +193,8 @@ var cardClicked = $('.cards').click(function (event) {
     }
     if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
       console.log('wrong card');
-      audioGameOver.play();
+      if (muted == false){
+      audioGameOver.play();}
       let remainingCards = shuffledDeck.slice(score);
       Swal.fire({
         icon: 'error',
@@ -181,21 +206,24 @@ var cardClicked = $('.cards').click(function (event) {
       }).then((result) => {
 
         if (result.isDismissed) {
-          audioCorrectCards.play();
+          if (muted == false){
+          audioCorrectCards.play();}
           Swal.fire({
               icon: 'success',
               text: `The remaining cards were: ${remainingCards}`
 
             })
             .then(() => {
-              audioTryAgain.play();
+              if (muted == false){
+              audioTryAgain.play();}
               setTimeout(function () {
                 window.location.href = 'index.html';
               }, 1500);
 
             });
         } else {
-          audioTryAgain.play();
+          if (muted == false){
+          audioTryAgain.play();}
           setTimeout(function () {
             window.location.href = 'index.html';
           }, 1500);
@@ -211,7 +239,8 @@ var cardClicked = $('.cards').click(function (event) {
       cardProgress = 0;
     }
     if ($(selectedCard).hasClass('card-is-flipped')) {
-      audioFail.play()
+      if (muted == false){
+      audioFail.play()}
       alert('Already flipped!');
     }
   }
@@ -222,7 +251,8 @@ var cardClicked = $('.cards').click(function (event) {
     localStorage.setItem('previousScore3', JSON.stringify(gameScores));
     localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
     document.getElementById('score-count').innerText = `52/52`;
-    audioGameWon.play();
+    if (muted == false){
+    audioGameWon.play();}
     Swal.fire({
         icon: 'success',
         title: 'You Win!',
@@ -244,7 +274,8 @@ var previousTime3 = JSON.parse(localStorage.getItem('previousTime3'));
 /*Code to display users previous score and time.
 If no scores have yet been logged it prompts the user to play a game */
 function scoreList() {
-  audioPreviousScore.play();
+  if (muted == false){
+  audioPreviousScore.play();}
   if (previousScore3 == null) {
     Swal.fire({
       title: '<strong>Previous Score</strong>',
@@ -297,7 +328,8 @@ modalBtn.onclick = function () {
   modal.style.display = "block"
   startClickCount++;
   if (startClickCount == 1) {
-    audioCardShuffle.play();
+    if (muted == false){
+    audioCardShuffle.play();}
     setTimeout(function () {
       $('#tableContainer').css('background-color', '#89b5af');
       $('#game-area').addClass('game-area');
@@ -315,3 +347,4 @@ window.onclick = function (e) {
     modal.style.display = "none"
   }
 }
+
