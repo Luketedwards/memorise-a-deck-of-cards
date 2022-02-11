@@ -6,8 +6,9 @@ var audioCompletedMemorising = new Audio('assets/audio/completed-cards.mp3');
 var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
 var audioCardShuffle = new Audio('assets/audio/shuffling-cards.mp3');
 var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
-var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3')
-var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3')
+var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3');
+var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3');
+var audioMuteButton = new Audio('assets/audio/mute-button.mp3');
 
 /* Array storing suits and values of cards to be assembled below upon page load.
 "Word" is used to insert shuffled deck images when presenting the order to the player. E.G. First card is "AC" in the shuffled deck, and the corresponding image for this card is name assets/images/Card-AC.
@@ -55,7 +56,6 @@ var muted ;
 var muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
 
 $('#mute-button').click(function(){
-  let muteBtn = document.getElementById('mute-button');
   let muteBtnImage = document.getElementById('mute-button');
   if (muted == false){
     muted = true;
@@ -69,6 +69,7 @@ $('#mute-button').click(function(){
   if (muted == true){
     muted = false;
     muteBtnImage.src = "assets/images/mute-audio.png"
+    audioMuteButton.play();
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
