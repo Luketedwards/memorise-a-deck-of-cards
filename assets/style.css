@@ -51,6 +51,7 @@ footer {
     width: 7rem;
     border-radius: 50%;
     height: 7rem;
+    margin-right: 1vw;
 
 }
 
@@ -64,6 +65,18 @@ footer {
     bottom: 6.4vw !important;
     margin-right: 1vw;
     border-radius: 50%;
+}
+
+#mute-button {
+    top: 0vw;
+    z-index: 1000;
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 700;
+    width: 7rem;
+    border-radius: 50%;
+    height: 7rem;
+
 }
 
 #button-text {
@@ -82,7 +95,7 @@ footer {
 
 #button-div {
     position: relative;
-    left: 66vw;
+    left: 52vw;
     margin-top: 15px;
     padding-top: 10px;
 }
@@ -844,7 +857,7 @@ nav {
 
 @media screen and (min-width: 1000px) {
     #button-div {
-        left: 42vw;
+        left: 35.5vw;
     }
 }
 
@@ -1057,6 +1070,11 @@ nav {
         width: 6rem;
         height: 6rem;
     }
+
+    #mute-button {
+        width: 6rem;
+        height: 6rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1069,6 +1087,11 @@ nav {
         width: 5rem;
         height: 5rem;
     }
+
+    #mute-button {
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1076,9 +1099,18 @@ nav {
         width: 5rem;
         height: 5rem;
     }
+    #score-button {
+        width: 5rem;
+        height: 5rem;
+    }
+    #mute-button {
+        width: 5rem;
+        height: 5rem;
+    }
+
 
     #button-div {
-        left: 55vw;
+        left: 34vw;
     }
 }
 
@@ -1092,7 +1124,14 @@ nav {
         width: 4.5rem;
         height: 4.5rem;
     }
+    #mute-button {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
 
+    #button-div{
+        left: 30vw;
+    }
 
 }
 
@@ -1160,6 +1199,9 @@ nav {
         font-size: 3.6vw;
     }
 
+    #button-div{
+        left: 48vw;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1191,6 +1233,10 @@ nav {
         width: 21vw;
         height: 12vw;
         font-size: 3.2vw;
+    }
+
+    #button-div{
+        left: 34vw;
     }
 }
 
