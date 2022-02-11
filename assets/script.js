@@ -49,6 +49,8 @@ for (let i = 0; i < 52; i++) {
   shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
 };
 
+/*Code adds mute button which when pressed prevents any audio from playing.
+The mute decision is stored in local storage and is persistent across games. */
 var muted ;
 var muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
 
