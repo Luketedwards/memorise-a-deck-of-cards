@@ -867,7 +867,7 @@ nav {
 }
 @media screen and (max-width: 1400px) {
     #button-div {
-        left: 37.5vw;
+        left: 35.5vw;
     }
 }
 
@@ -879,7 +879,7 @@ nav {
 
 @media screen and (max-width: 1000px) {
     #button-div {
-        left: 35.5vw;
+        left: 30.5vw;
     }
 }
 
@@ -1282,12 +1282,12 @@ nav {
         color: #fafafa;
         padding-right: 1%;
         padding-left: 1%;
-        font-size: 3.5vw !important;
+        font-size: 3.4vw !important;
         background-color: black;
         border: 3px solid #fafafa;
         border-radius: 5px;
         position: relative;
-        left: 12% !important;
+        left: 13% !important;
     }
 
     #time {
@@ -1295,17 +1295,17 @@ nav {
         color: #fafafa;
         padding-right: 1% !important;
         padding-left: 1% !important;
-        font-size: 3.5vw !important;
+        font-size: 3.4vw !important;
         background-color: black;
         border: 3px solid #fafafa;
         border-radius: 5px;
         position: relative;
-        margin-right: 35% !important;
+        margin-right: 36% !important;
     }
 
     #next {
-        width: 9vw !important;
-        height: 5vw !important;
+        width: 9.1vw !important;
+        height: 5.1vw !important;
         background-color: darkslateblue;
         color: #fafafa;
         margin-left: 40% !important;
@@ -1314,11 +1314,12 @@ nav {
         top: 79% !important;
         z-index: 1005;
         left: -4% !important;
-        font-size: 1.5vw !important;
+        font-size: 1.4vw !important;
     }
 
     #guess {
         width: 18vw !important;
+        margin-left: 28%;
     }
 
     #end-of-guess {
