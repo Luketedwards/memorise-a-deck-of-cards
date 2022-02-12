@@ -24,6 +24,7 @@ footer {
     background-color: #89a5b5;
     width: 100%;
     height: fit-content;
+    padding-bottom: 15px;
 }
 
 #suits-images-1 {
@@ -112,7 +113,7 @@ footer {
 .wood {
     background-image: url('images/dark-wood-min.jpg') !important;
     background-size: contain;
-    rotate: 90deg !important;
+    
 }
 
 #cards-container {
