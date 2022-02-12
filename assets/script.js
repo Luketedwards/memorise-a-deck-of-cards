@@ -364,10 +364,7 @@ modalBtn.onclick = function () {
   if (startClickCount == 1) {
     if (muted == false){
     audioCardShuffle.play();}
-      $('#tableContainer').css('background-color', '#89b5af');
-      $('#game-area').addClass('game-area');
-      $('nav, #tableContainer, footer').addClass('wood');
-      $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
+      
   }
 
 }
