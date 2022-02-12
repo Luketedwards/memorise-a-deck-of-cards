@@ -69,7 +69,9 @@ $('#mute-button').click(function(){
   if (muted == true){
     muted = false;
     muteBtnImage.src = "assets/images/mute-audio.png"
-    audioMuteButton.play();
+    setTimeout(() => {
+      audioMuteButton.play();
+    }, 60);
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
