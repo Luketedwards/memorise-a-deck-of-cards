@@ -24,6 +24,22 @@ var gameTimes = [];
 
 let deck = [];
 let shuffledDeck = [];
+let easyShuffledDeck = [];
+let mediumShuffledDeck = [];
+
+setTimeout(function(){
+  for (let i = 0; i < 10; i++) { 
+  easyShuffledDeck[i] = shuffledDeck[i];
+}
+ for (let i = 0; i < 25; i++) { 
+  mediumShuffledDeck[i] = shuffledDeck[i];
+}
+  console.log(shuffledDeck[9])
+  console.log(easyShuffledDeck[9])
+  console.log(mediumShuffledDeck[9])
+
+}, 2000);
+
 
 
 /*Code to assemble ordered deck and then shuffle the deck. This code was inspired by this Youtube tutorial: https://www.youtube.com/watch?v=seApG3uwjAs */
@@ -69,9 +85,7 @@ $('#mute-button').click(function(){
   if (muted == true){
     muted = false;
     muteBtnImage.src = "assets/images/mute-audio.png"
-    setTimeout(() => {
-      audioMuteButton.play();
-    }, 60);
+    audioMuteButton.play();
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
@@ -357,21 +371,62 @@ let modalBtn = document.getElementById("start-button")
 let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
 let startClickCount = 0;
+var difficultyChosen = false;
 
 /*Code to cause a shuffling cards sound, and to make the game themed like a poker table upon first click of the start game button.
 Code also causes the card guessing modal to become visible. Base code for the modal was taken from the Bootstrap website. */
-modalBtn.onclick = function () {
-  modal.style.display = "block"
-  startClickCount++;
-  if (startClickCount == 1) {
-    if (muted == false){
-    audioCardShuffle.play();}
-      $('#tableContainer').addClass('game-area');
-      $('nav, footer').addClass('wood');
-      $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
-  }
 
-}
+modalBtn.onclick = function () {
+  if (startClickCount == 0){
+    Swal.fire({
+      title: '<strong>Choose Difficulty</strong>',
+      icon: 'info',
+      html: "Choose a difficulty level!",
+      showCloseButton: true,
+      showCancelButton: true,
+      showDenyButton: true,
+      focusConfirm: false,
+      confirmButtonText: 'Easy: 10 Cards',
+      denyButtonText: 'Medium: 25 Cards',
+      cancelButtonText: 'Hard: 52 Cards',
+      confirmButtonAriaLabel: 'Thumbs up, great!',
+
+    }).then((result) => {
+
+      if (result.isDismissed) {
+        difficultyChosen = true;
+        let difficulty = 0
+        startClickCount ++;
+        
+          }
+      if (result.isDenied) {
+        difficultyChosen = true;
+        let difficulty = 1
+        startClickCount ++;
+        
+              }    
+      if (result.isConfirmed) {
+          difficultyChosen = true;
+          let difficulty = 2
+          startClickCount ++;
+          
+           }
+          })
+  
+  modalBtn.onclick = function(){        
+  if(difficultyChosen == true){
+      modal.style.display = "block"
+      if (startClickCount == 1) {
+        if (muted == false){
+        audioCardShuffle.play();}
+          $('#tableContainer').addClass('game-area');
+          $('nav, footer').addClass('wood');
+          $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
+      }
+      }
+  }
+  
+    
 closeBtn.onclick = function () {
   modal.style.display = "none"
 }
@@ -379,5 +434,5 @@ window.onclick = function (e) {
   if (e.target == modal) {
     modal.style.display = "none"
   }
+}}
 }
-
