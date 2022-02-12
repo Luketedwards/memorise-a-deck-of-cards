@@ -364,7 +364,9 @@ modalBtn.onclick = function () {
   if (startClickCount == 1) {
     if (muted == false){
     audioCardShuffle.play();}
-      
+      $('#tableContainer').addClass('game-area');
+      $('nav, footer').addClass('wood');
+      $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
   }
 
 }
