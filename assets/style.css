@@ -855,10 +855,31 @@ nav {
 }
 
 /*Media Queries */
-
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1500px) {
     #button-div {
-        left: 39.5vw;
+        left: 40vw;
+    }
+}
+@media screen and (max-width: 1499px) {
+    #button-div {
+        left: 38.5vw;
+    }
+}
+@media screen and (max-width: 1400px) {
+    #button-div {
+        left: 37.5vw;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #button-div {
+        left: 33.5vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #button-div {
+        left: 35.5vw;
     }
 }
 
@@ -1112,6 +1133,15 @@ nav {
 
     #button-div {
         left: 34vw;
+    }
+
+    #score-progress{
+        padding: 4px;
+        margin-left: 1%;
+    }
+
+    #score-progress h3{
+        font-size: 1.1em;
     }
 }
 
