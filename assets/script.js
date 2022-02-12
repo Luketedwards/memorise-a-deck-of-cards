@@ -368,21 +368,31 @@ function correctCard(selectedCard) {
 
 /*Initial decleration of various variables related to the modals */
 let modalBtn = document.getElementById("start-button")
+var modalBtn2 = document.getElementById("start-button");
 let modal = document.querySelector(".modal")
 let closeBtn = document.querySelector(".close-btn")
 let startClickCount = 0;
 var difficultyChosen = false;
+var difficulty;
+var canOpen = false;
 
 /*Code to cause a shuffling cards sound, and to make the game themed like a poker table upon first click of the start game button.
 Code also causes the card guessing modal to become visible. Base code for the modal was taken from the Bootstrap website. */
 
+
+
+
+
+
+if (difficultyChosen == false){
 modalBtn.onclick = function () {
+   
   if (startClickCount == 0){
     Swal.fire({
       title: '<strong>Choose Difficulty</strong>',
       icon: 'info',
       html: "Choose a difficulty level!",
-      showCloseButton: true,
+      showCloseButton: false,
       showCancelButton: true,
       showDenyButton: true,
       focusConfirm: false,
@@ -390,43 +400,58 @@ modalBtn.onclick = function () {
       denyButtonText: 'Medium: 25 Cards',
       cancelButtonText: 'Hard: 52 Cards',
       confirmButtonAriaLabel: 'Thumbs up, great!',
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      
 
     }).then((result) => {
 
       if (result.isDismissed) {
         difficultyChosen = true;
-        let difficulty = 0
+         difficulty = 0
         startClickCount ++;
-        
+        modalOpen();
+        canOpen = true;
           }
       if (result.isDenied) {
         difficultyChosen = true;
-        let difficulty = 1
+        difficulty = 1
         startClickCount ++;
-        
+        modalOpen();
+        canOpen = true;
+
               }    
       if (result.isConfirmed) {
           difficultyChosen = true;
-          let difficulty = 2
+          difficulty = 2
           startClickCount ++;
-          
+          modalOpen();
+          canOpen = true;
+
            }
           })
   
-  modalBtn.onclick = function(){        
-  if(difficultyChosen == true){
-      modal.style.display = "block"
-      if (startClickCount == 1) {
-        if (muted == false){
-        audioCardShuffle.play();}
-          $('#tableContainer').addClass('game-area');
-          $('nav, footer').addClass('wood');
-          $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
-      }
-      }
   }
+  else{
+   modalOpen();
+  }
+} 
   
-    
+}
+
+function modalOpen (){  
+  modal.style.display = "block";
+
+  if (startClickCount == 1) {
+    startClickCount++;
+    if (muted == false){
+    audioCardShuffle.play();}
+      $('#tableContainer').addClass('game-area');
+      $('nav, footer').addClass('wood');
+      $('#suits-images-1, #suits-images-2 ').removeClass('hidden');
+  }
+}  
+
 closeBtn.onclick = function () {
   modal.style.display = "none"
 }
@@ -434,5 +459,5 @@ window.onclick = function (e) {
   if (e.target == modal) {
     modal.style.display = "none"
   }
-}}
 }
+
