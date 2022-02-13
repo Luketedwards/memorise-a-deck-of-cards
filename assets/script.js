@@ -422,6 +422,7 @@ function buttoncards (){
                 for (let i = 0; i < mediumShuffledDeck.length; i++) { 
                   cardToFlip = 'Card-' + mediumShuffledDeck[i];
                   $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
+                  $(`#${cardToFlip}`).addClass('card-is-not-flipped');
                 }
                 $('#score-progress').removeClass('hidden');
               }
@@ -459,6 +460,7 @@ function buttoncards (){
               for (let i = 0; i < easyShuffledDeck.length; i++) { 
                 cardToFlip = 'Card-' + easyShuffledDeck[i];
                 $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
+                $(`#${cardToFlip}`).addClass('card-is-not-flipped');
               }
               $('#score-progress').removeClass('hidden');
             }
@@ -479,7 +481,7 @@ $('#cards-container div').click(function () {
     } else {
       const selectedCard = (this.id);
       console.log(selectedCard);
-      $(this).addClass('card-is-flipped' + " " + 'card-face--back');
+      
       if (muted == false){
       audioSuccess.play();}
     }
@@ -493,14 +495,15 @@ $('#cards-container div').click(function () {
 if (difficulty == 1){
   $('#cards-container div').click(function () {
     if (cardProgress >= 27) {
-      if (this.classList.contains("card-is-flipped")) {
+      if (this.classList.contains("card-is-flipped card-is-flipped-start")) {
         if (muted == false){
         audioFail.play()}
         alert('Already flipped!');
       } else {
         const selectedCard = (this.id);
         console.log(selectedCard);
-        $(this).addClass('card-is-flipped' + " " + 'card-face--back');
+        
+        
         if (muted == false){
         audioSuccess.play();}
       }
@@ -514,14 +517,15 @@ if (difficulty == 1){
   if (difficulty == 2){
     $('#cards-container div').click(function () {
       if (cardProgress >= 12) {
-        if (this.classList.contains("card-is-flipped")) {
+        if (this.classList.contains("card-is-flipped card-is-flipped-start")) {
           if (muted == false){
           audioFail.play()}
           alert('Already flipped!');
         } else {
           const selectedCard = (this.id);
           console.log(selectedCard);
-          $(this).addClass('card-is-flipped' + " " + 'card-face--back');
+          
+          
           if (muted == false){
           audioSuccess.play();}
         }
@@ -626,6 +630,7 @@ $('.cards').click(function (event) {
   var selectedCard = (this.id);
   if (cardProgress >= 54 && cardsLeft >= 0) {
     if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+      $(this).addClass('card-is-flipped' + " " + 'card-face--back');
       console.log("success!");
       number2++;
       score++;
@@ -686,7 +691,7 @@ $('.cards').click(function (event) {
       seconds = 0;
       cardProgress = 0;
     }
-    if ($(selectedCard).hasClass('card-is-flipped')) {
+    if ($(selectedCard).hasClass('card-is-flipped card-is-flipped-start')) {
       if (muted == false){
       audioFail.play()}
       alert('Already flipped!');
@@ -705,6 +710,7 @@ $('.cards').click(function (event) {
     var selectedCard = (this.id);
     if (cardProgress >= 27 && cardsLeft > 26) {
       if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+        $(this).addClass('card-is-flipped' + " " + 'card-face--back');
         console.log("success!");
         number2++;
         score++;
@@ -764,7 +770,7 @@ $('.cards').click(function (event) {
         seconds = 0;
         cardProgress = 0;
       }
-      if ($(selectedCard).hasClass('card-is-flipped')) {
+      if ($(selectedCard).hasClass('card-is-flipped card-is-flipped-start')) {
         if (muted == false){
         audioFail.play()}
         alert('Already flipped!');
@@ -784,6 +790,8 @@ if (difficulty == 2){
     var selectedCard = (this.id);
     if (cardProgress >= 12 && cardsLeft > 41) {
         if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+          $(this).addClass('card-is-flipped' + " " + 'card-face--back');
+          $(this).removeClass('card-is-not-flipped');
           console.log("success!");
           number2++;
           score++;
@@ -843,7 +851,7 @@ if (difficulty == 2){
         seconds = 0;
         cardProgress = 0;
       }
-      if ($(selectedCard).hasClass('card-is-flipped')) {
+      if ($(selectedCard).hasClass('card-is-flipped card-is-flipped-start')) {
         if (muted == false){
         audioFail.play()}
         alert('Already flipped!');
