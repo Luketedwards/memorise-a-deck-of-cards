@@ -33,6 +33,8 @@ if (difficultyChosen == false){
 modalBtn.onclick = function () {
    
   if (startClickCount == 0){
+    if (muted == false){
+      audioPreviousScore.play();}
     Swal.fire({
       title: '<strong>Choose Difficulty</strong>',
       icon: 'info',
