@@ -42,8 +42,11 @@ modalBtn.onclick = function () {
       showDenyButton: true,
       focusConfirm: false,
       confirmButtonText: 'Easy: 10 Cards',
+      confirmButtonColor: "#52a201",
       denyButtonText: 'Medium: 25 Cards',
+      denyButtonColor: "#f57a00",
       cancelButtonText: 'Hard: 52 Cards',
+      cancelButtonColor: "#c42032",
       confirmButtonAriaLabel: 'Thumbs up, great!',
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -566,7 +569,9 @@ function wonGameEasy () {
 
     })
     .then(() => {
+      if (muted == false){
       audioCongratulations.play()
+      }
       setTimeout(function(){
         window.location.href = 'index.html';
      }, 3000);
@@ -592,7 +597,9 @@ function wonGameMedium (){
 
     })
     .then(() => {
-      audioCongratulations.play()
+      if (muted == false){
+        audioCongratulations.play()
+        }
       setTimeout(function(){
         window.location.href = 'index.html';
      }, 3000);
@@ -617,7 +624,9 @@ function wonGameHard () {
 
     })
     .then(() => {
-      audioCongratulations.play()
+      if (muted == false){
+        audioCongratulations.play()
+        }
       setTimeout(function(){
         window.location.href = 'index.html';
      }, 3000);
