@@ -615,7 +615,7 @@ $('.cards').click(function (event) {
       cardsLeft--;
       document.getElementById('score-count').innerText = `${score}/52`;
       if (cardsLeft == 0){
-        wonGameEasy();
+        wonGameHard();
         }
       return [number2, cardsLeft]
       
