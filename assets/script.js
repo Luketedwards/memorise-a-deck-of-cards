@@ -60,8 +60,11 @@ modalBtn.onclick = function () {
         buttoncards();
         timerFunction();
         cardDisplay();
-        cardClicked();
+        
         flipCardOnClick();
+        updateScoreBox();
+        cardClickedHard();
+        
           }
       if (result.isDenied) {
         difficultyChosen = true;
@@ -73,8 +76,11 @@ modalBtn.onclick = function () {
         buttoncards();
         timerFunction();
         cardDisplay();
-        cardClicked();
+        
         flipCardOnClick();
+        updateScoreBox();
+        cardClickedMedium();
+        
 
               }    
       if (result.isConfirmed) {
@@ -87,8 +93,11 @@ modalBtn.onclick = function () {
           buttoncards();
           timerFunction();
           cardDisplay();
-          cardClicked();
+          
           flipCardOnClick();
+          updateScoreBox();
+          cardClickedEasy();
+          
 
            }
           })
@@ -526,18 +535,90 @@ The players score and time are then saved to local storage to view in the 'Previ
 
 If the player correctly recalls all cards a game won message is displayed and their score and time is logged to local storage.
 */
-function cardClicked (){
+
+function wonGameEasy () {
+  score = 10;
+  gameScores.push(score);
+  gameTimes.push(seconds);
+  localStorage.setItem('previousScore3', JSON.stringify(gameScores));
+  localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
+  localStorage.setItem('totalCardsNumber', JSON.stringify(10));
+  document.getElementById('score-count').innerText = `10/10`;
+  if (muted == false){
+  audioGameWon.play();}
+  Swal.fire({
+      icon: 'success',
+      title: 'You Win!',
+      text: `Congratulations! You successfully memorised all 10 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
+      footer: '<a href="index.html">Play Again?</a>'
+
+    })
+    .then(() => {
+      window.location.href = 'index.html';
+    });
+}
+
+function wonGameMedium (){
+      
+  score = 25;
+  gameScores.push(score);
+  gameTimes.push(seconds);
+  localStorage.setItem('previousScore3', JSON.stringify(gameScores));
+  localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
+  localStorage.setItem('totalCardsNumber', JSON.stringify(25));
+  document.getElementById('score-count').innerText = `25/25`;
+  if (muted == false){
+  audioGameWon.play();}
+  Swal.fire({
+      icon: 'success',
+      title: 'You Win!',
+      text: `Congratulations! You successfully memorised all 25 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
+      footer: '<a href="index.html">Play Again?</a>'
+
+    })
+    .then(() => {
+      window.location.href = 'index.html';
+    });
+}
+
+function wonGameHard () {
+  score = 52;
+  gameScores.push(score);
+  gameTimes.push(seconds);
+  localStorage.setItem('previousScore3', JSON.stringify(gameScores));
+  localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
+  localStorage.setItem('totalCardsNumber', JSON.stringify(52));
+  document.getElementById('score-count').innerText = `52/52`;
+  if (muted == false){
+  audioGameWon.play();}
+  Swal.fire({
+      icon: 'success',
+      title: 'You Win!',
+      text: `Congratulations! You successfully memorised all 52 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
+      footer: '<a href="index.html">Play Again?</a>'
+
+    })
+    .then(() => {
+      window.location.href = 'index.html';
+    });
+}
+
+function cardClickedHard (){
 if (difficulty == 0){
-var cardClicked = $('.cards').click(function (event) {
+$('.cards').click(function (event) {
   var selectedCard = (this.id);
-  if (cardProgress >= 54 && cardsLeft > 1) {
+  if (cardProgress >= 54 && cardsLeft >= 0) {
     if (selectedCard === 'Card-' + shuffledDeck[number2]) {
       console.log("success!");
       number2++;
       score++;
       cardsLeft--;
       document.getElementById('score-count').innerText = `${score}/52`;
-      return number2;
+      if (cardsLeft == 0){
+        wonGameEasy();
+        }
+      return [number2, cardsLeft]
+      
 
     }
     if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
@@ -593,44 +674,29 @@ var cardClicked = $('.cards').click(function (event) {
       audioFail.play()}
       alert('Already flipped!');
     }
+    
   }
-  if (cardsLeft == 1) {
-    score = 52;
-    gameScores.push(score);
-    gameTimes.push(seconds);
-    localStorage.setItem('previousScore3', JSON.stringify(gameScores));
-    localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
-    localStorage.setItem('totalCardsNumber', JSON.stringify(52));
-    document.getElementById('score-count').innerText = `52/52`;
-    if (muted == false){
-    audioGameWon.play();}
-    Swal.fire({
-        icon: 'success',
-        title: 'You Win!',
-        text: `Congratulations! You successfully memorised all 52 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-        footer: '<a href="index.html">Play Again?</a>'
-
-      })
-      .then(() => {
-        window.location.href = 'index.html';
-      });
-  }
+  
+ 
 })
 }
+}
 
-
-
+function cardClickedMedium(){
 if (difficulty == 1){
-  var cardClicked = $('.cards').click(function (event) {
+$('.cards').click(function (event) {
     var selectedCard = (this.id);
-    if (cardProgress >= 27 && cardsLeft > 1) {
+    if (cardProgress >= 27 && cardsLeft > 26) {
       if (selectedCard === 'Card-' + shuffledDeck[number2]) {
         console.log("success!");
         number2++;
         score++;
         cardsLeft--;
         document.getElementById('score-count').innerText = `${score}/25`;
-        return number2;
+        if (cardsLeft == 27){
+          wonGameMedium();
+          }
+        return [number2, cardsLeft]
   
       }
       if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
@@ -686,85 +752,71 @@ if (difficulty == 1){
         audioFail.play()}
         alert('Already flipped!');
       }
+      
     }
-    if (cardsLeft == 1) {
-      score = 25;
-      gameScores.push(score);
-      gameTimes.push(seconds);
-      localStorage.setItem('previousScore3', JSON.stringify(gameScores));
-      localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
-      localStorage.setItem('totalCardsNumber', JSON.stringify(25));
-      document.getElementById('score-count').innerText = `25/25`;
-      if (muted == false){
-      audioGameWon.play();}
-      Swal.fire({
-          icon: 'success',
-          title: 'You Win!',
-          text: `Congratulations! You successfully memorised all 25 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-          footer: '<a href="index.html">Play Again?</a>'
-  
-        })
-        .then(() => {
-          window.location.href = 'index.html';
-        });
-    }
+    
+
+    
   })
   }
+}
 
-
-
+function cardClickedEasy(){
 if (difficulty == 2){
-  var cardClicked = $('.cards').click(function (event) {
+ $('.cards').click(function () {
     var selectedCard = (this.id);
-    if (cardProgress >= 12 && cardsLeft > 1) {
-      if (selectedCard === 'Card-' + shuffledDeck[number2]) {
-        console.log("success!");
-        number2++;
-        score++;
-        cardsLeft--;
-        document.getElementById('score-count').innerText = `${score}/10`;
-        return number2;
-  
-      }
-      if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
-        console.log('wrong card');
-        if (muted == false){
-        audioGameOver.play();}
-        let remainingCards = easyShuffledDeck.slice(score);
-        Swal.fire({
-          icon: 'error',
-          title: 'Game Over!',
-          text: `Sorry that was the wrong card! You got ${score} out of 10 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
-          showCancelButton: true,
-          cancelButtonText: `View Correct Order`
-  
-        }).then((result) => {
-  
-          if (result.isDismissed) {
-            if (muted == false){
-            audioCorrectCards.play();}
-            Swal.fire({
-                icon: 'success',
-                text: `The remaining cards were: ${remainingCards}`
-  
-              })
-              .then(() => {
-                if (muted == false){
-                audioTryAgain.play();}
-                setTimeout(function () {
-                  window.location.href = 'index.html';
-                }, 1500);
-  
-              });
-          } else {
-            if (muted == false){
-            audioTryAgain.play();}
-            setTimeout(function () {
-              window.location.href = 'index.html';
-            }, 1500);
+    if (cardProgress >= 12 && cardsLeft > 41) {
+        if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+          console.log("success!");
+          number2++;
+          score++;
+          cardsLeft--;
+          document.getElementById('score-count').innerText = `${score}/10`;
+          if (cardsLeft == 42){
+          wonGameEasy();
           }
-  
-        })
+          return [number2, cardsLeft]
+    
+        }
+        if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
+          console.log('wrong card');
+          if (muted == false){
+          audioGameOver.play();}
+          let remainingCards = easyShuffledDeck.slice(score);
+          Swal.fire({
+            icon: 'error',
+            title: 'Game Over!',
+            text: `Sorry that was the wrong card! You got ${score} out of 10 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
+            showCancelButton: true,
+            cancelButtonText: `View Correct Order`
+    
+          }).then((result) => {
+    
+            if (result.isDismissed) {
+              if (muted == false){
+              audioCorrectCards.play();}
+              Swal.fire({
+                  icon: 'success',
+                  text: `The remaining cards were: ${remainingCards}`
+    
+                })
+                .then(() => {
+                  if (muted == false){
+                  audioTryAgain.play();}
+                  setTimeout(function () {
+                    window.location.href = 'index.html';
+                  }, 1500);
+    
+                });
+            } else {
+              if (muted == false){
+              audioTryAgain.play();}
+              setTimeout(function () {
+                window.location.href = 'index.html';
+              }, 1500);
+            }
+    
+          })
         gameScores.push(score);
         gameTimes.push(seconds);
         localStorage.setItem('previousScore3', JSON.stringify(gameScores));
@@ -780,28 +832,11 @@ if (difficulty == 2){
         alert('Already flipped!');
       }
     }
-    if (cardsLeft == 1) {
-      score = 10;
-      gameScores.push(score);
-      gameTimes.push(seconds);
-      localStorage.setItem('previousScore3', JSON.stringify(gameScores));
-      localStorage.setItem('previousTime3', JSON.stringify(gameTimes));
-      localStorage.setItem('totalCardsNumber', JSON.stringify(10));
-      document.getElementById('score-count').innerText = `10/10`;
-      if (muted == false){
-      audioGameWon.play();}
-      Swal.fire({
-          icon: 'success',
-          title: 'You Win!',
-          text: `Congratulations! You successfully memorised all 10 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-          footer: '<a href="index.html">Play Again?</a>'
-  
-        })
-        .then(() => {
-          window.location.href = 'index.html';
-        });
-    }
+
+    
+    
   })
+  
   }
 }
 document.getElementById('score-button').addEventListener('click', scoreList);
@@ -854,3 +889,15 @@ function correctCard(selectedCard) {
     j++;
   }
 };
+
+function updateScoreBox(){
+  if(difficulty == 0){
+    document.getElementById('score-count').innerText = `0/52`;
+  }
+  if(difficulty == 1){
+    document.getElementById('score-count').innerText = `0/25`;
+  }
+  if(difficulty == 2){
+    document.getElementById('score-count').innerText = `0/10`;
+  }
+}
