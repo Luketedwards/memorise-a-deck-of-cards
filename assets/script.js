@@ -9,6 +9,7 @@ var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
 var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3');
 var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3');
 var audioMuteButton = new Audio('assets/audio/mute-button.mp3');
+var audioCongratulations = new Audio('assets/audio/congratulations.mp3');
 
 /*Initial decleration of various variables related to the modals */
 let modalBtn = document.getElementById("start-button")
@@ -414,10 +415,14 @@ function buttoncards (){
             
               }
               if (cardProgress == 26) {
+                let cardToFlip; 
                 modal.style.display = "none";
                 if (muted == false){
                 audioSuccess.play();}
-                $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
+                for (let i = 0; i < mediumShuffledDeck.length; i++) { 
+                  cardToFlip = 'Card-' + mediumShuffledDeck[i];
+                  $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
+                }
                 $('#score-progress').removeClass('hidden');
               }
             })
@@ -451,7 +456,10 @@ function buttoncards (){
               modal.style.display = "none";
               if (muted == false){
               audioSuccess.play();}
-              $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
+              for (let i = 0; i < easyShuffledDeck.length; i++) { 
+                cardToFlip = 'Card-' + easyShuffledDeck[i];
+                $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
+              }
               $('#score-progress').removeClass('hidden');
             }
           })
@@ -550,11 +558,14 @@ function wonGameEasy () {
       icon: 'success',
       title: 'You Win!',
       text: `Congratulations! You successfully memorised all 10 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-      footer: '<a href="index.html">Play Again?</a>'
+      
 
     })
     .then(() => {
-      window.location.href = 'index.html';
+      audioCongratulations.play()
+      setTimeout(function(){
+        window.location.href = 'index.html';
+     }, 3000);
     });
 }
 
@@ -573,11 +584,14 @@ function wonGameMedium (){
       icon: 'success',
       title: 'You Win!',
       text: `Congratulations! You successfully memorised all 25 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-      footer: '<a href="index.html">Play Again?</a>'
+      
 
     })
     .then(() => {
-      window.location.href = 'index.html';
+      audioCongratulations.play()
+      setTimeout(function(){
+        window.location.href = 'index.html';
+     }, 3000);
     });
 }
 
@@ -595,11 +609,14 @@ function wonGameHard () {
       icon: 'success',
       title: 'You Win!',
       text: `Congratulations! You successfully memorised all 52 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-      footer: '<a href="index.html">Play Again?</a>'
+      
 
     })
     .then(() => {
-      window.location.href = 'index.html';
+      audioCongratulations.play()
+      setTimeout(function(){
+        window.location.href = 'index.html';
+     }, 3000);
     });
 }
 
