@@ -171,15 +171,19 @@ nav {
 }
 
 #PDFButton {
-    height: 3.5vw;
-    margin-left: 50%;
-    width: 7%;
-    font-size: 2.5vw;
+    margin-left: 3%;
+    width: fit-content;
+    font-size: 2rem;
     font-family: 'Source Sans Pro';
+    color: #fafafa !important;
     border-radius: 10px;
     border: none;
-    padding-bottom: 4%;
     background-color: #89B5AF;
+}
+
+#PDFButton:hover{
+    color:#379683;
+    background-color: #5CDB95 !important;
 }
 
 button {
@@ -199,7 +203,10 @@ button {
     position: relative;
     bottom: -3px;
     margin-bottom: 20px;
+    text-align: center;
     left: -23px;
+    width: 100%;
+    color: #fafafa;
 }
 
 /* Media Queries */

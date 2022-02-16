@@ -1,6 +1,6 @@
 /*All audio files being initially defined */
 var audioSuccess = new Audio('assets/audio/Card-flip-sound-effect.mp3');
-var audioFail = new Audio('assets/audio/denied.mp3');
+var audioFail = new Audio('assets/audio/error-sound.mp3');
 var audioGameOver = new Audio('assets/audio/You-lose-game-over.mp3');
 var audioCompletedMemorising = new Audio('assets/audio/completed-cards.mp3');
 var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
@@ -473,13 +473,26 @@ function buttoncards (){
         }  
         
   }    
+
+ if(difficultyChosen == false){
+   $('#cards-container div').click(function(){
+     if(this.classList.contains("card-face--back-start")){
+      if (muted == false){
+        audioFail.play()}
+        
+      }
+     }
+   )}
+        
+      
+
 /*Code that determines whether a card is to be flipped or not. If the card is currently unflipped it will flip, if it is already flipped
 it will play an error sound and display a message */
 function flipCardOnClick (){
 if (difficulty == 0){
 $('#cards-container div').click(function () {
   if (cardProgress >= 54) {
-    if (this.classList.contains("card-is-flipped")) {
+    if (this.classList.contains("card-is-flipped card-is-flipped-start")) {
       if (muted == false){
       audioFail.play()}
       alert('Already flipped!');
@@ -654,7 +667,7 @@ $('.cards').click(function (event) {
       
 
     }
-    if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
+    if (selectedCard != 'Card-' + shuffledDeck[number2] && $(!selectedCard).classList(".card-is-flipped .card-face--back")) {
       console.log('wrong card');
       if (muted == false){
       audioGameOver.play();}
@@ -733,7 +746,7 @@ $('.cards').click(function (event) {
         return [number2, cardsLeft]
   
       }
-      if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
+      if (selectedCard != 'Card-' + shuffledDeck[number2] ) {
         console.log('wrong card');
         if (muted == false){
         audioGameOver.play();}
@@ -814,7 +827,8 @@ if (difficulty == 2){
           return [number2, cardsLeft]
     
         }
-        if (selectedCard != 'Card-' + shuffledDeck[number2] && $(selectedCard).not(".card-is-flipped .card-face--back")) {
+        
+        if (selectedCard != 'Card-' + shuffledDeck[number2] ) {
           console.log('wrong card');
           if (muted == false){
           audioGameOver.play();}

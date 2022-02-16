@@ -53,6 +53,7 @@ footer {
     border-radius: 50%;
     height: 7rem;
     margin-right: 1vw;
+    cursor: pointer;
 
 }
 
@@ -66,6 +67,7 @@ footer {
     bottom: 6.4vw !important;
     margin-right: 1vw;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #mute-button {
@@ -77,6 +79,7 @@ footer {
     width: 7rem;
     border-radius: 50%;
     height: 7rem;
+    cursor: pointer;
 
 }
 
