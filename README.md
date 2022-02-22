@@ -69,8 +69,7 @@ Wire frames were generated using Balsamiq, and can be viewed below.
 
 ### Colour Scheme
 
-The main colours I used in developing this website are ...
-I chose these as I felt they gave the website a warm and inviting aesthetic. I also used another colour scheme once the game has began, opting for a green felt like texture behind the cards, and a wooden texture for the nav and footer. I did this to imitate the appearance of a poker table. 
+The main colours I used in developing this website are a darker and lighter shade of green, a soft purple and a warm white. I chose these colours as I felt they gave the website a warm and inviting aesthetic. I also used another colour scheme once the game has began, opting for a green felt like texture behind the playing cards, and a wooden texture for the nav bar and footer. I did this to imitate the appearance of a poker table. 
 
 ### Typography
 
@@ -194,6 +193,27 @@ The memory tips page provides the player with a table to generate their own PAO 
     * Sweet alert 2 was used to create attractive looking modals to house my game difficulty, game won/lost message, and previous scores section on the main game page.
 
 # Testing User Stories from the User Experience (UX) Section
+- As a first time user I want to:
+
+1. Q.  Quickly understand the purpose and layout of the game
+      * The website features a very streamlined and simple navigation bar that quickly allows users to access a clear set of game instructions. The game itself is also well equipped with user messages, buttons with contextual text, and informative pop-ups and modals.
+
+2. Q. Understand how to play the game
+      * The game features access to both a clear instructions page which detail exactly how to play the game, and also a very in-depth resource that both explains the techniques needed to beat the game and also allows users to generate the necessary tools to win.
+
+3. Q .Receive tips and guidance on how to improve my score
+      * The "Memory Tips" page both gives a comprehensive history of the techniques of memorisation, along with detailed instructions as to how the user can quickly improve their memory. This page also has a tool that allows the user to generate their own PAO system and save it to their computer. The ability to play at differing difficulty levels, and to track previous scores also aid the player in improving their scores.
+
+- As a returning visitor I want to:
+
+1. Q. Have different levels of difficulty to challenge myself
+      * The game features three seperate dificulty levels. Easy: 10 cards, Medium: 25 cards, Hard: 52 cards.
+
+2. Q. Have a system to track my previous score so that I can try and improve my skill
+      * The game has a "Previous Scores" button that saves the users previous efforts to local storage for them to keep track of their last attempt tempt across browser sessions.
+
+3. Q. Have tools to help me develop a method to learn the skills of memorisation
+      * The "Memory Tips" page contains both detailed historical information surrounding the pursit of memory techniques, along with detailed instructions on how to best memorise the deck of cards among other things. It also has a PAO generator section to allow the user to create their own memory tool to beat the game.
 
 ## Further Testing
 ---
@@ -275,12 +295,28 @@ This fix for this turned out to be a CSS rule to rotate the background image of 
 ## Content
 
 ## Media
+
+### Images
+---
 * All poker chip buttons were created in Affinity Photo by the developer using this background provided by [SVG Repo](https://www.svgrepo.com/svg/4886/poker-chip).
 * Images for the playing cards were downloaded from [Google Code Archive](https://code.google.com/archive/p/vector-playing-cards/).
 * Images of the card suits were downloaded using a free trial from [Adobe](https://stock.adobe.com/images/set-poker-cards-symbols-vector/323996998?as_campaign=TinEye&as_content=tineye_match&epi1=323996998&tduid=f877f64edb5850dacc9d98bf4bac7909&as_channel=affiliate&as_campclass=redirect&as_source=arvato).
 * Image for poker table wooden background from [Joshua Bartell on Unsplash](https://unsplash.com/photos/6vvIBTvL90A).
 * Green felt poker table background from [Engin Akyurt on Unsplash](https://unsplash.com/photos/HEMIBJ8QQuA).
 * Image of brain on "Memory tips" page were downloade using a free trial from [Adobe](https://stock.adobe.com/images/human-brain-on-white-background/26636186?as_campaign=TinEye&as_content=tineye_match&epi1=26636186&tduid=f877f64edb5850dacc9d98bf4bac7909&as_channel=affiliate&as_campclass=redirect&as_source=arvato).
+* Image of playing cards from "Game Instructions" page from [Eyestetix on Unsplash](https://unsplash.com/@eyestetix).
+ ### Audio
+ ---
+ * "Try again" sound effect [javapimp on freesound](https://freesound.org/people/javapimp/sounds/439187/).
+ * Card flip sound effect [notification sounds](https://notification-sounds.com/1433-card-flip-sound-effect.html).
+ * "Congratulations" sound effect [dersuperanton on freesound](https://freesound.org/people/dersuperanton/sounds/433702/) 
+ * Card shuffle sound effect [SoundJay](https://www.soundjay.com/misc/sounds/shuffling-cards-1.mp3).
+ * Error sound effect [Freesoundeffect](http://freesoundeffect.net/sound/multimedia-error-08-sound-effect).
+ * Un-mute audio sound [Freesound](https://freesound.org/people/dland/sounds/320181/).
+ * Game Won sound effect [Freesound](https://freesound.org/people/FunWithSound/sounds/456966/).
+ * Previous Score sound effect [Freesound](https://freesound.org/people/shinephoenixstormcrow/sounds/337049/).
+ * Game Over sound effect [Orangefreesounds](https://orangefreesounds.com/you-lose-game-over/).
+ * "Completed Memorising Cards" sound [Freesound](https://freesound.org/people/shinephoenixstormcrow/sounds/337049/).
 
 ## Acknowledgements
 ---
