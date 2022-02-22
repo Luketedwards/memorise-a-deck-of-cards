@@ -200,10 +200,23 @@ The memory tips page provides the player with a table to generate their own PAO 
 ### Validator Results
 
 ### Manual Testing
+* The website was tested on multiple web-browsers including Safari, Chrome, Firefox and Brave.
+
+* The website was viewed on multiple devices with varying screen sizes. These include multiple iPhone 11's, an iPad air, an iPad pro, a 16 inch Macbook pro and a 13 inch Acer laptop.
+
+* All links and pages were tested thoroughly across various browsers and screen sizes.
+
+* Family members trialled the website on their own devices to both give feedback and look for bugs. 
 
 ### Known Bugs
+* On my current version of Safari browser, at certain screen sizes some of the cards become slightly misaligned.
+* On the iPhones that I tested the site on, the sound files all work perfectly for their first play, however subsequent plays have the very start clipped off. This is a minor issue and is only noticeable when looking for it.
 
 ### Notable Solved Bugs
+* After first deploying my site to Github pages, when the game was started and the poker theme was introduced, on ipads the entire interface of the game would rotate and become unusable. This only happened on iPad, not on any phone or computer, however it was present on multiple iPads. 
+This fix for this turned out to be a CSS rule to rotate the background image of the Nav and Footer by 90 deg. I did this to change the alignment of the wood grain in the image, however it seemed the iPad misinterpreted this as "Rotate the nav and footer 90 deg". This is now solved.
+
+* On certain screen sizes the cards would become misaligned when flipped. I fixed this through very tedious testing of media queries to compensate at different screen sizes. This all appears to function correctly now on every screen size I have tried.
 
 ## Deployment
 ---
@@ -212,25 +225,25 @@ The memory tips page provides the player with a table to generate their own PAO 
 
  The project was deployed to GitHub Pages using the following steps...
 
- 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+ 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Luketedwards/memorise-a-deck-of-cards)
  2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
      - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
  3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
  4. Under "Source", click the dropdown called "None" and select "Master Branch".
  5. The page will automatically refresh.
- 6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+ 6. Scroll back down through the page to locate the now published site [link](https://luketedwards.github.io/memorise-a-deck-of-cards/index.html) in the "GitHub Pages" section.
 
  ### Forking the GitHub Repository
 
  By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
- 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+ 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Luketedwards/memorise-a-deck-of-cards)
  2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
  3. You should now have a copy of the original repository in your GitHub account.
 
  ### Making a Local Clone
 
- 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+ 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Luketedwards/memorise-a-deck-of-cards)
  2. Under the repository name, click "Clone or download".
  3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
  4. Open Git Bash
@@ -257,10 +270,17 @@ The memory tips page provides the player with a table to generate their own PAO 
  # Credits
 
 ## Code 
-
+* Bootstrap4: Bootstrap library was used during the inital setup of my site to help quickly create a responsive design. I also used their code in creating one of the modals on the page.
+* Sweet alert 2: I used several of their templates to create an aestheticly pleasing modal for my game, before altering it to suit my requirements.
 ## Content
 
 ## Media
+* All poker chip buttons were created in Affinity Photo by the developer using this background provided by [SVG Repo](https://www.svgrepo.com/svg/4886/poker-chip).
+* Images for the playing cards were downloaded from [Google Code Archive](https://code.google.com/archive/p/vector-playing-cards/).
+* Images of the card suits were downloaded using a free trial from [Adobe](https://stock.adobe.com/images/set-poker-cards-symbols-vector/323996998?as_campaign=TinEye&as_content=tineye_match&epi1=323996998&tduid=f877f64edb5850dacc9d98bf4bac7909&as_channel=affiliate&as_campclass=redirect&as_source=arvato).
+* Image for poker table wooden background from [Joshua Bartell on Unsplash](https://unsplash.com/photos/6vvIBTvL90A).
+* Green felt poker table background from [Engin Akyurt on Unsplash](https://unsplash.com/photos/HEMIBJ8QQuA).
+* Image of brain on "Memory tips" page were downloade using a free trial from [Adobe](https://stock.adobe.com/images/human-brain-on-white-background/26636186?as_campaign=TinEye&as_content=tineye_match&epi1=26636186&tduid=f877f64edb5850dacc9d98bf4bac7909&as_channel=affiliate&as_campclass=redirect&as_source=arvato).
 
 ## Acknowledgements
 ---
@@ -270,3 +290,5 @@ The memory tips page provides the player with a table to generate their own PAO 
 * Code Institute for their excellent learning platform and student support.
 
 * [W3C Schools](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/) for being valuable resources when I encountered problems in my code. 
+
+* mrGcoding for this Youtube tutorial: https://www.youtube.com/watch?v=seApG3uwjAs which was very useful when figuring out how to shuffle a deck of cards.
