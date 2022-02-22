@@ -87,6 +87,7 @@ The main themes and imagery used throughout the website are strongly related to 
 ---
 
 #### Nav Bar & Footer
+Each page on the site contains the same simple navbar and footer to easily traverse to the intended page.
 
 ### Game Page
 ---
@@ -128,13 +129,144 @@ When the player first presses the "Start Game" button they will be presented wit
 The three difficulties are easy for 10 cards, medium for 25 cards, and hard for all 52 cards in the deck.
 
 #### Score and Timer Tracking
-
+Once the game has began the score and time of the player is tracked by various functions. These are then presented to the player at the end of the game and saved into the "Previous Scores" section to compare to later.
 
 #### Remaining Cards Reminder
+If the player fails a game the game over message provides them the option to view the correct order of the remaining cards. This is a useful tool as it is likely that the player will spend some time memorising the deck, and knowing what the correct choice was may help remind them of where they went wrong in their "Memory Journey" technique.
+
+#### Contextual theme
+Once a game has been started the theme of the main game page transforms to resemble a poker table. The score counter is also hidden by default until the player has viewed all the shuffled cards.
 
 ### Supporting Pages
 ---
 
 #### Collapsing Instructions Buttons
+The memory tips page contains a great deal of text and information. Because of this I have stored each section inside a toggle button which collpases or expands upon click. This allows the player to hide or reveal information to prevent the page from being too cluttered.
 
 #### PAO System Generator
+The memory tips page provides the player with a table to generate their own PAO system to help them win the game. Once the player has created their PAO they can save it to their computer by clicking the "Save" button.
+
+## Technologies Used 
+---
+
+### Languages Used
+
+* HTML5
+* CSS3
+* Javascript
+
+### Framework, Software & Libraries Used
+
+1. [Bootstrap 4.4.1](https://getbootstrap.com/):
+  * Bootstrap was utilised to quickly build a responsive framework for the website, before being overwritten with a custom CSS stylesheet to add my own style.
+
+2. [Google Fonts](https://fonts.google.com/):
+   * 
+
+3. [Font Awesome](https://fontawesome.com/):
+   * Font Awesome was used to provide icons for the toggle buttons on the memory tips page.
+
+4. [Git](https://git-scm.com/):
+   * Git was used for version control to backup my project. I did this through terminal commands to commit to Git and push externally to GitHub.
+
+5. [GitHub](https://github.com/):
+   * GitHub was used to store all of my project code after being pushed from Git.
+
+6. [Affinity Photo/Publisher](https://affinity.serif.com/en-gb/photo/):
+  * Affinity software was used to create my poker chip buttons and favicon image.
+
+7. [Balsamiq](https://balsamiq.com/):
+  * Balsamiq was used to generate my wireframes to guide my design process.
+
+8. [Real Favicon Generator](https://realfavicongenerator.net):
+   * Real Favicon Generator was used to turn the image I created into a favicon.ico file.
+
+9. [Website Mockup Generator](https://websitemockupgenerator.com)
+   * Website Mockup Generator was used to create the website mockup at the start of this README.
+
+10.  [JQUERY](https://jquery.com)  
+    * JQUERY was used throughout the process of creating my Javascript code.
+
+11.  [HTML2PDF](https://github.com/spipu/html2pdf)  
+    * HTML2PDF library was used to convert the table data on the memory tips into a saveable PDF file.
+
+12.  [Sweet Alert 2](https://sweetalert2.github.io)   
+    * Sweet alert 2 was used to create attractive looking modals to house my game difficulty, game won/lost message, and previous scores section on the main game page.
+
+# Testing User Stories from the User Experience (UX) Section
+
+## Further Testing
+---
+### Validator Results
+
+### Manual Testing
+
+### Known Bugs
+
+### Notable Solved Bugs
+
+## Deployment
+---
+
+### GitHub Pages
+
+ The project was deployed to GitHub Pages using the following steps...
+
+ 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+ 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
+ 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+ 4. Under "Source", click the dropdown called "None" and select "Master Branch".
+ 5. The page will automatically refresh.
+ 6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+
+ ### Forking the GitHub Repository
+
+ By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+ 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+ 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+ 3. You should now have a copy of the original repository in your GitHub account.
+
+ ### Making a Local Clone
+
+ 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+ 2. Under the repository name, click "Clone or download".
+ 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+ 4. Open Git Bash
+ 5. Change the current working directory to the location where you want the cloned directory to be made.
+ 6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+ ```
+ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+ ```
+
+ 7. Press Enter. Your local clone will be created.
+
+ ```
+ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+ > Cloning into `CI-Clone`...
+ > remote: Counting objects: 10, done.
+ > remote: Compressing objects: 100% (8/8), done.
+ > remove: Total 10 (delta 1), reused 10 (delta 1)
+ > Unpacking objects: 100% (10/10), done.
+ ```
+
+ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+ # Credits
+
+## Code 
+
+## Content
+
+## Media
+
+## Acknowledgements
+---
+
+* My mentor Rahul Lakhanpal for his support and invaluable advice throughout my project.
+
+* Code Institute for their excellent learning platform and student support.
+
+* [W3C Schools](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/) for being valuable resources when I encountered problems in my code. 
