@@ -60,9 +60,8 @@
 
 Wire frames were generated using Balsamiq, and can be viewed below.
 
-- [Game Page](https://www.example.com)
-- [Memory Tips](https://www.example.com)
-- [Game instructions](https://www.example.com)
+- [Game Page Desktop](assets/wireframes/Game-Page-Desktop.png)
+- [Game Page Mobile](assets/wireframes//Game-page-mobile.png)
 
 ## 5. Surface 
 ---
