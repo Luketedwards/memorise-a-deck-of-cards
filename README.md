@@ -173,8 +173,8 @@ The memory tips page provides the player with a table to generate their own PAO 
 6. [Affinity Photo/Publisher](https://affinity.serif.com/en-gb/photo/):
   * Affinity software was used to create my poker chip buttons and favicon image.
 
-7. [Balsamiq](https://balsamiq.com/):
-  * Balsamiq was used to generate my wireframes to guide my design process.
+7. [Figma](https://figma.com/):
+  * The Figma free trial was used to generate my wireframes to guide my design process.
 
 8. [Real Favicon Generator](https://realfavicongenerator.net):
    * Real Favicon Generator was used to turn the image I created into a favicon.ico file.
