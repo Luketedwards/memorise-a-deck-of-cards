@@ -12,7 +12,7 @@ A play on the phrase "Photographic Memory", "Pokergraphic Memory!" is both a pow
 
 ---
 
-##  Experience (UX)
+##  User Experience (UX)
 ---
 ### User Stories
 
