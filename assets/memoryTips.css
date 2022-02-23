@@ -12,9 +12,10 @@ h1,
 h2,
 h3 {
     text-align: center;
-    font-family: 'Alegreya', serif;
+    font-family: 'Lusitana', serif;
     padding: 0;
     margin: 0;
+
 
 }
 
@@ -23,10 +24,12 @@ h1 {
     font-weight: 600;
     color: #000;
     padding-top: 15px;
+    
 }
 
 h2 {
     font-size: 3rem;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
 }
 
 h3 {
@@ -34,6 +37,7 @@ h3 {
     padding-top: 10px;
     padding-bottom: 5px;
     color: #000;
+    
 }
 
 p {
@@ -112,7 +116,7 @@ footer {
     background-color: #379683;
     height: 50px;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lusitana', sans-serif;
     font-size: 1.2rem;
     color: #fafafa;
 }
@@ -161,7 +165,7 @@ nav {
 }
 
 #PAOGenerator th {
-    font-family: 'Alegreya', serif;
+    font-family: 'Lusitana', serif;
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -174,7 +178,7 @@ nav {
     margin-left: 3%;
     width: fit-content;
     font-size: 2rem;
-    font-family: 'Source Sans Pro';
+    font-family: 'Lusitana', serif;
     color: #fafafa !important;
     border-radius: 10px;
     border: none;
