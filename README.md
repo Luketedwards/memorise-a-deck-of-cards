@@ -1,5 +1,5 @@
 # Pokergraphic Memory!
-"Pokergraphic Memory!" is both a powerful and memory training tool and a fun recall game. This project utilises the incredible techniques of the ancient "Loci" system, and the "PAO" system to help users memorise and recall the order of an entire deck of 52 cards; a feat many people would think impossible. This is the same set of techniques that memory athletes use to perform unbelievable cognitive achievements such as recalling Pi to 67,890 digits.
+A play on the phrase "Photographic Memory", "Pokergraphic Memory!" is both a powerful memory training tool and a fun recall game. This project utilises the incredible techniques of the ancient "Loci" system, and the "PAO" system to help users memorise and recall the order of an entire deck of 52 cards; a feat many people would think impossible. This is the same set of techniques that memory athletes use to perform unbelievable cognitive achievements such as recalling Pi to 67,890 digits. The game is designed at varying levels of difficulty, and with comprehensive instructions and training materials. A previous score system is also implemented for users to track their last effort in an attempt to improve their results. The project is also very 'gamefied' to make the learning experience as fun as possible.
 
 ---
 
@@ -17,23 +17,23 @@
 
 - As a first time user I want to:
 
-1. Quickly understand the purpose and layout of the game
-2. Understand how to play the game
-3. Receive tips and guidance on how to improve my score
+1. Quickly understand the purpose and layout of the game.
+2. Understand how to play the game.
+3. Receive tips and guidance on how to improve my score.
 
 - As a returning visitor I want to:
 
-1. Have different levels of difficulty to challenge myself
-2. Have a system to track my previous score so that I can try and improve my skill
-3. Have tools to help me develop a method to learn the skills of memorisation
+1. Have different levels of difficulty to challenge myself.
+2. Have a system to track my previous score so that I can try and improve my skill.
+3. Have tools to help me develop a method to learn the skills of memorisation.
 
 ## 1. Strategy
 ---
 ## Project purpose
-- To provide a fun game to challenge and quantify the skill of memorisation through a card memorising game
-- To provide a comprenhensive breakdown of the skills needed to learn this incredible ability, and to give the user the tools to learn
-- To provide a varying level of difficulty for the user to challenge themselves at different stages in their memory journey
-- To provide a system to compare users current scores to their previous efforts
+- To provide a fun game to challenge and quantify the skill of memorisation through a card memorising game.
+- To provide a comprenhensive breakdown of the skills needed to learn this incredible ability, and to give the user the tools to learn.
+- To provide a varying level of difficulty for the user to challenge themselves at different stages in their memory journey.
+- To provide a system to compare users current scores to their previous efforts.
 
 ## 2. Scope
 ---
@@ -58,7 +58,7 @@
 
 ### Wireframes
 
-Wire frames were generated using Balsamiq, and can be viewed below.
+Wire frames for the main game area were generated using Figma, and can be viewed below.
 
 - [Game Page Desktop](assets/wireframes/Game-Page-Desktop.png)
 - [Game Page Mobile](assets/wireframes//Game-page-mobile.png)
@@ -72,7 +72,7 @@ The main colours I used in developing this website are a darker and lighter shad
 
 ### Typography
 
-The two fonts I used throughout the website are ... and .. 
+The fonts I used throughout the website are 'Lusitana' for the nav bar and headings, and 'Source Serif 4' for body text. Both of these were imported using the Google fonts API. Both fonts were backed up by 'Sans-serif'. 
 
 
 ### Imagery and Theme
@@ -159,7 +159,7 @@ The memory tips page provides the player with a table to generate their own PAO 
   * Bootstrap was utilised to quickly build a responsive framework for the website, before being overwritten with a custom CSS stylesheet to add my own style.
 
 2. [Google Fonts](https://fonts.google.com/):
-   * 
+   * Google fonts was used to import the fonts 'Lusitana' for the nav bar and headings, and 'Source Serif 4' for the body text. Both fonts were backed up by 'Sans-serif'.
 
 3. [Font Awesome](https://fontawesome.com/):
    * Font Awesome was used to provide icons for the toggle buttons on the memory tips page.
@@ -168,7 +168,7 @@ The memory tips page provides the player with a table to generate their own PAO 
    * Git was used for version control to backup my project. I did this through terminal commands to commit to Git and push externally to GitHub.
 
 5. [GitHub](https://github.com/):
-   * GitHub was used to store all of my project code after being pushed from Git.
+   * GitHub was used to store all of my project code after being pushed from Git. Git hub pages was then used to deploy the project.
 
 6. [Affinity Photo/Publisher](https://affinity.serif.com/en-gb/photo/):
   * Affinity software was used to create my poker chip buttons and favicon image.
@@ -290,7 +290,7 @@ This fix for this turned out to be a CSS rule to rotate the background image of 
 
 ## Code 
 * Bootstrap4: Bootstrap library was used during the inital setup of my site to help quickly create a responsive design. I also used their code in creating one of the modals on the page.
-* Sweet alert 2: I used several of their templates to create an aestheticly pleasing modal for my game, before altering it to suit my requirements.
+* Sweet alert 2: I used several of their templates to create an aesthetically pleasing modal for my game information, before altering it to suit my requirements.
 ## Content
 
 ## Media
