@@ -3,7 +3,8 @@ A play on the phrase "Photographic Memory", "Pokergraphic Memory!" is both a pow
 
 ---
 
-**put image here**
+![Website Mockup](/assets/images/Pokergraphic-Memory-mockup.png)
+
 
 ---
 
