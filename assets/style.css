@@ -866,7 +866,7 @@ nav {
 /*Media Queries */
 @media screen and (min-width: 1500px) {
     #button-div {
-        left: 40vw;
+        left: 38vw;
     }
 }
 @media screen and (max-width: 1499px) {
