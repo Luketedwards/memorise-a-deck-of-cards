@@ -667,7 +667,7 @@ $('.cards').click(function (event) {
       
 
     }
-    if (selectedCard != 'Card-' + shuffledDeck[number2] && $(!selectedCard).classList(".card-is-flipped .card-face--back")) {
+    if (selectedCard != 'Card-' + shuffledDeck[number2]) {
       console.log('wrong card');
       if (muted == false){
       audioGameOver.play();}
