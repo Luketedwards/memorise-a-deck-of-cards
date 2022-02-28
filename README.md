@@ -91,22 +91,22 @@ Each page on the site contains the same simple navbar and footer to easily trave
 ### Game Page
 ---
 
-#### Card Flip Animation
+#### **Card Flip Animation**
 On the main game page the player is presented with a layout of all 52 playing cards. Initially these are face down, however once the game has began and all shuffled cards have been presented to the player, the relevant cards flip over to be revealed.
 
 Upon clicking a correct card the flipping animation plays backwards to hide the card from view and present only the remaining cards to the player.
 
-#### Previous Score System
+#### **Previous Score System**
 Upon clicking the "Previous Score" button players will be presented the results of their last game in a modal. 
 If the player has no previous game results they will be informed of this and prompted to start a game. 
 
 These results are stored in local storage at the end of each game and persist across browser sessions.
 
-#### Card Shuffling System
+#### **Card Shuffling System**
 Each time the web page is loaded a deck of playing cards is generated and stored into an array. This array is then shuffled into a random order.
 There is also an "Easy" and "Medium" shuffled deck created, with 10 and 25 cards stored. 
 
-#### Audio Sound effects
+#### **Audio Sound effects**
 Almost every action the player undertakes in the game has an associated sound effect. I did this to 'gamefy' the experience. Examples of these include:
 * Error sound for clicking a flipped card
 * Card flipping sound
@@ -118,31 +118,31 @@ Almost every action the player undertakes in the game has an associated sound ef
 * Remaining cards sound
 * A sound encouraging players to "Try Again" at the end of a lost game
 
-#### Audio Muting
+#### **Audio Muting**
 To provide the user with the option of turning off the sound effects there is a "Mute Audio" button on the main page. By default the audio is enabled but can be muted at any time. When the audio is muted, the "Mute Audio" button is replaced with an "Un-mute Audio" button. 
 The players choice of audio is saved into local storage and is persistent across browser sessions. It can also be changed at any time.
 
-#### A Range of Difficulty settings 
+#### **A Range of Difficulty settings** 
 When the player first presses the "Start Game" button they will be presented with three colour coded buttons to choose a dificulty setting. Their choice then determines how many cards need to be memorised, how many cards will be revealed to the player, the numbers inside the score and card progress counter, and the values stored in the "Previous Scores" section.
 
 The three difficulties are easy for 10 cards, medium for 25 cards, and hard for all 52 cards in the deck.
 
-#### Score and Timer Tracking
+#### **Score and Timer Tracking**
 Once the game has began the score and time of the player is tracked by various functions. These are then presented to the player at the end of the game and saved into the "Previous Scores" section to compare to later.
 
-#### Remaining Cards Reminder
+#### **Remaining Cards Reminder**
 If the player fails a game the game over message provides them the option to view the correct order of the remaining cards. This is a useful tool as it is likely that the player will spend some time memorising the deck, and knowing what the correct choice was may help remind them of where they went wrong in their "Memory Journey" technique.
 
-#### Contextual theme
+#### **Contextual theme**
 Once a game has been started the theme of the main game page transforms to resemble a poker table. The score counter is also hidden by default until the player has viewed all the shuffled cards.
 
 ### Supporting Pages
 ---
 
-#### Collapsing Instructions Buttons
+#### **Collapsing Instructions Buttons**
 The memory tips page contains a great deal of text and information. Because of this I have stored each section inside a toggle button which collpases or expands upon click. This allows the player to hide or reveal information to prevent the page from being too cluttered.
 
-#### PAO System Generator
+#### **PAO System Generator**
 The memory tips page provides the player with a table to generate their own PAO system to help them win the game. Once the player has created their PAO they can save it to their computer by clicking the "Save" button.
 
 ## Technologies Used 
@@ -157,7 +157,7 @@ The memory tips page provides the player with a table to generate their own PAO 
 ### Framework, Software & Libraries Used
 
 1. [Bootstrap 4.4.1](https://getbootstrap.com/):
-  * Bootstrap was utilised to quickly build a responsive framework for the website, before being overwritten with a custom CSS stylesheet to add my own style.
+      * Bootstrap was utilised to quickly build a responsive framework for the website, before being overwritten with a custom CSS stylesheet to add my own style.
 
 2. [Google Fonts](https://fonts.google.com/):
    * Google fonts was used to import the fonts 'Lusitana' for the nav bar and headings, and 'Source Serif 4' for the body text. Both fonts were backed up by 'Sans-serif'.
@@ -172,10 +172,10 @@ The memory tips page provides the player with a table to generate their own PAO 
    * GitHub was used to store all of my project code after being pushed from Git. Git hub pages was then used to deploy the project.
 
 6. [Affinity Photo/Publisher](https://affinity.serif.com/en-gb/photo/):
-  * Affinity software was used to create my poker chip buttons and favicon image.
+      * Affinity software was used to create my poker chip buttons and favicon image.
 
 7. [Figma](https://figma.com/):
-  * The Figma free trial was used to generate my wireframes to guide my design process.
+      * The Figma free trial was used to generate my wireframes to guide my design process.
 
 8. [Real Favicon Generator](https://realfavicongenerator.net):
    * Real Favicon Generator was used to turn the image I created into a favicon.ico file.
@@ -184,13 +184,13 @@ The memory tips page provides the player with a table to generate their own PAO 
    * Website Mockup Generator was used to create the website mockup at the start of this README.
 
 10.  [JQUERY](https://jquery.com)  
-    * JQUERY was used throughout the process of creating my Javascript code.
+      * JQUERY was used throughout the process of creating my Javascript code.
 
 11.  [HTML2PDF](https://github.com/spipu/html2pdf)  
-    * HTML2PDF library was used to convert the table data on the memory tips into a saveable PDF file.
+      * HTML2PDF library was used to convert the table data on the memory tips into a saveable PDF file.
 
 12.  [Sweet Alert 2](https://sweetalert2.github.io)   
-    * Sweet alert 2 was used to create attractive looking modals to house my game difficulty, game won/lost message, and previous scores section on the main game page.
+      * Sweet alert 2 was used to create attractive looking modals to house my game difficulty, game won/lost message, and previous scores section on the main game page.
 
 # Testing User Stories from the User Experience (UX) Section
 - As a first time user I want to:
