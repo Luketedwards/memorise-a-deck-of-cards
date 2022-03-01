@@ -8,7 +8,9 @@ A play on the phrase "Photographic Memory", "Pokergraphic Memory!" is both a pow
 
 ---
 
-**put walkthrough video here**
+# Walkthrough Video - Click To Watch!
+
+[![Pokergraphic Memory! Demo](/assets/images/Thumbnail-min.png)](https://www.youtube.com/watch?v=zEotJoRqh2o "Pokergraphic Memory! Demo - Click to Watch!")
 
 ---
 
