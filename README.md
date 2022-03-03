@@ -194,6 +194,13 @@ The memory tips page provides the player with a table to generate their own PAO 
 12.  [Sweet Alert 2](https://sweetalert2.github.io)   
       * Sweet alert 2 was used to create attractive looking modals to house my game difficulty, game won/lost message, and previous scores section on the main game page.
 
+13. [Final Cut Pro](https://www.apple.com/uk/final-cut-pro/)
+      * Final Cut Pro was used to edit the demo video included in this read me.
+
+14. [Logic Pro X](https://www.apple.com/uk/logic-pro/)
+      * Logic Pro X was used to record and edit the audio voiceover for the demo video included in this read me.
+
+
 # Testing User Stories from the User Experience (UX) Section
 - As a first time user I want to:
 
