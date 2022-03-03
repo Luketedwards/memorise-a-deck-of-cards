@@ -769,7 +769,7 @@ nav {
     border-bottom: none !important;
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
-    background-color: rgba(0, 0, 0, );
+    background-color: rgba(0, 0, 0 );
 }
 
 .modal-footer {

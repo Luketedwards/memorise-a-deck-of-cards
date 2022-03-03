@@ -12,10 +12,10 @@ var audioMuteButton = new Audio('assets/audio/mute-button.mp3');
 var audioCongratulations = new Audio('assets/audio/congratulations.mp3');
 
 /*Initial decleration of various variables related to the modals */
-let modalBtn = document.getElementById("start-button")
+let modalBtn = document.getElementById("start-button");
 var modalBtn2 = document.getElementById("start-button");
-let modal = document.querySelector(".modal")
-let closeBtn = document.querySelector(".close-btn")
+let modal = document.querySelector(".modal");
+let closeBtn = document.querySelector(".close-btn");
 let startClickCount = 0;
 var difficultyChosen = false;
 var difficulty;
@@ -58,7 +58,7 @@ modalBtn.onclick = function () {
 
       if (result.isDismissed) {
         difficultyChosen = true;
-         difficulty = 0
+         difficulty = 0;
         startClickCount ++;
         modalOpen();
         canOpen = true;
@@ -74,7 +74,7 @@ modalBtn.onclick = function () {
           }
       if (result.isDenied) {
         difficultyChosen = true;
-        difficulty = 1
+        difficulty = 1;
         startClickCount ++;
         modalOpen();
         canOpen = true;
@@ -91,7 +91,7 @@ modalBtn.onclick = function () {
               }    
       if (result.isConfirmed) {
           difficultyChosen = true;
-          difficulty = 2
+          difficulty = 2;
           startClickCount ++;
           modalOpen();
           canOpen = true;
@@ -106,13 +106,13 @@ modalBtn.onclick = function () {
           
 
            }
-          })
+          });
   
   }
   else{
    modalOpen();
   }
-} 
+}; 
   
 }
 
@@ -130,13 +130,13 @@ function modalOpen (){
 }  
 
 closeBtn.onclick = function () {
-  modal.style.display = "none"
-}
+  modal.style.display = "none";
+};
 window.onclick = function (e) {
   if (e.target == modal) {
-    modal.style.display = "none"
+    modal.style.display = "none";
   }
-}
+};
 
 
 
@@ -164,9 +164,9 @@ setTimeout(function(){
  for (let i = 0; i < 25; i++) { 
   mediumShuffledDeck[i] = shuffledDeck[i];
 }
-  console.log(shuffledDeck[9])
-  console.log(easyShuffledDeck[9])
-  console.log(mediumShuffledDeck[9])
+  console.log(shuffledDeck[9]);
+  console.log(easyShuffledDeck[9]);
+  console.log(mediumShuffledDeck[9]);
 
 }, 2000);
 
@@ -193,8 +193,8 @@ for (let i = deck.length - 1; i > 0; i--) {
 
 
 for (let i = 0; i < 52; i++) {
-  shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat
-};
+  shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat;
+}
 
 /*Code adds mute button which when pressed prevents any audio from playing.
 The mute decision is stored in local storage and is persistent across games. */
@@ -205,47 +205,47 @@ $('#mute-button').click(function(){
   let muteBtnImage = document.getElementById('mute-button');
   if (muted == false){
     muted = true;
-    muteBtnImage.src = "assets/images/un-mute-audio.png"
+    muteBtnImage.src = "assets/images/un-mute-audio.png";
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
-    return {muted, muteDecision}
+    return {muted, muteDecision};
     
   }
   if (muted == true){
     muted = false;
-    muteBtnImage.src = "assets/images/mute-audio.png"
+    muteBtnImage.src = "assets/images/mute-audio.png";
     audioMuteButton.play();
     localStorage.setItem('muteDecision', JSON.stringify(muted));
     muteDecision = JSON.parse(localStorage.getItem('muteDecision'));
   console.log(muteDecision);
-    return {muted, muteDecision}
+    return {muted, muteDecision};
   }
   
-  })
+  });
 
 window.onload = function(){
   if (muteDecision == null){
     let muteBtnImage = document.getElementById('mute-button');
     muted = false;
-    muteBtnImage.src = "assets/images/mute-audio.png"
-    return muted
+    muteBtnImage.src = "assets/images/mute-audio.png";
+    return muted;
   } 
   
   if (muteDecision == false){
     let muteBtnImage = document.getElementById('mute-button');
     muted = false;
-    muteBtnImage.src = "assets/images/mute-audio.png"
-    return muted
+    muteBtnImage.src = "assets/images/mute-audio.png";
+    return muted;
   } 
   
   if (muteDecision == true){
     let muteBtnImage = document.getElementById('mute-button');
     muted = true;
-    muteBtnImage.src = "assets/images/un-mute-audio.png"
-    return muted
+    muteBtnImage.src = "assets/images/un-mute-audio.png";
+    return muted;
   } 
-  }
+  };
 
 
 /*Initial decleration of a few important parameters. 
@@ -278,7 +278,7 @@ $('#next').click(function () {
     clearInterval(myInterval);
   }
 
-})};
+});}
 
 if (difficulty == 1){
   $('#next').click(function () {
@@ -295,7 +295,7 @@ if (difficulty == 1){
       clearInterval(myInterval);
     }
   
-  })};
+  });}
 
   if (difficulty == 2){
     $('#next').click(function () {
@@ -312,7 +312,7 @@ if (difficulty == 1){
         clearInterval(myInterval);
       }
     
-    })};  
+    });}  
   }
 /*Function to update card progress counter */
 function cardsProgression() {
@@ -337,21 +337,21 @@ function cardDisplay(){
  var number = 0; 
 if (difficulty == 0){
 $("#next").click(function () {
-  $('#guess').css('background-image', `url(assets/images/Card-${shuffledDeck[parseInt(number)]}.png`);;
+  $('#guess').css('background-image', `url(assets/images/Card-${shuffledDeck[parseInt(number)]}.png`);
   number++;
 });
 }
 
 if (difficulty == 1){
   $("#next").click(function () {
-    $('#guess').css('background-image', `url(assets/images/Card-${mediumShuffledDeck[parseInt(number)]}.png`);;
+    $('#guess').css('background-image', `url(assets/images/Card-${mediumShuffledDeck[parseInt(number)]}.png`);
     number++;
   });
   }
 
   if (difficulty == 2){
     $("#next").click(function () {
-      $('#guess').css('background-image', `url(assets/images/Card-${easyShuffledDeck[parseInt(number)]}.png`);;
+      $('#guess').css('background-image', `url(assets/images/Card-${easyShuffledDeck[parseInt(number)]}.png`);
       number++;
     });
     }
@@ -391,7 +391,7 @@ function buttoncards (){
               $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
               $('#score-progress').removeClass('hidden');
             }
-          })
+          });
     }
 
 
@@ -431,7 +431,7 @@ function buttoncards (){
                 }
                 $('#score-progress').removeClass('hidden');
               }
-            })
+            });
       }
       
     if (difficulty == 2){
@@ -469,7 +469,7 @@ function buttoncards (){
               }
               $('#score-progress').removeClass('hidden');
             }
-          })
+          });
         }  
         
   }    
@@ -478,11 +478,11 @@ function buttoncards (){
    $('#cards-container div').click(function(){
      if(this.classList.contains("card-face--back-start")){
       if (muted == false){
-        audioFail.play()}
+        audioFail.play();}
         
       }
      }
-   )}
+   );}
         
       
 
@@ -494,7 +494,7 @@ $('#cards-container div').click(function () {
   if (cardProgress >= 54) {
     if (this.classList.contains("card-is-flipped card-is-flipped-start")) {
       if (muted == false){
-      audioFail.play()}
+      audioFail.play();}
       alert('Already flipped!');
     } else {
       const selectedCard = (this.id);
@@ -515,7 +515,7 @@ if (difficulty == 1){
     if (cardProgress >= 27) {
       if (this.classList.contains("card-is-flipped card-is-flipped-start")) {
         if (muted == false){
-        audioFail.play()}
+        audioFail.play();}
         alert('Already flipped!');
       } else {
         const selectedCard = (this.id);
@@ -537,7 +537,7 @@ if (difficulty == 1){
       if (cardProgress >= 12) {
         if (this.classList.contains("card-is-flipped card-is-flipped-start")) {
           if (muted == false){
-          audioFail.play()}
+          audioFail.play();}
           alert('Already flipped!');
         } else {
           const selectedCard = (this.id);
@@ -585,7 +585,7 @@ function wonGameEasy () {
     })
     .then(() => {
       if (muted == false){
-      audioCongratulations.play()
+      audioCongratulations.play();
       }
       setTimeout(function(){
         window.location.href = 'index.html';
@@ -613,7 +613,7 @@ function wonGameMedium (){
     })
     .then(() => {
       if (muted == false){
-        audioCongratulations.play()
+        audioCongratulations.play();
         }
       setTimeout(function(){
         window.location.href = 'index.html';
@@ -640,7 +640,7 @@ function wonGameHard () {
     })
     .then(() => {
       if (muted == false){
-        audioCongratulations.play()
+        audioCongratulations.play();
         }
       setTimeout(function(){
         window.location.href = 'index.html';
@@ -663,7 +663,7 @@ $('.cards').click(function (event) {
       if (cardsLeft == 0){
         wonGameHard();
         }
-      return [number2, cardsLeft]
+      return [number2, cardsLeft];
       
 
     }
@@ -705,7 +705,7 @@ $('.cards').click(function (event) {
           }, 1500);
         }
 
-      })
+      });
       gameScores.push(score);
       gameTimes.push(seconds);
       localStorage.setItem('previousScore3', JSON.stringify(gameScores));
@@ -717,14 +717,14 @@ $('.cards').click(function (event) {
     }
     if ($(selectedCard).hasClass('card-is-flipped card-is-flipped-start')) {
       if (muted == false){
-      audioFail.play()}
+      audioFail.play();}
       alert('Already flipped!');
     }
     
   }
   
  
-})
+});
 }
 }
 
@@ -743,7 +743,7 @@ $('.cards').click(function (event) {
         if (cardsLeft == 27){
           wonGameMedium();
           }
-        return [number2, cardsLeft]
+        return [number2, cardsLeft];
   
       }
       if (selectedCard != 'Card-' + shuffledDeck[number2] ) {
@@ -784,7 +784,7 @@ $('.cards').click(function (event) {
             }, 1500);
           }
   
-        })
+        });
         gameScores.push(score);
         gameTimes.push(seconds);
         localStorage.setItem('previousScore3', JSON.stringify(gameScores));
@@ -796,7 +796,7 @@ $('.cards').click(function (event) {
       }
       if ($(selectedCard).hasClass('card-is-flipped card-is-flipped-start')) {
         if (muted == false){
-        audioFail.play()}
+        audioFail.play();}
         alert('Already flipped!');
       }
       
@@ -804,7 +804,7 @@ $('.cards').click(function (event) {
     
 
     
-  })
+  });
   }
 }
 
@@ -824,7 +824,7 @@ if (difficulty == 2){
           if (cardsLeft == 42){
           wonGameEasy();
           }
-          return [number2, cardsLeft]
+          return [number2, cardsLeft];
     
         }
         
@@ -866,7 +866,7 @@ if (difficulty == 2){
               }, 1500);
             }
     
-          })
+          });
         gameScores.push(score);
         gameTimes.push(seconds);
         localStorage.setItem('previousScore3', JSON.stringify(gameScores));
@@ -878,14 +878,14 @@ if (difficulty == 2){
       }
       if ($(selectedCard).hasClass('card-is-flipped card-is-flipped-start')) {
         if (muted == false){
-        audioFail.play()}
+        audioFail.play();}
         alert('Already flipped!');
       }
     }
 
     
     
-  })
+  });
   
   }
 }
@@ -911,7 +911,7 @@ function scoreList() {
       confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
       confirmButtonAriaLabel: 'Thumbs up, great!',
 
-    })
+    });
   } else {
 
     Swal.fire({
@@ -927,7 +927,7 @@ function scoreList() {
       confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
       confirmButtonAriaLabel: 'Thumbs up, great!',
 
-    })
+    });
   }
 }
 
@@ -938,7 +938,7 @@ function correctCard(selectedCard) {
     console.log('it worked!');
     j++;
   }
-};
+}
 
 function updateScoreBox(){
   if(difficulty == 0){
