@@ -705,6 +705,7 @@ nav {
     margin-left: 2%;
     padding: 7px;
     top: -46px;
+    display: inline;
 }
 
 #score-progress h3 {
@@ -936,27 +937,28 @@ nav {
         flex-direction: column;
         flex-wrap: wrap;
         width: 10vw;
+        display: inline;
     }
 
     #spades {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
+        display: inline;
     }
 
     #diamonds {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
+        display: inline;
     }
 
     #clubs {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
+        display: inline;
     }
 }
 

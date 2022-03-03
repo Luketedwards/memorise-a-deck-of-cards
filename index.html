@@ -72,20 +72,20 @@
             </div>
         </nav>
         
-            <div id="button-div"><img src="assets/images/previous-score-chip.png"  data-toggle="modal"
-                    data-target="#Modal" id="score-button"></img>
-                    <img src="assets/images/poker-chip-start-game.png"  data-toggle="modal" data-target="#Modal" id="start-button"></img>
-                <img src="" id="mute-button"></img>
+            <div id="button-div"><img src="assets/images/previous-score-chip.png" alt="previous score" data-toggle="modal"
+                    data-target="#Modal" id="score-button">
+                    <img src="assets/images/poker-chip-start-game.png" alt="Start Game" data-toggle="modal" data-target="#Modal" id="start-button">
+                <img src="assets/images/mute-audio.png" alt="mute button" id="mute-button">
             </div>
 
 
-            <span class="hidden" id="score-progress">
+            <div class="hidden" id="score-progress">
                 <h3>Score:</h3>
                 <h3 id="score-count"></h3>
-            </span>
+            </div>
             <div id="cards-container" class="container-fluid">
-                <span id="cards-span">
-                    <span id="hearts">
+                <div class="cards-span">
+                    <div id="hearts">
                         <div class="cards card-face--back-start card-is-flipped-start" onClick=(cardClicked(this.id))
                             id="Card-AH"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-2H"></div>
@@ -100,10 +100,10 @@
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-JH"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-QH"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-KH"></div>
-                    </span>
-                </span>
-                <span id="cards-span">
-                    <span id="spades">
+                    </div>
+                </div>
+                <div class="cards-span">
+                    <div id="spades">
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-AS"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-2S"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-3S"></div>
@@ -117,10 +117,10 @@
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-JS"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-QS"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-KS"></div>
-                    </span>
-                </span>
-                <span id="cards-span">
-                    <span id="diamonds">
+                    </div>
+                </div>
+                <div class="cards-span">
+                    <div id="diamonds">
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-AD"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-2D"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-3D"></div>
@@ -134,10 +134,10 @@
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-JD"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-QD"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-KD"></div>
-                    </span>
-                </span>
-                <span id="cards-span">
-                    <span id="clubs">
+                    </div>
+                </div>
+                <div class="cards-span">
+                    <div id="clubs">
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-AC"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-2C"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-3C"></div>
@@ -151,8 +151,8 @@
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-JC"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-QC"></div>
                         <div class="cards card-face--back-start card-is-flipped-start" id="Card-KC"></div>
-                    </span>
-                </span>
+                    </div>
+                </div>
             </div>
 
         
