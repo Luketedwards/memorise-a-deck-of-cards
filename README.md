@@ -89,7 +89,7 @@ The main themes and imagery used throughout the website are strongly related to 
 
 #### Nav Bar & Footer
 Each page on the site contains the same simple navbar and footer to easily traverse to the intended page.
-
+![Navbar](/assets/readme-images/navbar.png)
 ### Game Page
 ---
 
@@ -103,6 +103,7 @@ Upon clicking the "Previous Score" button players will be presented the results 
 If the player has no previous game results they will be informed of this and prompted to start a game. 
 
 These results are stored in local storage at the end of each game and persist across browser sessions.
+![Previous Score](/assets/readme-images/previous-score.png)
 
 #### **Card Shuffling System**
 Each time the web page is loaded a deck of playing cards is generated and stored into an array. This array is then shuffled into a random order.
@@ -123,29 +124,43 @@ Almost every action the player undertakes in the game has an associated sound ef
 #### **Audio Muting**
 To provide the user with the option of turning off the sound effects there is a "Mute Audio" button on the main page. By default the audio is enabled but can be muted at any time. When the audio is muted, the "Mute Audio" button is replaced with an "Un-mute Audio" button. 
 The players choice of audio is saved into local storage and is persistent across browser sessions. It can also be changed at any time.
+![Mute Button](/assets/readme-images/muted.png)
+![Un-mute Button](/assets/readme-images/un-muted.png)
 
 #### **A Range of Difficulty settings** 
 When the player first presses the "Start Game" button they will be presented with three colour coded buttons to choose a dificulty setting. Their choice then determines how many cards need to be memorised, how many cards will be revealed to the player, the numbers inside the score and card progress counter, and the values stored in the "Previous Scores" section.
 
 The three difficulties are easy for 10 cards, medium for 25 cards, and hard for all 52 cards in the deck.
+![Difficulty Settings](/assets/readme-images/difficulty-settings.png)
 
 #### **Score and Timer Tracking**
 Once the game has began the score and time of the player is tracked by various functions. These are then presented to the player at the end of the game and saved into the "Previous Scores" section to compare to later.
+![Timer](/assets/readme-images/memory-modal.png)
+![Score Counter](/assets/readme-images/score-counter.png)
+![Game Over Screen](/assets/readme-images/game-over-screen.png)
 
 #### **Remaining Cards Reminder**
 If the player fails a game the game over message provides them the option to view the correct order of the remaining cards. This is a useful tool as it is likely that the player will spend some time memorising the deck, and knowing what the correct choice was may help remind them of where they went wrong in their "Memory Journey" technique.
+![Remaining Cards](/assets/readme-images/remaining-cards.png)
 
 #### **Contextual theme**
 Once a game has been started the theme of the main game page transforms to resemble a poker table. The score counter is also hidden by default until the player has viewed all the shuffled cards.
+![Standard Theme](/assets/readme-images/standard-theme.png)
+![Game Theme](/assets/readme-images/game-theme.png)
 
 ### Supporting Pages
 ---
 
 #### **Collapsing Instructions Buttons**
 The memory tips page contains a great deal of text and information. Because of this I have stored each section inside a toggle button which collpases or expands upon click. This allows the player to hide or reveal information to prevent the page from being too cluttered.
-
+![Closed Toggle Button](/assets/readme-images/toggle-buttons-closed.png)
+![Toggle Button Open](/assets/readme-images/toggle-buttons.png)
 #### **PAO System Generator**
 The memory tips page provides the player with a table to generate their own PAO system to help them win the game. Once the player has created their PAO they can save it to their computer by clicking the "Save" button.
+![PAO Generator](/assets/readme-images/pao-system.png)
+![Example PAO](/assets/readme-images/example-pao.png)
+![PAO Save Button](/assets/readme-images/pao-save-button.png)
+
 
 ## Technologies Used 
 ---
