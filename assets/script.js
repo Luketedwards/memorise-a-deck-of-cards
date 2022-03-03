@@ -164,10 +164,6 @@ setTimeout(function(){
  for (let i = 0; i < 25; i++) { 
   mediumShuffledDeck[i] = shuffledDeck[i];
 }
-  console.log(shuffledDeck[9]);
-  console.log(easyShuffledDeck[9]);
-  console.log(mediumShuffledDeck[9]);
-
 }, 2000);
 
 
