@@ -123,7 +123,8 @@ Almost every action the player undertakes in the game has an associated sound ef
 
 #### **Audio Muting**
 To provide the user with the option of turning off the sound effects there is a "Mute Audio" button on the main page. By default the audio is enabled but can be muted at any time. When the audio is muted, the "Mute Audio" button is replaced with an "Un-mute Audio" button. 
-The players choice of audio is saved into local storage and is persistent across browser sessions. It can also be changed at any time.
+The players choice of audio is saved into local storage and is persistent across browser sessions. It can also be changed at any time.  
+
 ![Mute Button](/assets/readme-images/muted.png)
 ![Un-mute Button](/assets/readme-images/un-muted.png)
 
@@ -242,6 +243,14 @@ The memory tips page provides the player with a table to generate their own PAO 
 ## Further Testing
 ---
 ### Validator Results
+* All Html pages passed through the official [W3C Validator](https://validator.w3.org) validator with no errors.
+Results can be found here:
+[Game Page](assets/readme-images/index.html-validator.png)|[How To Play](assets/readme-images/How-to-play-html-validator.png)|[Memory Tips](assets/readme-images/Memory-tips-html-validator.png)|
+
+* The CSS stylesheets all passed through the official [W3C Validator](https://validator.w3.org) with no issues.
+
+CSS validation results can be found here: 
+[style.css](assets/readme-images/Style.css-validator.png)| [memory-tips.css](assets/readme-images/memorytips.css-validator.png)| [How-to-play.css](assets/readme-images/gameinstructions.css-validator.png)
 
 ### Manual Testing
 * The website was tested on multiple web-browsers including Safari, Chrome, Firefox and Brave.
