@@ -130,6 +130,7 @@ footer {
     padding-bottom: 200px;
     position: relative;
     padding-bottom: 10px;
+    padding-left: 1.2%;
 
 }
 
@@ -183,7 +184,7 @@ nav {
     cursor: grab;
     transform-style: preserve-3d;
     transform-origin: 7.5vw 0 0 !important;
-    transition: transform 1s;
+    transition: transform 0.5s;
 
 }
 
@@ -199,26 +200,14 @@ nav {
 }
 
 .card-face--back {
-   /* transform: rotateY(-180deg) translateX(100%); */
-    transition: transform 0.5s;
-
     background-image: url(images/playing-card-rear.png) !important;
 }
 
 .card-face--back-start {
-   /* transform: rotateY(180deg) translateX(100%); */
-    transition: transform 0.5s;
-
     background-image: url(images/playing-card-rear.png) !important;
 }
 
-/*
-.card.visible .card-back {
-    transform: rotateY(-180deg);
-}
-*/
 .card-is-not-flipped{
-   /* transform: rotateY(-180deg) translateX(100%); */
     transition: transform 0.5s;
 }
 
@@ -992,110 +981,7 @@ nav {
         margin-left: 21vw;
     }
 }
-/*
-@media screen and (min-width: 1500px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-107%);
 
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(119%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-    
-}
-
-
-
-@media screen and (max-width: 1450px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-106%);
-
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(100%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-    
-}
-
-@media screen and (max-width: 1440px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-110%);
-
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(100%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-}
-
-
-@media screen and (max-width: 1420px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-100%);
-
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(100%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-100%);
-
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(102%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-}
-
-@media screen and (max-width: 1380px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-100%);
-
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(100%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-}
-
-@media screen and (max-width: 1360px) {
-    .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-100%);
-
-    }
-
-    .card-face--back {
-        transform: rotateY(-180deg) translateX(100%);
-        transition: transform 0.5s;
-
-        background-image: url(images/playing-card-rear.png) !important;
-    }
-}
-*/
 @media only screen and (max-width: 800px) {
 
 
