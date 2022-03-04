@@ -994,12 +994,12 @@ nav {
 
 @media screen and (min-width: 1500px) {
     .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-110%);
+        transform: rotateY(-180deg) translateX(-107%);
 
     }
 
     .card-face--back {
-        transform: rotateY(-180deg) translateX(121%);
+        transform: rotateY(-180deg) translateX(119%);
         transition: transform 0.5s;
 
         background-image: url(images/playing-card-rear.png) !important;
@@ -1011,12 +1011,12 @@ nav {
 
 @media screen and (max-width: 1450px) {
     .card-is-flipped {
-        transform: rotateY(-180deg) translateX(-110%);
+        transform: rotateY(-180deg) translateX(-106%);
 
     }
 
     .card-face--back {
-        transform: rotateY(-180deg) translateX(119%);
+        transform: rotateY(-180deg) translateX(100%);
         transition: transform 0.5s;
 
         background-image: url(images/playing-card-rear.png) !important;
@@ -1031,7 +1031,7 @@ nav {
     }
 
     .card-face--back {
-        transform: rotateY(-180deg) translateX(115%);
+        transform: rotateY(-180deg) translateX(100%);
         transition: transform 0.5s;
 
         background-image: url(images/playing-card-rear.png) !important;
@@ -1046,7 +1046,7 @@ nav {
     }
 
     .card-face--back {
-        transform: rotateY(-180deg) translateX(104%);
+        transform: rotateY(-180deg) translateX(100%);
         transition: transform 0.5s;
 
         background-image: url(images/playing-card-rear.png) !important;
