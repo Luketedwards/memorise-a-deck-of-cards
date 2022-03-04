@@ -386,6 +386,10 @@ function buttoncards (){
               audioSuccess.play();}
               $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
               $('#score-progress').removeClass('hidden');
+              for (let i = 0; i < shuffledDeck.length; i++) { 
+                cardToFlip = 'Card-' + shuffledDeck[i];
+                $(`#${cardToFlip}`).addClass('card-is-not-flipped');
+              }
             }
           });
     }
@@ -651,6 +655,7 @@ $('.cards').click(function (event) {
   if (cardProgress >= 54 && cardsLeft >= 0) {
     if (selectedCard === 'Card-' + shuffledDeck[number2]) {
       $(this).addClass('card-is-flipped' + " " + 'card-face--back');
+      $(this).removeClass('card-is-not-flipped');
       console.log("success!");
       number2++;
       score++;
