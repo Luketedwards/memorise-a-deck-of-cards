@@ -13,6 +13,9 @@ A play on the phrase "Photographic Memory", "Pokergraphic Memory!" is both a pow
 [![Pokergraphic Memory! Demo](/assets/images/Thumbnail-min.png)](https://www.youtube.com/watch?v=zEotJoRqh2o "Pokergraphic Memory! Demo - Click to Watch!")
 
 ---
+# Deployed Project
+
+The deployed site can be viewed [Here](https://luketedwards.github.io/memorise-a-deck-of-cards/index.html).
 
 ##  User Experience (UX)
 ---
@@ -262,14 +265,14 @@ CSS validation results can be found here:
 * Family members trialled the website on their own devices to both give feedback and look for bugs. 
 
 ### Known Bugs
-* On my current version of Safari browser, at certain screen sizes some of the cards become slightly misaligned.
+* On my current version of Safari browser, some of the buttons are slightly misaligned compared to Google Chrome.
 * On the iPhones that I tested the site on, the sound files all work perfectly for their first play, however subsequent plays have the very start clipped off. This is a minor issue and is only noticeable when looking for it.
 
 ### Notable Solved Bugs
 * After first deploying my site to Github pages, when the game was started and the poker theme was introduced, on ipads the entire interface of the game would rotate and become unusable. This only happened on iPad, not on any phone or computer, however it was present on multiple iPads. 
 This fix for this turned out to be a CSS rule to rotate the background image of the Nav and Footer by 90 deg. I did this to change the alignment of the wood grain in the image, however it seemed the iPad misinterpreted this as "Rotate the nav and footer 90 deg". This is now solved.
 
-* On certain screen sizes the cards would become misaligned when flipped. I fixed this through very tedious testing of media queries to compensate at different screen sizes. This all appears to function correctly now on every screen size I have tried.
+* On certain screen sizes the cards would become misaligned when flipped. I initially tried to fix this through very tedious testing of media queries to compensate at different screen sizes. This was not an ideal solution. After much testing I found that by using "Scalex(-1)" instead of "Translatex(-100%)" the cards correctly alligned.
 
 ## Deployment
 ---

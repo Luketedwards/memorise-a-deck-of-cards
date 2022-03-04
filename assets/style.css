@@ -130,7 +130,7 @@ footer {
     padding-bottom: 200px;
     position: relative;
     padding-bottom: 10px;
-    padding-left: 1.2%;
+    padding-left: 1%;
 
 }
 
@@ -184,7 +184,7 @@ nav {
     cursor: grab;
     transform-style: preserve-3d;
     transform-origin: 7.5vw 0 0 !important;
-    transition: transform 0.5s;
+    transition: transform 0.4s;
 
 }
 
@@ -1228,18 +1228,4 @@ nav {
         font-size: 2.3vw !important;
     }
 }
-/*
-@media screen and (min-width: 1569px){
-    
-    #cards-container{
-        padding-left: 25px;
-    }
-}
 
-@media screen and (min-width: 1570px){
-    .card-face--back-start{
-        transform: rotateY(180deg) translateX(120%);
-    }
-
-   
-} 
