@@ -650,7 +650,7 @@ function wonGameHard () {
 
 function cardClickedHard (){
 if (difficulty == 0){
-$('.cards').click(function (event) {
+$('.cards').click(function () {
   var selectedCard = (this.id);
   if (cardProgress >= 54 && cardsLeft >= 0) {
     if (selectedCard === 'Card-' + shuffledDeck[number2]) {
@@ -731,7 +731,7 @@ $('.cards').click(function (event) {
 
 function cardClickedMedium(){
 if (difficulty == 1){
-$('.cards').click(function (event) {
+$('.cards').click(function () {
     var selectedCard = (this.id);
     if (cardProgress >= 27 && cardsLeft > 26) {
       if (selectedCard === 'Card-' + shuffledDeck[number2]) {
