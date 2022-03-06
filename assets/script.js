@@ -310,7 +310,7 @@ if (difficulty == 1){
     
     });}  
   }
-/*Function to update card progress counter */
+/*Function to update card progress counter for each difficulty level.*/
 function cardsProgression() {
   if (difficulty == 0){
   cardProgress = parseInt(cardProgress);
@@ -331,24 +331,30 @@ function cardsProgression() {
 /*Code displays next image of card in the shuffled deck each time the button is clicked */
 function cardDisplay(){
  var number = 0; 
-if (difficulty == 0){
+if (difficulty == 0 && number < 51){
 $("#next").click(function () {
+  if(number < 52){
   $('#guess').css('background-image', `url(assets/images/Card-${shuffledDeck[parseInt(number)]}.png`);
-  number++;
+  number++;}
+  else {$('#guess').css('visibility', `hidden`);}
 });
 }
 
 if (difficulty == 1){
   $("#next").click(function () {
+    if(number < 25){
     $('#guess').css('background-image', `url(assets/images/Card-${mediumShuffledDeck[parseInt(number)]}.png`);
-    number++;
+    number++;}
+    else {$('#guess').css('visibility', `hidden`);}
   });
   }
 
   if (difficulty == 2){
     $("#next").click(function () {
+      if(number < 10){
       $('#guess').css('background-image', `url(assets/images/Card-${easyShuffledDeck[parseInt(number)]}.png`);
-      number++;
+      number++;}
+      else {$('#guess').css('visibility', `hidden`);}
     });
     }
 }    

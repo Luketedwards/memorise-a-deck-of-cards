@@ -720,11 +720,11 @@ nav {
 }
 
 #next {
-    width: 12vw;
+    width: 13vw;
     height: 7vw;
     background-color: darkslateblue;
     color: #fafafa;
-    margin-left: 40%;
+    margin-left: 38%;
     position: absolute;
     border-radius: 10px;
     top: 79%;
@@ -971,14 +971,14 @@ nav {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
     #logo {
         font-size: 8vw;
     }
 
     .list {
-        font-size: 3.2vw;
-        margin-left: 21vw;
+        font-size: 4.2vw;
+        margin-left: 15vw;
     }
 }
 
@@ -998,6 +998,20 @@ nav {
     #mute-button {
         width: 6rem;
         height: 6rem;
+    }
+
+    #next {
+        width: 16vw;
+        height: 8vw;
+        background-color: darkslateblue;
+        color: #fafafa;
+        margin-left: 38%;
+        position: absolute;
+        border-radius: 10px;
+        top: 79%;
+        z-index: 1005;
+        left: -3%;
+        font-size: 2.1vw;
     }
 }
 
@@ -1115,11 +1129,11 @@ nav {
     }
 
     #next {
-        width: 14vw;
+        width: 15vw;
         height: 8vw;
         background-color: darkslateblue;
         color: #fafafa;
-        margin-left: 40%;
+        margin-left: 38%;
         position: absolute;
         border-radius: 10px;
         top: 79%;
@@ -1163,7 +1177,7 @@ nav {
     }
 
     #next {
-        width: 21vw;
+        width: 22vw;
         height: 12vw;
         font-size: 3.2vw;
     }
