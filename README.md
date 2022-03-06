@@ -267,6 +267,8 @@ CSS validation results can be found here:
 ### Known Bugs
 * On my current version of Safari browser, some of the buttons are slightly misaligned compared to Google Chrome.
 * On the iPhones that I tested the site on, the sound files all work perfectly for their first play, however subsequent plays have the very start clipped off. This is a minor issue and is only noticeable when looking for it.
+* In the console, the following error message is displayed: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.". From my research this appears to be an issue with Github Pages.
+![Console Error Message](/assets/readme-images/console-error-msg.png)
 
 ### Notable Solved Bugs
 * After first deploying my site to Github pages, when the game was started and the poker theme was introduced, on ipads the entire interface of the game would rotate and become unusable. This only happened on iPad, not on any phone or computer, however it was present on multiple iPads. 
