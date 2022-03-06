@@ -24,7 +24,7 @@ h1 {
     font-weight: 600;
     color: #000;
     padding-top: 15px;
-    
+
 }
 
 h2 {
@@ -32,7 +32,7 @@ h2 {
     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
 }
 
-.h2{
+.h2 {
     font-size: 3rem !important;
     text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
     text-align: center !important;
@@ -46,7 +46,7 @@ h3 {
     padding-top: 10px;
     padding-bottom: 5px;
     color: #000;
-    
+
 }
 
 p {
@@ -217,8 +217,8 @@ nav {
     background-color: #89B5AF;
 }
 
-#PDFButton:hover{
-    color:#379683;
+#PDFButton:hover {
+    color: #379683;
     background-color: #5CDB95 !important;
 }
 
@@ -253,27 +253,44 @@ button {
     }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
     p {
         font-size: 1.2rem;
     }
-    h1{
+
+    h1 {
         font-size: 2.7rem;
     }
-    h2{
+
+    h2 {
         font-size: 2.4rem;
     }
-    h3{
+
+    h3 {
         font-size: 2.4rem;
     }
-    li{
-        font-size: 1.2rem;
-    }
-    button{
-        font-size: 2.7rem;
-    }
-    #number-stat{
+
+    li {
         font-size: 1.2rem;
     }
 
+    button {
+        font-size: 2.7rem;
+    }
+
+    #number-stat {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    #logo {
+        font-size: 8vw;
+    }
+
+    .list {
+        font-size: 4.2vw;
+        margin-left: 15vw;
+    }
 }

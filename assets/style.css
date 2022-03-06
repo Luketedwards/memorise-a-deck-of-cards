@@ -116,7 +116,7 @@ footer {
 .wood {
     background-image: url('images/dark-wood-min.jpg') !important;
     background-size: contain;
-    
+
 }
 
 #cards-container {
@@ -195,8 +195,8 @@ nav {
 }
 
 .card-is-flipped-start {
-   transform: rotateY(180deg) scaleX(-1);
-    
+    transform: rotateY(180deg) scaleX(-1);
+
 }
 
 .card-face--back {
@@ -207,7 +207,7 @@ nav {
     background-image: url(images/playing-card-rear.png) !important;
 }
 
-.card-is-not-flipped{
+.card-is-not-flipped {
     transition: transform 0.5s;
 }
 
@@ -760,7 +760,7 @@ nav {
     border-bottom: none !important;
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
-    background-color: rgba(0, 0, 0 );
+    background-color: rgba(0, 0, 0);
 }
 
 .modal-footer {
@@ -860,11 +860,13 @@ nav {
         left: 38vw;
     }
 }
+
 @media screen and (max-width: 1499px) {
     #button-div {
         left: 38.5vw;
     }
 }
+
 @media screen and (max-width: 1400px) {
     #button-div {
         left: 35.5vw;
@@ -1037,10 +1039,12 @@ nav {
         width: 5rem;
         height: 5rem;
     }
+
     #score-button {
         width: 5rem;
         height: 5rem;
     }
+
     #mute-button {
         width: 5rem;
         height: 5rem;
@@ -1051,12 +1055,12 @@ nav {
         left: 34vw;
     }
 
-    #score-progress{
+    #score-progress {
         padding: 4px;
         margin-left: 1%;
     }
 
-    #score-progress h3{
+    #score-progress h3 {
         font-size: 1.1em;
     }
 }
@@ -1071,12 +1075,13 @@ nav {
         width: 4.5rem;
         height: 4.5rem;
     }
+
     #mute-button {
         width: 4.5rem;
         height: 4.5rem;
     }
 
-    #button-div{
+    #button-div {
         left: 30vw;
     }
 
@@ -1146,7 +1151,7 @@ nav {
         font-size: 3.6vw;
     }
 
-    #button-div{
+    #button-div {
         left: 48vw;
     }
 }
@@ -1182,7 +1187,7 @@ nav {
         font-size: 3.2vw;
     }
 
-    #button-div{
+    #button-div {
         left: 34vw;
     }
 }
@@ -1242,4 +1247,3 @@ nav {
         font-size: 2.3vw !important;
     }
 }
-
