@@ -771,7 +771,7 @@ nav {
 .modal {
     display: none;
     position: fixed;
-    padding-top: 50px;
+    padding-top: 70px;
     left: 0;
     top: 0;
     width: 100%;
@@ -856,6 +856,12 @@ nav {
 }
 
 /*Media Queries */
+@media screen and (min-width: 1179px) {
+    .modal{
+        padding-top: 120px !important;
+    }
+    
+}
 @media screen and (min-width: 1500px) {
     #button-div {
         left: 38vw;
