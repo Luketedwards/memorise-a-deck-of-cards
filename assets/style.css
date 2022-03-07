@@ -860,6 +860,22 @@ nav {
     .modal{
         padding-top: 120px !important;
     }
+    #modal-content{
+        height: 41vw !important;
+        width: 29.5vw !important;
+    }
+
+    #card-progress{
+        left: 13% !important;
+    }
+
+    #time{
+        margin-right: 37% !important;
+    }
+
+    #next{
+        left: -6% !important;
+    }
     
 }
 @media screen and (min-width: 1500px) {
