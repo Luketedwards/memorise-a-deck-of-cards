@@ -3,14 +3,14 @@ A play on the phrase "Photographic Memory", "Pokergraphic Memory!" is both a pow
 
 ---
 
-![Website Mockup](/assets/images/Pokergraphic-Memory-mockup.png)
+![Website Mockup](/assets/images/pokergraphic-memory-mockup.png)
 
 
 ---
 
 # Walkthrough Video - Click To Watch!
 
-[![Pokergraphic Memory! Demo](/assets/images/Thumbnail-min.png)](https://www.youtube.com/watch?v=zEotJoRqh2o "Pokergraphic Memory! Demo - Click to Watch!")
+[![Pokergraphic Memory! Demo](/assets/images/thumbnail-min.png)](https://www.youtube.com/watch?v=zEotJoRqh2o "Pokergraphic Memory! Demo - Click to Watch!")
 
 ---
 # Deployed Project
@@ -66,8 +66,8 @@ The deployed site can be viewed [Here](https://luketedwards.github.io/memorise-a
 
 Wire frames for the main game area were generated using Figma, and can be viewed below.
 
-- [Game Page Desktop](assets/wireframes/Game-Page-Desktop.png)
-- [Game Page Mobile](assets/wireframes//Game-page-mobile.png)
+- [Game Page Desktop](assets/wireframes/game-page-desktop.png)
+- [Game Page Mobile](assets/wireframes//game-page-mobile.png)
 
 ## 5. Surface 
 ---
@@ -248,12 +248,12 @@ The memory tips page provides the player with a table to generate their own PAO 
 ### Validator Results
 * All Html pages passed through the official [W3C Validator](https://validator.w3.org) validator with no errors.
 Results can be found here:
-[Game Page](assets/readme-images/index.html-validator.png)|[How To Play](assets/readme-images/How-to-play-html-validator.png)|[Memory Tips](assets/readme-images/Memory-tips-html-validator.png)|
+[Game Page](assets/readme-images/index.html-validator.png)|[How To Play](assets/readme-images/how-to-play-html-validator.png)|[Memory Tips](assets/readme-images/memory-tips-html-validator.png)|
 
 * The CSS stylesheets all passed through the official [W3C Validator](https://validator.w3.org) with no issues.
 
 CSS validation results can be found here: 
-[style.css](assets/readme-images/Style.css-validator.png)| [memory-tips.css](assets/readme-images/memorytips.css-validator.png)| [How-to-play.css](assets/readme-images/gameinstructions.css-validator.png)
+[style.css](assets/readme-images/style.css-validator.png)| [memory-tips.css](assets/readme-images/memorytips.css-validator.png)| [How-to-play.css](assets/readme-images/gameinstructions.css-validator.png)
 
 ### Manual Testing
 * The website was tested on multiple web-browsers including Safari, Chrome, Firefox and Brave.

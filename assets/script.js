@@ -1,14 +1,14 @@
 /* jshint esversion:6 */
 
 /*All audio files being initially defined */
-var audioSuccess = new Audio('assets/audio/Card-flip-sound-effect.mp3');
+var audioSuccess = new Audio('assets/audio/card-flip-sound-effect.mp3');
 var audioFail = new Audio('assets/audio/error-sound.mp3');
-var audioGameOver = new Audio('assets/audio/You-lose-game-over.mp3');
+var audioGameOver = new Audio('assets/audio/you-lose-game-over.mp3');
 var audioCompletedMemorising = new Audio('assets/audio/completed-cards.mp3');
-var audioGameWon = new Audio('assets/audio/Finale-sound-effect.mp3');
+var audioGameWon = new Audio('assets/audio/finale-sound-effect.mp3');
 var audioCardShuffle = new Audio('assets/audio/shuffling-cards.mp3');
 var audioTryAgain = new Audio('assets/audio/try-again-new.mp3');
-var audioCorrectCards = new Audio('assets/audio/Success-sound-effect.mp3');
+var audioCorrectCards = new Audio('assets/audio/success-sound-effect.mp3');
 var audioPreviousScore = new Audio('assets/audio/previous-score-sound.mp3');
 var audioMuteButton = new Audio('assets/audio/mute-button.mp3');
 var audioCongratulations = new Audio('assets/audio/congratulations.mp3');
@@ -145,7 +145,7 @@ window.onclick = function (e) {
 "gamescores" and "gametimes" are used to store results of the game before passing them to local storage*/
 const suits = ['H', 'S', 'D', 'C'];
 const value = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-const Word = 'Card-';
+const Word = 'card-';
 
 
 var gameScores = [];
@@ -343,7 +343,7 @@ function cardDisplay() {
   if (difficulty == 0 && number < 51) {
     $("#next").click(function () {
       if (number < 52) {
-        $('#guess').css('background-image', `url(assets/images/Card-${shuffledDeck[parseInt(number)]}.png`);
+        $('#guess').css('background-image', `url(assets/images/card-${shuffledDeck[parseInt(number)]}.png`);
         number++;
       } else {
         $('#guess').css('visibility', `hidden`);
@@ -354,7 +354,7 @@ function cardDisplay() {
   if (difficulty == 1) {
     $("#next").click(function () {
       if (number < 25) {
-        $('#guess').css('background-image', `url(assets/images/Card-${mediumShuffledDeck[parseInt(number)]}.png`);
+        $('#guess').css('background-image', `url(assets/images/card-${mediumShuffledDeck[parseInt(number)]}.png`);
         number++;
       } else {
         $('#guess').css('visibility', `hidden`);
@@ -365,7 +365,7 @@ function cardDisplay() {
   if (difficulty == 2) {
     $("#next").click(function () {
       if (number < 10) {
-        $('#guess').css('background-image', `url(assets/images/Card-${easyShuffledDeck[parseInt(number)]}.png`);
+        $('#guess').css('background-image', `url(assets/images/card-${easyShuffledDeck[parseInt(number)]}.png`);
         number++;
       } else {
         $('#guess').css('visibility', `hidden`);
@@ -452,7 +452,7 @@ function buttoncards() {
           audioSuccess.play();
         }
         for (let i = 0; i < mediumShuffledDeck.length; i++) {
-          cardToFlip = 'Card-' + mediumShuffledDeck[i];
+          cardToFlip = 'card-' + mediumShuffledDeck[i];
           $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
           $(`#${cardToFlip}`).addClass('card-is-not-flipped');
         }
@@ -493,7 +493,7 @@ function buttoncards() {
           audioSuccess.play();
         }
         for (let i = 0; i < easyShuffledDeck.length; i++) {
-          cardToFlip = 'Card-' + easyShuffledDeck[i];
+          cardToFlip = 'card-' + easyShuffledDeck[i];
           $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
           $(`#${cardToFlip}`).addClass('card-is-not-flipped');
         }
@@ -696,7 +696,7 @@ function cardClickedHard() {
     $('.cards').click(function () {
       var selectedCard = (this.id);
       if (cardProgress >= 54 && cardsLeft >= 0) {
-        if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+        if (selectedCard === 'card-' + shuffledDeck[number2]) {
           $(this).addClass('card-is-flipped' + " " + 'card-face--back');
           $(this).removeClass('card-is-not-flipped');
           console.log("success!");
@@ -711,7 +711,7 @@ function cardClickedHard() {
 
 
         }
-        if (selectedCard != 'Card-' + shuffledDeck[number2]) {
+        if (selectedCard != 'card-' + shuffledDeck[number2]) {
           console.log('wrong card');
           if (muted == false) {
             audioGameOver.play();
@@ -782,7 +782,7 @@ function cardClickedMedium() {
     $('.cards').click(function () {
       var selectedCard = (this.id);
       if (cardProgress >= 27 && cardsLeft > 26) {
-        if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+        if (selectedCard === 'card-' + shuffledDeck[number2]) {
           $(this).addClass('card-is-flipped' + " " + 'card-face--back');
           console.log("success!");
           number2++;
@@ -795,7 +795,7 @@ function cardClickedMedium() {
           return [number2, cardsLeft];
 
         }
-        if (selectedCard != 'Card-' + shuffledDeck[number2]) {
+        if (selectedCard != 'card-' + shuffledDeck[number2]) {
           console.log('wrong card');
           if (muted == false) {
             audioGameOver.play();
@@ -867,7 +867,7 @@ function cardClickedEasy() {
     $('.cards').click(function () {
       var selectedCard = (this.id);
       if (cardProgress >= 12 && cardsLeft > 41) {
-        if (selectedCard === 'Card-' + shuffledDeck[number2]) {
+        if (selectedCard === 'card-' + shuffledDeck[number2]) {
           $(this).addClass('card-is-flipped' + " " + 'card-face--back');
           $(this).removeClass('card-is-not-flipped');
           console.log("success!");
@@ -882,7 +882,7 @@ function cardClickedEasy() {
 
         }
 
-        if (selectedCard != 'Card-' + shuffledDeck[number2]) {
+        if (selectedCard != 'card-' + shuffledDeck[number2]) {
           console.log('wrong card');
           if (muted == false) {
             audioGameOver.play();
@@ -994,7 +994,7 @@ function scoreList() {
 /*Code to determine if the card clicked is equal to the next card in the shuffled deck. */
 function correctCard(selectedCard) {
   let j = 0;
-  if (selectedCard === 'Card-' + shuffledDeck[j]) {
+  if (selectedCard === 'card-' + shuffledDeck[j]) {
     console.log('it worked!');
     j++;
   }
