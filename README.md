@@ -37,7 +37,7 @@ The deployed site can be viewed [Here](https://luketedwards.github.io/memorise-a
 ---
 ## Project purpose
 - To provide a fun game to challenge and quantify the skill of memorisation through a card memorising game.
-- To provide a comprenhensive breakdown of the skills needed to learn this incredible ability, and to give the user the tools to learn.
+- To provide a comprehensive breakdown of the skills needed to learn this incredible ability, and to give the user the tools to learn.
 - To provide a varying level of difficulty for the user to challenge themselves at different stages in their memory journey.
 - To provide a system to compare users current scores to their previous efforts.
 
@@ -45,8 +45,8 @@ The deployed site can be viewed [Here](https://luketedwards.github.io/memorise-a
 ---
 - I wanted a simple and intuitive user experience.
 - I wanted all content to be displayed in a slick and aesthetic manner.
-- I wanted a fun game that tracks several metrics such as score and time, as well as providing a system to compare previous efforts.
-- I wanted to create a fun game like experience with sound effects and animations.
+- I wanted a fun game that tracks several metrics such as score and time, as well as providing a system to compare to previous efforts.
+- I wanted to create a fun game-like experience with sound effects and animations.
 - I wanted to provide the user with tools and explanation as to how to develop the skills needed to beat the game and improve their memory.
 - I wanted a slick looking experience that functions well on a variety of screen sizes.
 
@@ -55,7 +55,7 @@ The deployed site can be viewed [Here](https://luketedwards.github.io/memorise-a
 - The site features a clear and minimalistic navigation bar that takes users to either the central game area, or the two supporting resource pages.
 - The game layout is clear and intuitive, providing three main buttons; A start game button to begin playing, a mute button to silence the audio, and a previous scores button to compare against previous efforts.
 - Functions of the three main pages:
-1. The main game page is where the game is operated. It also displays previous scores, information about the users time and score, and game over/ game won messages.
+1. The main game page is where the game is operated. It also displays previous scores, information about the users time and score, and game over/game won messages.
 2. The memory tips page gives a comprehensive and detailed history and breakdown of the techniques needed to beat the game. It also features a table to create your own PAO system and save it to your computer as a PDF.
 3. The game instructions page is a simple page that provides clear instructions for playing the game.
 
@@ -78,12 +78,12 @@ The main colours I used in developing this website are a darker and lighter shad
 
 ### Typography
 
-The fonts I used throughout the website are 'Lusitana' for the nav bar and headings, and 'Source Serif 4' for body text. Both of these were imported using the Google fonts API. Both fonts were backed up by 'Sans-serif'. 
+The fonts I used throughout the website are 'Lusitana' for the nav bar and headings, and 'Source Serif 4' for body text. Both of these were imported using the Google fonts API. Both fonts are backed up by 'Sans-serif'. 
 
 
 ### Imagery and Theme
 
-The main themes and imagery used throughout the website are strongly related to both poker and in one case, the brain. The buttons used to start the game, display previous scores, and mute audio are all designed in the form of a poker chip. During the game the main game page is transformed to have a green felt background and wooden borders to mimic the appearance of a poker table. Imagery of card suits and playing cards are also used throughout the design of the site. 
+The main themes and imagery used throughout the website are strongly related to both poker and playing cards, and in one case, the brain. The buttons used to start the game, display previous scores, and mute audio are all designed in the form of a poker chip. During the game the main game page is transformed to have a green felt background and wooden borders to mimic the appearance of a poker table. Imagery of card suits and playing cards are also used throughout the design of the site. 
 
 ## 5. Features 
 ---
@@ -238,7 +238,7 @@ The memory tips page provides the player with a table to generate their own PAO 
       * The game features three seperate dificulty levels. Easy: 10 cards, Medium: 25 cards, Hard: 52 cards.
 
 2. Q. Have a system to track my previous score so that I can try and improve my skill
-      * The game has a "Previous Scores" button that saves the users previous efforts to local storage for them to keep track of their last attempt tempt across browser sessions.
+      * The game has a "Previous Scores" button that saves the users previous efforts to local storage for them to keep track of their last attempt across browser sessions.
 
 3. Q. Have tools to help me develop a method to learn the skills of memorisation
       * The "Memory Tips" page contains both detailed historical information surrounding the pursit of memory techniques, along with detailed instructions on how to best memorise the deck of cards among other things. It also has a PAO generator section to allow the user to create their own memory tool to beat the game.
@@ -246,7 +246,8 @@ The memory tips page provides the player with a table to generate their own PAO 
 ## Further Testing
 ---
 ### Validator Results
-* All Html pages passed through the official [W3C Validator](https://validator.w3.org) validator with no errors.
+* All Html pages passed through the official [W3C Validator](https://validator.w3.org) validator with no errors. The index.html page had one warning for an "Empty Heading". This is intentional. The empty heading is the score counter which is hidden until the game has started, at which point the score and total number of cards are inserted using Javascript.
+
 Results can be found here:
 [Game Page](assets/readme-images/index.html-validator.png)|[How To Play](assets/readme-images/how-to-play-html-validator.png)|[Memory Tips](assets/readme-images/memory-tips-html-validator.png)|
 
@@ -328,7 +329,7 @@ This fix for this turned out to be a CSS rule to rotate the background image of 
  # Credits
 
 ## Code 
-* Bootstrap4: Bootstrap library was used during the inital setup of my site to help quickly create a responsive design. I also used their code in creating one of the modals on the page.
+* Bootstrap4: Bootstrap library was used during the inital setup of my site to help quickly create a responsive design. I also used their code in initially creating one of the modals on the page.
 * Sweet alert 2: I used several of their templates to create an aesthetically pleasing modal for my game information, before altering it to suit my requirements.
 ## Content
 
