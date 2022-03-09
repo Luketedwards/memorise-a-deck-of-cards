@@ -100,7 +100,7 @@ footer {
 
 #button-div {
     position: relative;
-    left: 52vw;
+    text-align: center;
     margin-top: 15px;
     padding-top: 10px;
 }
@@ -857,56 +857,30 @@ nav {
 
 /*Media Queries */
 @media screen and (min-width: 1179px) {
-    .modal{
+    .modal {
         padding-top: 120px !important;
     }
-    #modal-content{
+
+    #modal-content {
         height: 41vw !important;
         width: 29.5vw !important;
     }
 
-    #card-progress{
+    #card-progress {
         left: 13% !important;
     }
 
-    #time{
+    #time {
         margin-right: 37% !important;
     }
 
-    #next{
+    #next {
         left: -6% !important;
     }
-    
-}
-@media screen and (min-width: 1500px) {
-    #button-div {
-        left: 38vw;
-    }
+
 }
 
-@media screen and (max-width: 1499px) {
-    #button-div {
-        left: 38.5vw;
-    }
-}
 
-@media screen and (max-width: 1400px) {
-    #button-div {
-        left: 35.5vw;
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    #button-div {
-        left: 33.5vw;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    #button-div {
-        left: 30.5vw;
-    }
-}
 
 @media screen and (max-width: 1000px) {
 
@@ -945,7 +919,9 @@ nav {
         color: #fafafa !important;
     }
 
-
+    #button-div {
+        text-align: right !important;
+    }
 
     #hearts {
         display: flex;
@@ -1073,11 +1049,6 @@ nav {
         height: 5rem;
     }
 
-
-    #button-div {
-        left: 34vw;
-    }
-
     #score-progress {
         padding: 4px;
         margin-left: 1%;
@@ -1102,10 +1073,6 @@ nav {
     #mute-button {
         width: 4.5rem;
         height: 4.5rem;
-    }
-
-    #button-div {
-        left: 30vw;
     }
 
 }
@@ -1174,9 +1141,6 @@ nav {
         font-size: 3.6vw;
     }
 
-    #button-div {
-        left: 48vw;
-    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1210,9 +1174,6 @@ nav {
         font-size: 3.2vw;
     }
 
-    #button-div {
-        left: 34vw;
-    }
 }
 
 @media screen and (min-width: 1100px) {
