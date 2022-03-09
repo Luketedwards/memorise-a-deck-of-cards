@@ -344,6 +344,7 @@ function cardDisplay() {
     $("#next").click(function () {
       if (number < 52) {
         $('#guess').css('background-image', `url(assets/images/card-${shuffledDeck[parseInt(number)]}.png`);
+        $("#guess").attr('aria-label',`The card is ${shuffledDeck[parseInt(number)]}`);
         number++;
       } else {
         $('#guess').css('visibility', `hidden`);
@@ -355,6 +356,7 @@ function cardDisplay() {
     $("#next").click(function () {
       if (number < 25) {
         $('#guess').css('background-image', `url(assets/images/card-${mediumShuffledDeck[parseInt(number)]}.png`);
+        $("#guess").attr('aria-label',`The card is ${mediumShuffledDeck[parseInt(number)]}`);
         number++;
       } else {
         $('#guess').css('visibility', `hidden`);
@@ -366,6 +368,7 @@ function cardDisplay() {
     $("#next").click(function () {
       if (number < 10) {
         $('#guess').css('background-image', `url(assets/images/card-${easyShuffledDeck[parseInt(number)]}.png`);
+        $("#guess").attr('aria-label',`The card is ${easyShuffledDeck[parseInt(number)]}`);
         number++;
       } else {
         $('#guess').css('visibility', `hidden`);
