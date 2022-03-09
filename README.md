@@ -112,8 +112,8 @@ These results are stored in local storage at the end of each game and persist ac
 Each time the web page is loaded a deck of playing cards is generated and stored into an array. This array is then shuffled into a random order.
 There is also an "Easy" and "Medium" shuffled deck created, with 10 and 25 cards stored. 
 
-#### **Contextual Aria-labels**
-All cards buttons and links on the website are labelled with an Aria-label to make the game accessible to screen readers. The modal that displays the randomised order of cards has an aria label that updates depending on the card displayed, and labels it appropriately.
+#### **Contextual Titles On Cards For Accessibility**
+All cards buttons and links on the website are labelled with a title in an attempt to make the game accessible to screen readers. The modal that displays the randomised order of cards has a title that updates depending on the card displayed, and labels it appropriately.
 
 #### **Audio Sound effects**
 Almost every action the player undertakes in the game has an associated sound effect. I did this to 'gamefy' the experience. Examples of these include:

@@ -47,7 +47,7 @@
             <h2 id="end-of-guess">Congratulations on memorising the deck! You can now close this window by pressing the
                 button below and then input the order by clicking the playing cards.</h2>
             <div class="picture" id="guess"></div>
-            <button id="next" aria-label="Next Card">Start Timer!</button>
+            <button id="next" title="Next Card">Start Timer!</button>
         </div>
         <div class="modal-footer">
 
@@ -59,24 +59,24 @@
             <div class="container-fluid">
                 <img id="suits-images-1" class="hidden" src="assets/images/poker-card-symbols-transparent-min.png"
                     alt="Four suits of playing cards">
-                <a class="container-fluid navbar-brand" aria-label="Home" id="logo" href="index.html">Pokergraphic Memory!</a>
+                <a class="container-fluid navbar-brand" title="Home" id="logo" href="index.html">Pokergraphic Memory!</a>
                 <img id="suits-images-2" class="hidden" src="assets/images/poker-card-symbols-transparent-min.png"
                     alt="Four suits of playing cards">
                 <br>
                 <div class="container-fluid col-12">
                     <span class="navbar-nav list">
-                        <a class="nav-item" aria-label="How To Play" id="game-link" href="game-instructions.html">How To Play</a>
-                        <a class="nav-item" aria-label="Memory Tips" id="memory-link" href="memory-tips.html">Memory Tips</a>
+                        <a class="nav-item" title="How To Play" id="game-link" href="game-instructions.html">How To Play</a>
+                        <a class="nav-item" title="Memory Tips" id="memory-link" href="memory-tips.html">Memory Tips</a>
                     </span>
                 </div>
             </div>
         </nav>
-        <h1 style="display: none;"></h1> <!-- non-visible h1 tag added to comply with Bing Webmaster guidelines that require a h1 tag. -->
-        <div id="button-div"><img src="assets/images/previous-score-chip.png" aria-label="previous score" alt="previous score" data-toggle="modal"
+        <h1 style="display: none;">Pokergraphic Memory</h1> <!-- non-visible h1 tag added to comply with Bing Webmaster guidelines that require a h1 tag. -->
+        <div id="button-div"><img src="assets/images/previous-score-chip.png" title="previous score" alt="previous score" data-toggle="modal"
                 data-target="#Modal" id="score-button">
-            <img src="assets/images/poker-chip-start-game.png" aria-label="Start Game" alt="Start Game" data-toggle="modal" data-target="#Modal"
+            <img src="assets/images/poker-chip-start-game.png" title="Start Game" alt="Start Game" data-toggle="modal" data-target="#Modal"
                 id="start-button">
-            <img src="assets/images/mute-audio.png" aria-label="Mute Audio" alt="mute button" id="mute-button">
+            <img src="assets/images/mute-audio.png" title="Mute Audio" alt="mute button" id="mute-button">
         </div>
 
 
@@ -88,70 +88,70 @@
             <div class="cards-span">
                 <div id="hearts">
                     <div class="cards card-face--back-start card-is-flipped-start" onClick=(cardClicked(this.id))
-                        id="card-AH" aria-label="Ace of hearts"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2H" aria-label="2 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3H" aria-label="3 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4H" aria-label="4 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5H" aria-label="5 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6H" aria-label="6 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7H" aria-label="7 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8H" aria-label="8 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9H" aria-label="9 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10H" aria-label="10 of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JH" aria-label="Jack of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QH" aria-label="Queen of hearts" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KH" aria-label="King of hearts" ></div>
+                        id="card-AH" title="Ace of hearts"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2H" title="2 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3H" title="3 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4H" title="4 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5H" title="5 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6H" title="6 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7H" title="7 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8H" title="8 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9H" title="9 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10H" title="10 of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JH" title="Jack of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QH" title="Queen of hearts" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KH" title="King of hearts" ></div>
                 </div>
             </div>
             <div class="cards-span">
                 <div id="spades">
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-AS" aria-label="Ace of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2S" aria-label="2 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3S" aria-label="3 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4S" aria-label="4 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5S" aria-label="5 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6S" aria-label="6 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7S" aria-label="7 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8S" aria-label="8 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9S" aria-label="9 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10S" aria-label="10 of spades" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JS" aria-label="Jack of spades"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QS" aria-label="Queen of spades"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KS" aria-label="King of spades"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-AS" title="Ace of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2S" title="2 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3S" title="3 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4S" title="4 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5S" title="5 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6S" title="6 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7S" title="7 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8S" title="8 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9S" title="9 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10S" title="10 of spades" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JS" title="Jack of spades"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QS" title="Queen of spades"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KS" title="King of spades"></div>
                 </div>
             </div>
             <div class="cards-span">
                 <div id="diamonds">
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-AD" aria-label="Ace of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2D" aria-label="2 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3D" aria-label="3 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4D" aria-label="4 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5D" aria-label="5 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6D" aria-label="6 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7D" aria-label="7 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8D" aria-label="8 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9D" aria-label="9 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10D" aria-label="10 of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JD" aria-label="Jack of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QD" aria-label="Queen of diamonds"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KD" aria-label="King of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-AD" title="Ace of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2D" title="2 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3D" title="3 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4D" title="4 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5D" title="5 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6D" title="6 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7D" title="7 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8D" title="8 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9D" title="9 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10D" title="10 of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JD" title="Jack of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QD" title="Queen of diamonds"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KD" title="King of diamonds"></div>
                 </div>
             </div>
             <div class="cards-span">
                 <div id="clubs">
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-AC" aria-label="Ace of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2C" aria-label="2 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3C" aria-label="3 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4C" aria-label="4 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5C" aria-label="5 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6C" aria-label="6 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7C" aria-label="7 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8C" aria-label="8 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9C" aria-label="9 of clubs" ></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10C" aria-label="10 of clubs"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JC" aria-label="Jack of clubs"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QC" aria-label="Queen of clubs"></div>
-                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KC" aria-label="King of clubs"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-AC" title="Ace of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-2C" title="2 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-3C" title="3 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-4C" title="4 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-5C" title="5 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-6C" title="6 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-7C" title="7 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-8C" title="8 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-9C" title="9 of clubs" ></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-10C" title="10 of clubs"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-JC" title="Jack of clubs"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-QC" title="Queen of clubs"></div>
+                    <div class="cards card-face--back-start card-is-flipped-start" id="card-KC" title="King of clubs"></div>
                 </div>
             </div>
         </div>
