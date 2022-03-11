@@ -113,7 +113,7 @@ Each time the web page is loaded a deck of playing cards is generated and stored
 There is also an "Easy" and "Medium" shuffled deck created, with 10 and 25 cards stored. 
 
 #### **Contextual Titles On Cards For Accessibility**
-All cards buttons and links on the website are labelled with a title in an attempt to make the game accessible to screen readers. The modal that displays the randomised order of cards has a title that updates depending on the card displayed, and labels it appropriately.
+All cards buttons and links on the website are labelled with a title in an attempt to make the game accessible to screen readers. The modal that displays the randomised order of cards has a title that updates depending on the card displayed, and labels it appropriately. I initially used aria-labels however I was warned by the validator of potentially improper use due to the elements I used them on.
 
 #### **Audio Sound effects**
 Almost every action the player undertakes in the game has an associated sound effect. I did this to 'gamefy' the experience. Examples of these include:
