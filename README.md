@@ -222,6 +222,12 @@ The memory tips page provides the player with a table to generate their own PAO 
 14. [Logic Pro X](https://www.apple.com/uk/logic-pro/)
       * Logic Pro X was used to record and edit the audio voiceover for the demo video included in this read me.
 
+14. [lighthouse](https://developers.google.com/web/tools/lighthouse)
+      * Lighthouse was used to assess the performance of the project.
+
+14. [Wave](https://wave.webaim.org/)
+      * Wave was used to assess the accessibility of the project.
+
 
 # Testing User Stories from the User Experience (UX) Section
 - As a first time user I want to:
@@ -249,10 +255,10 @@ The memory tips page provides the player with a table to generate their own PAO 
 ## Further Testing
 ---
 ### Validator Results
-* All Html pages passed through the official [W3C Validator](https://validator.w3.org) validator with no errors. The index.html page had one warning for an "Empty Heading". This is intentional. The empty heading is the score counter which is hidden until the game has started, at which point the score and total number of cards are inserted using Javascript.
+* All Html pages passed through the official [W3C Validator](https://validator.w3.org) validator with no errors.
 
 Results can be found here:
-[Game Page](assets/readme-images/index.html-validator.png)|[How To Play](assets/readme-images/how-to-play-html-validator.png)|[Memory Tips](assets/readme-images/memory-tips-html-validator.png)|
+[Game Page](assets/readme-images/new-index.html-validator-min.png)|[How To Play](assets/readme-images/how-to-play-html-validator.png)|[Memory Tips](assets/readme-images/memory-tips-html-validator.png)|
 
 * The CSS stylesheets all passed through the official [W3C Validator](https://validator.w3.org) with no issues.
 
@@ -279,6 +285,22 @@ CSS validation results can be found here:
 This fix for this turned out to be a CSS rule to rotate the background image of the Nav and Footer by 90 deg. I did this to change the alignment of the wood grain in the image, however it seemed the iPad misinterpreted this as "Rotate the nav and footer 90 deg". This is now solved.
 
 * On certain screen sizes the cards would become misaligned when flipped. I initially tried to fix this through very tedious testing of media queries to compensate at different screen sizes. This was not an ideal solution. After much testing I found that by using "Scalex(-1)" instead of "Translatex(-100%)" the cards correctly alligned.
+
+## Accessibility and Performance
+---
+The project was tested using both [lighthouse](https://developers.google.com/web/tools/lighthouse) and [Wave](https://wave.webaim.org/) to check the overall performance and accessibility of the project.
+
+The [Wave](https://wave.webaim.org/) report revealed no errors, and just a few advisory alerts for things such as "potentially erroneous alt text." I investigated all of these and found no issue with them.
+Wave results can be viewed here:
+[Main page](assets/readme-images/wave-index-min.png)
+[Memory Tips](assets/readme-images/wave-memory-tips-min.png)
+[How to play](assets/readme-images/wave-how-to-play-min.png)
+
+The [lighthouse](https://developers.google.com/web/tools/lighthouse) report was positive for all areas, particularly on the main game page.
+Light house results can be viewed here:
+[Main page](assets/readme-images/index.html-performance-min.png)
+[Memory Tips](assets/readme-images/memory-tips-performance-min.png)
+[How to play](assets/readme-images/game-instructions-performance-min.png)
 
 ## Deployment
 ---
