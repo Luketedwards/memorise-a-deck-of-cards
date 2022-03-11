@@ -202,7 +202,8 @@ nav {
     width: fit-content;
     font-size: 2rem;
     font-family: 'Lusitana', serif;
-    color: #fafafa !important;
+    color: #ffffff !important;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
     border-radius: 10px;
     border: none;
     background-color: #89B5AF;
