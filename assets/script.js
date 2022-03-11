@@ -15,7 +15,6 @@ var audioCongratulations = new Audio('assets/audio/congratulations.mp3');
 
 /*Initial decleration of various variables related to the modals */
 let modalBtn = document.getElementById("start-button");
-var modalBtn2 = document.getElementById("start-button");
 let modal = document.querySelector(".modal");
 let closeBtn = document.querySelector(".close-btn");
 let startClickCount = 0;
@@ -53,7 +52,6 @@ if (difficultyChosen == false) {
         allowOutsideClick: false,
         allowEscapeKey: false,
 
-
       }).then((result) => {
 
         if (result.isDismissed) {
@@ -66,11 +64,9 @@ if (difficultyChosen == false) {
           buttoncards();
           timerFunction();
           cardDisplay();
-
           flipCardOnClick();
           updateScoreBox();
           cardClickedHard();
-
         }
         if (result.isDenied) {
           difficultyChosen = true;
@@ -82,12 +78,9 @@ if (difficultyChosen == false) {
           buttoncards();
           timerFunction();
           cardDisplay();
-
           flipCardOnClick();
           updateScoreBox();
           cardClickedMedium();
-
-
         }
         if (result.isConfirmed) {
           difficultyChosen = true;
@@ -99,12 +92,9 @@ if (difficultyChosen == false) {
           buttoncards();
           timerFunction();
           cardDisplay();
-
           flipCardOnClick();
           updateScoreBox();
           cardClickedEasy();
-
-
         }
       });
 
@@ -138,14 +128,11 @@ window.onclick = function (e) {
   }
 };
 
-
-
 /* Array storing suits and values of cards to be assembled below upon page load.
 "Word" is used to insert shuffled deck images when presenting the order to the player. E.G. First card is "AC" in the shuffled deck, and the corresponding image for this card is name assets/images/Card-AC.
 "gamescores" and "gametimes" are used to store results of the game before passing them to local storage*/
 const suits = ['H', 'S', 'D', 'C'];
 const value = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
-const Word = 'card-';
 
 
 var gameScores = [];
@@ -167,7 +154,6 @@ setTimeout(function () {
 }, 2000);
 
 
-
 /*Code to assemble ordered deck and then shuffle the deck. This code was inspired by this Youtube tutorial: https://www.youtube.com/watch?v=seApG3uwjAs */
 for (let i = 0; i < suits.length; i++) {
   for (let x = 0; x < value.length; x++) {
@@ -179,14 +165,12 @@ for (let i = 0; i < suits.length; i++) {
   }
 }
 
-
 for (let i = deck.length - 1; i > 0; i--) {
   let j = Math.floor(Math.random() * i);
   let temp = deck[i];
   deck[i] = deck[j];
   deck[j] = temp;
 }
-
 
 for (let i = 0; i < 52; i++) {
   shuffledDeck.push(`${deck[i].Value}${deck[i].Suit}`).concat;
@@ -249,7 +233,6 @@ window.onload = function () {
   }
 };
 
-
 /*Initial decleration of a few important parameters. 
 numberOfClicks is used to ensure the game doesn't start until all the shuffled cards have been presented to the player.
 cardProgress is used to track how many shuffled cards remain.*/
@@ -279,7 +262,6 @@ function timerFunction() {
       if (numberOfClicks == 53) {
         clearInterval(myInterval);
       }
-
     });
   }
 
@@ -404,7 +386,6 @@ function buttoncards() {
         if (muted == false) {
           audioCompletedMemorising.play();
         }
-
       }
       if (cardProgress == 53) {
         modal.style.display = "none";
@@ -414,13 +395,12 @@ function buttoncards() {
         $('#cards-container div').removeClass('card-face--back-start card-is-flipped-start');
         $('#score-progress').removeClass('hidden');
         for (let i = 0; i < shuffledDeck.length; i++) {
-          cardToFlip = 'Card-' + shuffledDeck[i];
+          let cardToFlip = 'Card-' + shuffledDeck[i];
           $(`#${cardToFlip}`).addClass('card-is-not-flipped');
         }
       }
     });
   }
-
 
   if (difficulty == 1) {
     $('#next').click(function () {
@@ -446,7 +426,6 @@ function buttoncards() {
         if (muted == false) {
           audioCompletedMemorising.play();
         }
-
       }
       if (cardProgress == 26) {
         let cardToFlip;
@@ -455,7 +434,7 @@ function buttoncards() {
           audioSuccess.play();
         }
         for (let i = 0; i < mediumShuffledDeck.length; i++) {
-          cardToFlip = 'card-' + mediumShuffledDeck[i];
+         let cardToFlip = 'card-' + mediumShuffledDeck[i];
           $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
           $(`#${cardToFlip}`).addClass('card-is-not-flipped');
         }
@@ -488,7 +467,6 @@ function buttoncards() {
         if (muted == false) {
           audioCompletedMemorising.play();
         }
-
       }
       if (cardProgress == 11) {
         modal.style.display = "none";
@@ -496,7 +474,7 @@ function buttoncards() {
           audioSuccess.play();
         }
         for (let i = 0; i < easyShuffledDeck.length; i++) {
-          cardToFlip = 'card-' + easyShuffledDeck[i];
+         let cardToFlip = 'card-' + easyShuffledDeck[i];
           $(`#${cardToFlip}`).removeClass('card-face--back-start card-is-flipped-start');
           $(`#${cardToFlip}`).addClass('card-is-not-flipped');
         }
@@ -504,7 +482,6 @@ function buttoncards() {
       }
     });
   }
-
 }
 
 if (difficultyChosen == false) {
@@ -513,12 +490,9 @@ if (difficultyChosen == false) {
       if (muted == false) {
         audioFail.play();
       }
-
     }
   });
 }
-
-
 
 /*Code that determines whether a card is to be flipped or not. If the card is currently unflipped it will flip, if it is already flipped
 it will play an error sound */
@@ -558,8 +532,6 @@ function flipCardOnClick() {
         } else {
           const selectedCard = (this.id);
           console.log(selectedCard);
-
-
           if (muted == false) {
             audioSuccess.play();
           }
@@ -583,8 +555,6 @@ function flipCardOnClick() {
         } else {
           const selectedCard = (this.id);
           console.log(selectedCard);
-
-
           if (muted == false) {
             audioSuccess.play();
           }
@@ -624,8 +594,6 @@ function wonGameEasy() {
       icon: 'success',
       title: 'You Win!',
       text: `Congratulations! You successfully memorised all 10 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-
-
     })
     .then(() => {
       if (muted == false) {
@@ -653,8 +621,6 @@ function wonGameMedium() {
       icon: 'success',
       title: 'You Win!',
       text: `Congratulations! You successfully memorised all 25 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-
-
     })
     .then(() => {
       if (muted == false) {
@@ -681,8 +647,6 @@ function wonGameHard() {
       icon: 'success',
       title: 'You Win!',
       text: `Congratulations! You successfully memorised all 52 cards in a time of ${seconds} seconds. Amazing work! Play again to try and beat your time.`,
-
-
     })
     .then(() => {
       if (muted == false) {
@@ -711,8 +675,6 @@ function cardClickedHard() {
             wonGameHard();
           }
           return [number2, cardsLeft];
-
-
         }
         if (selectedCard != 'card-' + shuffledDeck[number2]) {
           console.log('wrong card');
@@ -726,7 +688,6 @@ function cardClickedHard() {
             text: `Sorry that was the wrong card! You got ${score} out of 52 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
             showCancelButton: true,
             cancelButtonText: `View Correct Order`
-
           }).then((result) => {
 
             if (result.isDismissed) {
@@ -772,10 +733,7 @@ function cardClickedHard() {
           }
           alert('Already flipped!');
         }
-
       }
-
-
     });
   }
 }
@@ -820,7 +778,6 @@ function cardClickedMedium() {
               Swal.fire({
                   icon: 'success',
                   text: `The remaining cards were: ${remainingCards}`
-
                 })
                 .then(() => {
                   if (muted == false) {
@@ -829,7 +786,6 @@ function cardClickedMedium() {
                   setTimeout(function () {
                     window.location.href = 'index.html';
                   }, 1500);
-
                 });
             } else {
               if (muted == false) {
@@ -839,7 +795,6 @@ function cardClickedMedium() {
                 window.location.href = 'index.html';
               }, 1500);
             }
-
           });
           gameScores.push(score);
           gameTimes.push(seconds);
@@ -856,11 +811,7 @@ function cardClickedMedium() {
           }
           alert('Already flipped!');
         }
-
       }
-
-
-
     });
   }
 }
@@ -897,9 +848,7 @@ function cardClickedEasy() {
             text: `Sorry that was the wrong card! You got ${score} out of 10 cards correct and your time to memorise the deck was ${seconds} seconds. Thanks for playing!`,
             showCancelButton: true,
             cancelButtonText: `View Correct Order`
-
           }).then((result) => {
-
             if (result.isDismissed) {
               if (muted == false) {
                 audioCorrectCards.play();
@@ -907,7 +856,6 @@ function cardClickedEasy() {
               Swal.fire({
                   icon: 'success',
                   text: `The remaining cards were: ${remainingCards}`
-
                 })
                 .then(() => {
                   if (muted == false) {
@@ -916,7 +864,6 @@ function cardClickedEasy() {
                   setTimeout(function () {
                     window.location.href = 'index.html';
                   }, 1500);
-
                 });
             } else {
               if (muted == false) {
@@ -926,7 +873,6 @@ function cardClickedEasy() {
                 window.location.href = 'index.html';
               }, 1500);
             }
-
           });
           gameScores.push(score);
           gameTimes.push(seconds);
@@ -944,9 +890,6 @@ function cardClickedEasy() {
           alert('Already flipped!');
         }
       }
-
-
-
     });
 
   }
@@ -973,7 +916,6 @@ function scoreList() {
       focusConfirm: false,
       confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
       confirmButtonAriaLabel: 'Thumbs up, great!',
-
     });
   } else {
 
@@ -994,15 +936,7 @@ function scoreList() {
   }
 }
 
-/*Code to determine if the card clicked is equal to the next card in the shuffled deck. */
-function correctCard(selectedCard) {
-  let j = 0;
-  if (selectedCard === 'card-' + shuffledDeck[j]) {
-    console.log('it worked!');
-    j++;
-  }
-}
-
+/*Function updates score count for each correct card */
 function updateScoreBox() {
   if (difficulty == 0) {
     document.getElementById('score-count').innerText = `0/52`;
